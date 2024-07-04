@@ -14,7 +14,7 @@
             <Button layoutX="109.0" layoutY="199.0" mnemonicParsing="false" text="Entrar" />
             <TextField alignment="CENTER" layoutX="59.0" layoutY="119.0" promptText="Nome de Usuário" />
             <TextField alignment="CENTER" layoutX="59.0" layoutY="162.0" promptText="Senha" />
-            <Button layoutX="79.0" layoutY="292.0" mnemonicParsing="false" text="Registrar Cliente" />
+            <Button layoutX="71.0" layoutY="288.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Registrar Cliente" />
             <Label layoutX="56.0" layoutY="14.0" prefHeight="30.0" prefWidth="149.0" text="CAR WASH">
                <font>
                   <Font size="28.0" />
