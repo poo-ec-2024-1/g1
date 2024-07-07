@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipoprojeto.TelaPrincipalClienteController">
+   <children>
+      <Label layoutX="23.0" layoutY="24.0" prefHeight="45.0" prefWidth="143.0" text="Car Wash">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Button fx:id="BotaoAgendar" layoutX="59.0" layoutY="96.0" mnemonicParsing="false" text="Agendar">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ImagensIcons/AgendaPreto.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="BotaoVerAgenda" layoutX="59.0" layoutY="157.0" mnemonicParsing="false" text="Meus agendamentos">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ImagensIcons/listPreto.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="BotaoOpcao" layoutX="59.0" layoutY="226.0" mnemonicParsing="false" text="Opçoes">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ImagensIcons/OpcaoImg.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <TextArea layoutX="357.0" layoutY="133.0" prefHeight="200.0" prefWidth="200.0" text="Imagens&#10;&#10;ofertas&#10;&#10;Cupons" />
+      <ImageView fitHeight="20.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../ImagensIcons/account_circle_24dp_E8EAED.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="397.0" layoutY="40.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ImagensIcons/PerfilPreto.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="489.0" layoutY="40.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ImagensIcons/logoutpreto.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

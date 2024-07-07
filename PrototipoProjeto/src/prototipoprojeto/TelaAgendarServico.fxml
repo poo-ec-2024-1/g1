@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="prototipoprojeto.TelaAgendarServicoController">
+   <children>
+      <DatePicker layoutX="46.0" layoutY="132.0" />
+      <ChoiceBox layoutX="46.0" layoutY="186.0" prefWidth="150.0" />
+      <Label layoutX="32.0" layoutY="36.0" prefHeight="56.0" prefWidth="189.0" text="Agendar">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <Button layoutX="115.0" layoutY="346.0" mnemonicParsing="false" text="Agendar">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ImagensIcons/Agendado.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="235.0" layoutY="346.0" mnemonicParsing="false" text="Limpar">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ImagensIcons/limpar.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="46.0" layoutY="113.0" text="Escolha uma data:" />
+      <Label layoutX="47.0" layoutY="168.0" text="Escolha um serviço:" />
+      <ChoiceBox layoutX="46.0" layoutY="244.0" prefWidth="150.0" />
+      <Label layoutX="46.0" layoutY="225.0" text="Escolha um horario:" />
+      <Label layoutX="294.0" layoutY="313.0" text="Valor do serviço:" />
+      <TextArea layoutX="292.0" layoutY="212.0" prefHeight="93.0" prefWidth="144.0" />
+      <ChoiceBox layoutX="46.0" layoutY="299.0" prefWidth="150.0" />
+      <Label layoutX="46.0" layoutY="279.0" text="Forma de pagamento:" />
+      <Label layoutX="292.0" layoutY="191.0" text="Descriçao:" />
+      <Button layoutX="355.0" layoutY="346.0" mnemonicParsing="false" text="Voltar">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ImagensIcons/arrow_back_24dp_000000.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ChoiceBox layoutX="289.0" layoutY="132.0" prefWidth="150.0" />
+      <Label layoutX="289.0" layoutY="113.0" text="Escolha uma empresa:" />
+   </children>
+</AnchorPane>
