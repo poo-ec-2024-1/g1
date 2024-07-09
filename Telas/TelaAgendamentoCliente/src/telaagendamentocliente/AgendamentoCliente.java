@@ -9,9 +9,8 @@ public class AgendamentoCliente {
     private String nomeServico, data, horario, tempo, preco, localizacao, descricao, nomeEmpresa, 
             cnpj, telefone, email, cep, endereco;
     
-    public AgendamentoCliente(String nomeServico, String data, String horario, String tempo,
-            String preco, String localizacao, String descricao, String nomeEmpresa, String cnpj, 
-            String telefone, String email, String cep, String endereco) {
+    public AgendamentoCliente(String nomeServico, String data, String horario, String tempo,String preco, String localizacao,
+            String descricao, String nomeEmpresa, String cnpj, String telefone, String email, String cep, String endereco) {
         this.nomeServico = nomeServico;
         this.data = data;
         this.horario = horario;
@@ -26,7 +25,7 @@ public class AgendamentoCliente {
         this.cep = cep;
         this.endereco = endereco;
     }
-    // Getters and Setters
+    
     public String getNomeServico() {
         return nomeServico;
     }

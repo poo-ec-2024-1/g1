@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="TelaAgendamentoEmpresa.jar" size="6574" download="eager" />
+    <jar href="TelaAgendamentoEmpresa.jar" size="6579" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="telaagendamentoempresa.TelaAgendamentoEmpresa"  name="TelaAgendamentoEmpresa" />
   <update check="always"/>

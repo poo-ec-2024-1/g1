@@ -14,7 +14,7 @@ public class Usuario {
         this.usuario = usuario;
         this.senha = senha;
     }
-
+    
     public String getUsuario() {
         return usuario;
     }

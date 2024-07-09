@@ -56,7 +56,8 @@ public class TelaAgendamentoClienteController implements Initializable {
         carregarAgendamentos();
     }    
     /**
-     *  Classe responsável por inicializar e atribuir instâncias à ComboBox
+     *  Método responsável por carregar os agendamentos de forma que fiquem disponíveis para visualização
+     * na caixa de seleção. Foram utilizados dois exemplos.
      */
     public void carregarAgendamentos(){
         
@@ -76,7 +77,7 @@ public class TelaAgendamentoClienteController implements Initializable {
         cbAgendamentos.setItems(obsAgendamentos);
     }
     /**
-     * Seleciona e exibe os dados do objeto atual da ComboBox
+     * Seleciona e exibe os dados do objeto atual da caixa de seleção nos seus respectivos locais.
      */
     public void selecionarDados(){
         

@@ -35,8 +35,9 @@ public class FXMLTelaLoginController implements Initializable {
     }    
 
     private Usuario usuario = new Usuario("","");
+    
     /**
-     * Lê o Usuario e Senha digitados
+     * Lê o usuário e a senha que estão digitados nos campos de texto, e os atribui ao objeto "usuario".
      */
     public void buttonEntrarClicked(){
         usuario.setUsuario(String.valueOf(textfieldUsuario.getText()));
