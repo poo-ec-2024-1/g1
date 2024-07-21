@@ -28,11 +28,11 @@ public class TelaAgendamentoClienteController implements Initializable {
     @FXML
     private TextField textEmail;
     @FXML
-    private TextField textEndereco;
+    private TextField textEmpEndereco;
     @FXML
     private TextField textHorario;
     @FXML
-    private TextField textLocalizacao;
+    private TextField textServEndereco;
     @FXML
     private TextField textNomeEmpresa;
     @FXML
@@ -45,6 +45,14 @@ public class TelaAgendamentoClienteController implements Initializable {
     private TextField textTempo;
     @FXML
     private TextArea textDescricao;
+    @FXML
+    private TextField textEmpCidade;
+    @FXML
+    private TextField textEmpEstado;
+    @FXML
+    private TextField textServCidade;
+    @FXML
+    private TextField textServEstado;
     @FXML
     private ComboBox<AgendamentoCliente> cbAgendamentos;
     
@@ -61,14 +69,44 @@ public class TelaAgendamentoClienteController implements Initializable {
      */
     public void carregarAgendamentos(){
         
-        AgendamentoCliente agendamento1 = new AgendamentoCliente("Lavagem Completa", "08/07/2023", "15:00", "60 min", "R$ 100,00",
-                "Rua 02 Quadra 34 Lote 12 Jardim São Francisco", "Uma lavagem completa no seu carro, interna e externamente."
-                        + " Ele vai ficar limpo como nunca!", "Super Lava Tudo", "12345678910121", "(62) 990431223", 
-        "superlavatudo@gmail.com", "78950345", "Rua T9 Quadra 7 Lote 1 Jardim das Cachorras");
-        AgendamentoCliente agendamento2 = new AgendamentoCliente("Lavagem Externa", "10/07/2023", "16:00", "30 min", "R$ 60,00",
-                "Rua 54 Quadra 31 Lote 22 Jardim das Palmeiras", "Uma lavagem completa na parte externa do seu carro. "
-                        + "Ele ficará brilhando!", "Mega Lava Jato", "11111111111111", "(90) 96663629", 
-        "megalavajato@gmail.com", "70707070", "Rua 29 Quadra 1 Lote 2 Parque do Peixe");
+        AgendamentoCliente agendamento1 = new AgendamentoCliente(
+                "Lavagem Completa",
+                "08/07/2023", 
+                "15:00",
+                "60 min",
+                "R$ 100,00",
+                "Rua 02 Quadra 34 Lote 12 Jardim São Francisco",
+                "Goiânia",
+                "Goiás",
+                "Uma lavagem completa no seu carro, interna e externamente. Ele vai ficar limpo como nunca!", 
+                "Super Lava Tudo", 
+                "12345678910121", 
+                "(62) 990431223", 
+                "superlavatudo@gmail.com", 
+                "78950345", 
+                "Rua T9 Quadra 7 Lote 1 Jardim das Cachorras",
+                "Aparecida de GoiÂnia",
+                "Goiás");
+        
+        
+        AgendamentoCliente agendamento2 = new AgendamentoCliente(
+                "Lavagem Externa", 
+                "10/07/2023", 
+                "16:00", 
+                "30 min", 
+                "R$ 60,00",
+                "Rua 54 Quadra 31 Lote 22 Jardim das Palmeiras", 
+                "Anápolis",
+                "Goiás",
+                "Uma lavagem completa na parte externa do seu carro. Ele ficará brilhando!", 
+                "Mega Lava Jato", 
+                "11111111111111", 
+                "(90) 96663629", 
+                "megalavajato@gmail.com", 
+                "70707070", 
+                "Rua 29 Quadra 1 Lote 2 Parque do Peixe",
+                "Anápolis",
+                "Goiás");
         
         agendamentos.add(agendamento1);
         agendamentos.add(agendamento2);
@@ -87,9 +125,13 @@ public class TelaAgendamentoClienteController implements Initializable {
         textCNPJ.setText(String.valueOf(agendamento.getCnpj()));
         textData.setText(String.valueOf(agendamento.getData()));
         textEmail.setText(String.valueOf(agendamento.getEmail()));
-        textEndereco.setText(String.valueOf(agendamento.getEndereco()));
+        textEmpEndereco.setText(String.valueOf(agendamento.getEmpEndereco()));
+        textEmpCidade.setText(String.valueOf(agendamento.getEmpCidade()));
+        textEmpEstado.setText(String.valueOf(agendamento.getEmpEstado()));
         textHorario.setText(String.valueOf(agendamento.getHorario()));
-        textLocalizacao.setText(String.valueOf(agendamento.getLocalizacao()));
+        textServEndereco.setText(String.valueOf(agendamento.getServEndereco()));
+        textServCidade.setText(String.valueOf(agendamento.getServCidade()));
+        textServEstado.setText(String.valueOf(agendamento.getServEstado()));
         textNomeEmpresa.setText(String.valueOf(agendamento.getNomeEmpresa()));
         textNomeServico.setText(String.valueOf(agendamento.getNomeServico()));
         textPreco.setText(String.valueOf(agendamento.getPreco()));
