@@ -6,26 +6,31 @@ package telaagendamentocliente;
  * @author matheus teixeira pires
  */
 public class AgendamentoCliente {
-    private String nomeServico, data, horario, tempo, preco, localizacao, descricao, nomeEmpresa, 
-            cnpj, telefone, email, cep, endereco;
+    private String nomeServico, data, horario, tempo, preco, servEndereco, servCidade, servEstado, descricao, nomeEmpresa, 
+            cnpj, telefone, email, cep, empEndereco, empCidade, empEstado;
     
-    public AgendamentoCliente(String nomeServico, String data, String horario, String tempo,String preco, String localizacao,
-            String descricao, String nomeEmpresa, String cnpj, String telefone, String email, String cep, String endereco) {
+    public AgendamentoCliente(String nomeServico, String data, String horario, String tempo,String preco, String servEndereco,
+            String servCidade, String servEstado, String descricao, String nomeEmpresa, String cnpj, String telefone, String email,
+            String cep, String empEndereco,String empCidade, String empEstado) {
         this.nomeServico = nomeServico;
         this.data = data;
         this.horario = horario;
         this.tempo = tempo;
         this.preco = preco;
-        this.localizacao = localizacao;
+        this.servEndereco = servEndereco;
+        this.servCidade = servCidade;
+        this.servEstado = servEstado;
         this.descricao = descricao;
         this.nomeEmpresa = nomeEmpresa;
         this.cnpj = cnpj;
         this.telefone = telefone;
         this.email = email;
         this.cep = cep;
-        this.endereco = endereco;
+        this.empEndereco = empEndereco;
+        this.empCidade = empCidade;
+        this.empEstado = empEstado;
     }
-    
+
     public String getNomeServico() {
         return nomeServico;
     }
@@ -56,11 +61,23 @@ public class AgendamentoCliente {
     public void setPreco(String preco) {
         this.preco = preco;
     }
-    public String getLocalizacao() {
-        return localizacao;
+    public String getServEndereco() {
+        return servEndereco;
     }
-    public void setLocalizacao(String localizacao) {
-        this.localizacao = localizacao;
+    public void setServEndereco(String servEndereco) {
+        this.servEndereco = servEndereco;
+    }
+    public String getServCidade() {
+        return servCidade;
+    }
+    public void setServCidade(String servCidade) {
+        this.servCidade = servCidade;
+    }
+    public String getServEstado() {
+        return servEstado;
+    }
+    public void setServEstado(String servEstado) {
+        this.servEstado = servEstado;
     }
     public String getDescricao() {
         return descricao;
@@ -98,13 +115,25 @@ public class AgendamentoCliente {
     public void setCep(String cep) {
         this.cep = cep;
     }
-    public String getEndereco() {
-        return endereco;
+    public String getEmpEndereco() {
+        return empEndereco;
     }
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setEmpEndereco(String empEndereco) {
+        this.empEndereco = empEndereco;
     }
-
+    public String getEmpCidade() {
+        return empCidade;
+    }
+    public void setEmpCidade(String empCidade) {
+        this.empCidade = empCidade;
+    }
+    public String getEmpEstado() {
+        return empEstado;
+    }
+    public void setEmpEstado(String empEstado) {
+        this.empEstado = empEstado;
+    }
+    
     @Override
     public String toString(){
         return (getNomeServico() + " - " + getNomeEmpresa());
