@@ -3,8 +3,9 @@ package autenticacaoregistro;
 import com.j256.ormlite.field.DatabaseField;
 
 /**
- *
- * @author mathe
+ *  POJO para o banco de dados dos clientes
+ * 
+ * @author Matheus TP
  */
 public class Cliente{
     // Atributos da classe dos clientes. Novos atributos podem ser adicionados, contanto que a adaptação seja feita no código
@@ -19,7 +20,7 @@ public class Cliente{
     private String usuario;
     @DatabaseField
     private String senha;
-
+    // Métodos Construtores
     public Cliente() {
     }
     public Cliente(String nome, String cpf, String usuario, String senha) {
@@ -28,7 +29,7 @@ public class Cliente{
         this.usuario = usuario;
         this.senha = senha;
     }
-
+    // Getters e Setters
     public int getId() {
         return id;
     }
@@ -59,5 +60,4 @@ public class Cliente{
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
 }
