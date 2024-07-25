@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="549.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaLoginClienteController">
+   <children>
+      <Label layoutX="383.0" layoutY="161.0" text="Usuario">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font></Label>
+      <TextField layoutX="455.0" layoutY="155.0" prefHeight="29.0" prefWidth="233.0" promptText="Usuario" />
+      <Button fx:id="BotaoEntrar" layoutX="496.0" layoutY="336.0" mnemonicParsing="false" onAction="#onClickEntrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Entrar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font></Button>
+      <PasswordField layoutX="455.0" layoutY="233.0" prefHeight="29.0" prefWidth="233.0" promptText="Senha" />
+      <AnchorPane layoutX="1.0" prefHeight="549.0" prefWidth="358.0" style="-fx-background-color: #E8530D;">
+         <children>
+            <Label layoutX="64.0" layoutY="53.0" text="Car Wash">
+               <font>
+                  <Font name="DejaVu Sans Condensed Bold" size="45.0" />
+               </font>
+            </Label>
+            <Line endX="100.0" layoutX="172.0" layoutY="109.0" startX="-100.0" stroke="WHITE" />
+         </children></AnchorPane>
+      <Label layoutX="511.0" layoutY="47.0" text="Login">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="34.0" />
+         </font>
+      </Label>
+      <Label layoutX="388.0" layoutY="238.0" text="Senha">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="455.0" layoutY="122.0" prefHeight="19.0" prefWidth="227.0" />
+      <Button fx:id="BotaoRegistrar" layoutX="496.0" layoutY="390.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Registrar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

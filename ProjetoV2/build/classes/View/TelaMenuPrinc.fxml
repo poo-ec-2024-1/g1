@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaMenuPrincController">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="87.0" prefWidth="242.0" text="Car Wash">
+         <font>
+            <Font size="53.0" />
+         </font>
+      </Label>
+      <Button layoutX="75.0" layoutY="158.0" mnemonicParsing="false" text="Agendar">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/Calendario.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="75.0" layoutY="252.0" mnemonicParsing="false" text="Meus agendamentos">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/Lupinha.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="75.0" layoutY="358.0" mnemonicParsing="false" text="Opçoes">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/Config.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="664.0" layoutY="43.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/Logout.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button layoutX="543.0" layoutY="43.0" mnemonicParsing="false">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/Perfil.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>
