@@ -16,7 +16,7 @@
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font></Label>
       <TextField layoutX="455.0" layoutY="155.0" prefHeight="29.0" prefWidth="233.0" promptText="Usuario" />
-      <Button fx:id="BotaoEntrar" layoutX="496.0" layoutY="336.0" mnemonicParsing="false" onAction="#onClickEntrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Entrar" textFill="WHITE">
+      <Button fx:id="BotaoEntrar" layoutX="496.0" layoutY="336.0" mnemonicParsing="false" onAction="#switchToMenu" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Entrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font></Button>
@@ -41,9 +41,19 @@
          </font>
       </Label>
       <Label layoutX="455.0" layoutY="122.0" prefHeight="19.0" prefWidth="227.0" />
-      <Button fx:id="BotaoRegistrar" layoutX="496.0" layoutY="390.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Registrar" textFill="WHITE">
+      <Button fx:id="BotaoRegistrar" layoutX="496.0" layoutY="390.0" mnemonicParsing="false" onAction="#switchToRegistro" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Registrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="380.0" layoutY="482.0" text="Tenho uma empresa:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="BotaoLadoEmpresa" layoutX="544.0" layoutY="475.0" mnemonicParsing="false" onAction="#switchToEmpresaSide" prefHeight="33.0" prefWidth="100.0" style="-fx-background-color: #E8530D;" text="Acesse aqui" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="12.0" />
          </font>
       </Button>
    </children>
