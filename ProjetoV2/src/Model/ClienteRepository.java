@@ -1,4 +1,4 @@
-package autenticacaoregistro;
+package Model;
 
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.dao.Dao;
@@ -16,12 +16,12 @@ import java.util.ArrayList;
 public class ClienteRepository{
     private static Database database;
     private static Dao<Cliente, Integer> dao;
-    private List<Cliente> loadedClientes;
+    private List<Cliente> loadedServicos;
     private Cliente loadedCliente; 
     // Construtores
     public ClienteRepository(Database database) {
         ClienteRepository.setDatabase(database);
-        loadedClientes = new ArrayList<Cliente>();
+        loadedServicos = new ArrayList<Cliente>();
     }
     /**
      * Seleciona o banco de dados sobre qual o repositorio vai operar
@@ -51,7 +51,7 @@ public class ClienteRepository{
             if ( nrows == 0 )
                 throw new SQLException("Error: object not saved");
             this.loadedCliente = cliente;
-            loadedClientes.add(cliente);
+            loadedServicos.add(cliente);
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -103,7 +103,7 @@ public class ClienteRepository{
         try {
             this.loadedCliente = dao.queryForId(id);
             if (this.loadedCliente != null)
-                this.loadedClientes.add(this.loadedCliente);
+                this.loadedServicos.add(this.loadedCliente);
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -115,13 +115,13 @@ public class ClienteRepository{
      */
     public List<Cliente> loadAll() {
         try {
-            this.loadedClientes =  dao.queryForAll();
-            if (this.loadedClientes.size() != 0)
-                this.loadedCliente = this.loadedClientes.get(0);
+            this.loadedServicos =  dao.queryForAll();
+            if (this.loadedServicos.size() != 0)
+                this.loadedCliente = this.loadedServicos.get(0);
         } catch (SQLException e) {
             System.out.println(e);
         }
-        return this.loadedClientes;
+        return this.loadedServicos;
     }
     /**
      * Método responsável por validar se um cliente existe no banco de dados através de seu usuario e senha, e além disso,

@@ -1,4 +1,4 @@
-package autenticacaoregistro;
+package Model;
 
 /**
  *

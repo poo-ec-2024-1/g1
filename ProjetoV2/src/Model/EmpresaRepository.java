@@ -1,4 +1,4 @@
-package autenticacaoregistro;
+package Model;
 
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.dao.Dao;

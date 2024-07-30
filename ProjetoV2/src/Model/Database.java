@@ -1,4 +1,4 @@
-package autenticacaoregistro;
+package Model;
 
 import java.sql.*;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;

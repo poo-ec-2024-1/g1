@@ -1,9 +1,9 @@
 
 package Controller;
 
-import autenticacaoregistro.Cliente;
-import autenticacaoregistro.ClienteRepository;
-import autenticacaoregistro.Database;
+import Model.Cliente;
+import Model.ClienteRepository;
+import Model.Database;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
