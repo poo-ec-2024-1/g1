@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="612.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaMenuPrincController">
+   <children>
+      <AnchorPane prefHeight="132.0" prefWidth="938.0" style="-fx-background-color: #E8530D;">
+         <children>
+            <Label layoutX="47.0" layoutY="24.0" prefHeight="68.0" prefWidth="269.0" text="Car Wash">
+               <font>
+                  <Font name="DejaVu Sans Condensed Bold" size="52.0" />
+               </font>
+            </Label>
+            <Button fx:id="BotaoPerfil" layoutX="780.0" layoutY="32.0" mnemonicParsing="false" onAction="#onClickPerfil" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #E8530D;" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/Perfilbranco.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="BotaoLogout" layoutX="850.0" layoutY="31.0" mnemonicParsing="false" onAction="#onClickLogout" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #E8530D;" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fx:id="Logout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icons/logoutbranco.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="BotaoAgendar" layoutX="223.0" layoutY="214.0" mnemonicParsing="false" onAction="#onClickAgendar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Agendar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BotaoConfig" layoutX="223.0" layoutY="392.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Config" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BotaoContato" layoutX="223.0" layoutY="479.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: #E8530D;" text="Contate-nos" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BotaoVerAgendamentos" layoutX="223.0" layoutY="306.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: #E8530D;" text="Meus Agendamentos" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="131.0" prefHeight="481.0" prefWidth="177.0" style="-fx-background-color: #E8530D;">
+         <children>
+            <Circle fill="#e8530d" layoutX="89.0" layoutY="171.0" radius="77.0" stroke="WHITE" strokeType="INSIDE" />
+            <ImageView fitHeight="150.0" fitWidth="100.0" layoutX="39.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/carro_branco.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <Label layoutX="202.0" layoutY="178.0" text="Novo Agendamento:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="202.0" layoutY="268.0" text="Visualizar agendamentos:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="210.0" layoutY="357.0" text="Configure seu app:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="23.0" />
+         </font>
+      </Label>
+      <Label layoutX="210.0" layoutY="444.0" text="Algum problema?">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="23.0" />
+         </font>
+      </Label>
+      <Line endX="100.0" layoutX="300.0" layoutY="297.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="300.0" layoutY="386.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="300.0" layoutY="473.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="300.0" layoutY="207.0" startX="-100.0" />
+   </children>
+</AnchorPane>
