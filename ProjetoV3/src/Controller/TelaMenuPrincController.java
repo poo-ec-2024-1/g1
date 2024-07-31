@@ -32,7 +32,8 @@ public class TelaMenuPrincController{
     @FXML
     private Button BotaoLogout;
     
-
+ 
+   
     @FXML
     public void onClickLogout(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaLoginCliente.fxml"));
