@@ -3,14 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV2/src/autenticacaoregistro/Database.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV2/src/View/Main.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV2/src/Controller/TelaRegistrarClienteController.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV2/src/autenticacaoregistro/ClienteRepository.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV2/src/View/TelaLoginCliente.fxml</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV2/src/autenticacaoregistro/Cliente.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV2/src/Controller/TelaLoginClienteController.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV2/src/autenticacaoregistro/MainTest.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Model/repository/EmpresaRepository.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/TelaRegistrarClienteController.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/TelaRegistroEmpresaController.java</file>
         </group>
     </open-files>
 </project-private>

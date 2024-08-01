@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaRegistroEmpresaController">
+<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaRegistroEmpresaController">
    <children>
-      <Label layoutX="50.0" layoutY="117.0" text="Usuario:">
+      <Label layoutX="50.0" layoutY="117.0" text="Nome:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
@@ -55,7 +54,7 @@
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <TextField blendMode="DARKEN" layoutX="399.0" layoutY="297.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfEndereco" blendMode="DARKEN" layoutX="399.0" layoutY="297.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
       <Label layoutX="52.0" layoutY="39.0" text="Registro">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="34.0" />
@@ -70,18 +69,23 @@
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoRegistrarEmpresa" layoutX="364.0" layoutY="471.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Registrar" textFill="WHITE">
+      <Button fx:id="BotaoRegistrarEmpresa" layoutX="364.0" layoutY="471.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Registrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <TextField blendMode="DARKEN" layoutX="50.0" layoutY="351.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField blendMode="DARKEN" layoutX="50.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField blendMode="DARKEN" layoutX="50.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField blendMode="DARKEN" layoutX="52.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField blendMode="DARKEN" layoutX="50.0" layoutY="297.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField blendMode="DARKEN" layoutX="395.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField blendMode="DARKEN" layoutX="399.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField blendMode="DARKEN" layoutX="399.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfDescricao" blendMode="DARKEN" layoutX="50.0" layoutY="351.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfNome" blendMode="DARKEN" layoutX="50.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfCnpj" blendMode="DARKEN" layoutX="50.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfCep" blendMode="DARKEN" layoutX="52.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfTelefone" blendMode="DARKEN" layoutX="50.0" layoutY="297.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfEmail" blendMode="DARKEN" layoutX="395.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfCidade" blendMode="DARKEN" layoutX="399.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfEstado" blendMode="DARKEN" layoutX="399.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <Label fx:id="labelMensagem" alignment="CENTER" layoutX="1.0" layoutY="433.0" prefHeight="17.0" prefWidth="689.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
