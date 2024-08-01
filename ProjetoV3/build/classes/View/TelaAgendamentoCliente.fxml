@@ -9,30 +9,29 @@
 
 <AnchorPane id="AnchorPane" prefHeight="739.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="-3.0" prefHeight="739.0" prefWidth="112.0" style="-fx-background-color: #E8530D;" />
-      <ChoiceBox fx:id="horarioServiço" layoutX="128.0" layoutY="496.0" prefWidth="150.0" />
-      <DatePicker fx:id="dateData" layoutX="128.0" layoutY="393.0" />
+      <AnchorPane layoutX="-3.0" prefHeight="739.0" prefWidth="112.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 30 30 0;" />
+      <DatePicker fx:id="dateData" layoutX="128.0" layoutY="360.0" prefHeight="29.0" prefWidth="229.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
       <Label layoutX="128.0" layoutY="179.0" text="Empresa:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="128.0" layoutY="285.0" text="Serviço:">
+      <Label layoutX="128.0" layoutY="260.0" text="Serviço:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="128.0" layoutY="375.0" text="Data:">
+      <Label layoutX="128.0" layoutY="341.0" text="Data:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="128.0" layoutY="478.0" text="Hora:">
+      <Label layoutX="128.0" layoutY="422.0" text="Hora:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="513.0" layoutY="285.0" text="Placa:">
+      <Label layoutX="513.0" layoutY="260.0" text="Placa:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
@@ -42,23 +41,25 @@
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="513.0" layoutY="375.0" text="Endereço:">
+      <Label layoutX="513.0" layoutY="341.0" text="Endereço:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="textEmpresa" layoutX="128.0" layoutY="197.0" prefHeight="29.0" prefWidth="229.0" />
-      <ChoiceBox fx:id="typeServiço" layoutX="128.0" layoutY="303.0" prefWidth="150.0" />
-      <TextField fx:id="textModelo" layoutX="511.0" layoutY="197.0" prefHeight="29.0" prefWidth="229.0" />
-      <TextField fx:id="textPlaca" layoutX="511.0" layoutY="303.0" prefHeight="29.0" prefWidth="229.0" />
-      <TextArea fx:id="textEndereço" layoutX="513.0" layoutY="393.0" prefHeight="108.0" prefWidth="302.0" />
-      <Label layoutX="519.0" layoutY="516.0" prefHeight="19.0" prefWidth="293.0" text="Preço:" />
-      <Button fx:id="BotaoAgendar" layoutX="394.0" layoutY="561.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Agendar" textFill="WHITE">
+      <TextField fx:id="textEmpresa" layoutX="128.0" layoutY="197.0" prefHeight="29.0" prefWidth="229.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
+      <ChoiceBox fx:id="typeServiço" layoutX="128.0" layoutY="280.0" prefHeight="29.0" prefWidth="229.0" style="-fx-border-color: #E8530D; -fx-background-color: EE871E; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
+      <TextField fx:id="textModelo" layoutX="511.0" layoutY="197.0" prefHeight="29.0" prefWidth="229.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
+      <TextField fx:id="textPlaca" layoutX="511.0" layoutY="280.0" prefHeight="29.0" prefWidth="229.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
+      <Label layoutX="575.0" layoutY="501.0" prefHeight="19.0" prefWidth="293.0" text="Preço:">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font></Label>
+      <Button fx:id="BotaoAgendar" layoutX="394.0" layoutY="583.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Agendar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoVoltar" layoutX="394.0" layoutY="623.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Voltar" textFill="WHITE">
+      <Button fx:id="BotaoVoltar" layoutX="394.0" layoutY="640.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
@@ -73,22 +74,35 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="195.0" layoutY="284.0" text="*" textFill="#e8530d">
+      <Label layoutX="191.0" layoutY="259.0" text="*" textFill="#e8530d">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="178.0" layoutY="374.0" text="*" textFill="#e8530d">
+      <Label layoutX="172.0" layoutY="341.0" text="*" textFill="#e8530d">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="174.0" layoutY="477.0" text="*" textFill="#e8530d">
+      <Label layoutX="174.0" layoutY="421.0" text="*" textFill="#e8530d">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="585.0" layoutY="374.0" text="*" textFill="#e8530d">
+      <Label layoutX="585.0" layoutY="341.0" text="*" textFill="#e8530d">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textPlaca1" layoutX="511.0" layoutY="359.0" prefHeight="29.0" prefWidth="229.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
+      <Label layoutX="511.0" layoutY="424.0" text="Forma de pagamento:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="typeServiço1" layoutX="128.0" layoutY="441.0" prefHeight="29.0" prefWidth="229.0" style="-fx-border-color: #E8530D; -fx-background-color: EE871E; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
+      <ChoiceBox fx:id="typeServiço11" layoutX="511.0" layoutY="443.0" prefHeight="29.0" prefWidth="229.0" style="-fx-border-color: #E8530D; -fx-background-color: EE871E; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
+      <Label layoutX="675.0" layoutY="423.0" text="*" textFill="#e8530d">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
