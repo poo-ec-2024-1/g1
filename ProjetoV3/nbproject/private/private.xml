@@ -3,9 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/TelaLoginClienteController.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Model/repository/EmpresaRepository.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/TelaLoginEmpresaController.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Model/model/Cliente.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/cliente/TelaLoginClienteController.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/View/Main.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/cliente/TelaMenuPrincController.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Util/Util.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/cliente/TelaRegistrarClienteController.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/cliente/TelaAgendamentoClienteController.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Model/repository/ClienteRepository.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/cliente/TelaPerfilController.java</file>
         </group>
     </open-files>
 </project-private>

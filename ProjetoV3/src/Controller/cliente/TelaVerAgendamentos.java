@@ -1,5 +1,5 @@
 
-package Controller;
+package Controller.cliente;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;

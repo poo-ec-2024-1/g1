@@ -1,4 +1,4 @@
-package Controller;
+package Controller.cliente;
 
 import Model.model.Cliente;
 import Model.repository.ClienteRepository;
@@ -67,6 +67,8 @@ public class TelaLoginClienteController {
         stage.show();
     }
     
+    public static int idSelecionado = 0;
+    
     public boolean verificarLogin(){
         boolean validador = false;
         try{
@@ -75,13 +77,15 @@ public class TelaLoginClienteController {
             Database database = new Database("clientesDatabase");
             database.getConnection();
             ClienteRepository clienteRP = new ClienteRepository(database);
-            if((clienteRP.autenticarCliente(email, senha)) == 0){
+            int id = clienteRP.autenticarCliente(email, senha);
+            if(id == 0){
                 labelMensagem.setText("Email ou senha incorretos! Tente novamente");
                 this.tfEmail.setText("");
                 this.tfSenha.setText((""));
             }
             else{
                 validador = true;
+                idSelecionado = id;
             }
        } catch(Exception e){
             labelMensagem.setText("Não foi possível fazer login. Tente novamente!");

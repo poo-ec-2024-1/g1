@@ -1,5 +1,5 @@
 
-package Controller;
+package Controller.empresa;
 
 
 import Model.repository.EmpresaRepository;

@@ -17,7 +17,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaRegistrarClienteController">
+<AnchorPane id="AnchorPane" prefHeight="609.0" prefWidth="817.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.cliente.TelaRegistrarClienteController">
    <children>
       <AnchorPane prefHeight="609.0" prefWidth="265.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 40 40 0;">
          <children>

@@ -1,6 +1,7 @@
 package Util;
 
 import Model.model.Cliente;
+import Model.repository.Database;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -55,5 +56,25 @@ public class Util {
             }
         }
         return validador;
+    }
+    
+    public static List<String> listCliente(Cliente cliente){
+        List<String> list = new ArrayList<>();
+        list.add(cliente.getNome());
+        list.add(cliente.getCpf());
+        list.add(cliente.getDataNascimento());
+        list.add(cliente.getEmail());
+        list.add(cliente.getCep());
+        list.add(cliente.getCidade());
+        list.add(cliente.getTelefone());
+        list.add(cliente.getSenha());
+        list.add(cliente.getEndereco());
+        return list;
+    }
+    
+    public static Database openDatabase(String nome){
+        Database database = new Database(nome);
+        database.getConnection();
+        return database;
     }
 }

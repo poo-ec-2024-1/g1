@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaLoginEmpresaController">
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.TelaLoginEmpresaController">
    <children>
       <AnchorPane layoutX="570.0" prefHeight="554.0" prefWidth="200.0" style="-fx-background-color: #E8530D;" />
       <Label layoutX="39.0" layoutY="26.0" text="Login">

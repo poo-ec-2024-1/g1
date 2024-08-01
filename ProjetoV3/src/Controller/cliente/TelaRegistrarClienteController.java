@@ -1,9 +1,10 @@
 
-package Controller;
+package Controller.cliente;
 
 import Model.model.Cliente;
 import Model.repository.ClienteRepository;
 import Model.repository.Database;
+import Util.Util;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -62,51 +63,7 @@ public class TelaRegistrarClienteController  {
         stage.setScene(scena);
         stage.show();
     }
-    
-   
-    
-    public boolean verificarSenha(String senha, String senhaConfirmacao){
-        boolean validador = false;
-        if(senha.equals(senhaConfirmacao)){
-            validador = true;
-        }
-        return validador;
-    }
-    
-    public List<String> listCliente(Cliente cliente){
-        List<String> list = new ArrayList<>();
-        list.add(cliente.getNome());
-        list.add(cliente.getCpf());
-        list.add(cliente.getDataNascimento());
-        list.add(cliente.getEmail());
-        list.add(cliente.getCep());
-        list.add(cliente.getCidade());
-        list.add(cliente.getTelefone());
-        list.add(cliente.getSenha());
-        list.add(cliente.getEndereco());
-        return list;
-    }
-            
-    public boolean stringVazia(String s){
-        boolean validador = false;
-        if(s.trim().isEmpty()){
-            validador = true;
-        }
-        return validador;
-    }
-    
-    public boolean existeVazio(Cliente cliente){
-        boolean validador = false;
-        List<String> list = listCliente(cliente);
-        for(String x : list){
-            if(stringVazia(x)){
-                validador = true;
-                break;
-            }
-        }
-        return validador;
-    }
-    
+
     public void onClickRegistrar(ActionEvent event){
         try{
             String nome = tfNome.getText();
@@ -122,10 +79,10 @@ public class TelaRegistrarClienteController  {
             
             Cliente cliente = new Cliente(nome, dataNascimento, email, telefone, endereco, cpf, cep, cidade, senha);
             
-            if(existeVazio(cliente)){
+            if(Util.existeVazio(Util.listCliente(cliente))){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");
             }
-            else if(!verificarSenha(senha, senhaConfirmacao)){
+            else if(!Util.verificarIgualdade(senha, senhaConfirmacao)){
                 labelMensagem.setText("As senhas não conferem! Tente novamente.");
             }
             else{

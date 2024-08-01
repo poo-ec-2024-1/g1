@@ -1,7 +1,9 @@
 
-package Controller;
+package Controller.cliente;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -11,8 +13,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import javafx.fxml.Initializable;
 
-public class TelaMenuPrincController{
+public class TelaMenuPrincController implements Initializable{
 
     @FXML
     private Button BotaoEntrar1;
@@ -32,8 +35,13 @@ public class TelaMenuPrincController{
     @FXML
     private Button BotaoLogout;
     
- 
-   
+    public static int idSelecionado = 0;
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        idSelecionado = TelaLoginClienteController.idSelecionado;
+    }
+    
     @FXML
     public void onClickLogout(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaLoginCliente.fxml"));
@@ -67,8 +75,6 @@ public class TelaMenuPrincController{
         stage.setScene(scene);
         stage.show();
     }
-    
-
 }
 
 
