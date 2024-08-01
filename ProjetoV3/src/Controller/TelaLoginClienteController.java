@@ -1,8 +1,8 @@
 package Controller;
 
-import Model.model.Cliente;
-import Model.repository.ClienteRepository;
-import Model.repository.Database;
+import Model.Cliente;
+import Model.ClienteRepository;
+import Model.Database;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

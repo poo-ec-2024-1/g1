@@ -31,4 +31,12 @@ public class TelaLoginEmpresaController {
         stage.setScene(scene);
         stage.show();
     }
+    
+    public void onClickEntrar(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/DashboardEmpresa.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

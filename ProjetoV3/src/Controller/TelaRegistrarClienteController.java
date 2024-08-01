@@ -1,10 +1,9 @@
 
 package Controller;
 
-import Util.Util;
-import Model.model.Cliente;
-import Model.repository.ClienteRepository;
-import Model.repository.Database;
+import Model.Cliente;
+import Model.ClienteRepository;
+import Model.Database;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,6 +63,16 @@ public class TelaRegistrarClienteController  {
         stage.show();
     }
     
+   
+    
+    public boolean verificarSenha(String senha, String senhaConfirmacao){
+        boolean validador = false;
+        if(senha.equals(senhaConfirmacao)){
+            validador = true;
+        }
+        return validador;
+    }
+    
     public List<String> listCliente(Cliente cliente){
         List<String> list = new ArrayList<>();
         list.add(cliente.getNome());
@@ -76,6 +85,26 @@ public class TelaRegistrarClienteController  {
         list.add(cliente.getSenha());
         list.add(cliente.getEndereco());
         return list;
+    }
+            
+    public boolean stringVazia(String s){
+        boolean validador = false;
+        if(s.trim().isEmpty()){
+            validador = true;
+        }
+        return validador;
+    }
+    
+    public boolean existeVazio(Cliente cliente){
+        boolean validador = false;
+        List<String> list = listCliente(cliente);
+        for(String x : list){
+            if(stringVazia(x)){
+                validador = true;
+                break;
+            }
+        }
+        return validador;
     }
     
     public void onClickRegistrar(ActionEvent event){
@@ -92,12 +121,11 @@ public class TelaRegistrarClienteController  {
             String senhaConfirmacao = tfSenhaConfirmacao.getText();
             
             Cliente cliente = new Cliente(nome, dataNascimento, email, telefone, endereco, cpf, cep, cidade, senha);
-            List<String> list = listCliente(cliente);
             
-            if(Util.existeVazio(list)){
+            if(existeVazio(cliente)){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");
             }
-            else if(!Util.verificarIgualdade(senha, senhaConfirmacao)){
+            else if(!verificarSenha(senha, senhaConfirmacao)){
                 labelMensagem.setText("As senhas não conferem! Tente novamente.");
             }
             else{
@@ -111,9 +139,15 @@ public class TelaRegistrarClienteController  {
                 scena = new Scene(root);
                 stage.setScene(scena);
                 stage.show();
+   
+             
             }
         } catch(Exception e){
             labelMensagem.setText("Não foi posível realizar o cadastro. Tente novamente");
         }
     }
+    
+    
+   
+    
 }

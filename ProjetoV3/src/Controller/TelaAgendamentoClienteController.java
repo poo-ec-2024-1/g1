@@ -9,19 +9,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
-
-public class TelaRegistroEmpresaController {
+public class TelaAgendamentoClienteController {
     
-    private Stage stage;
     private Scene scene;
     private Parent root;
+    private Stage stage;
     
     public void onClickVoltar(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/TelaLoginEmpresa.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/TelaMenuPrinc.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+    
 }

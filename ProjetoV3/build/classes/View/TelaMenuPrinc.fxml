@@ -12,7 +12,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="743.0" prefWidth="1069.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaMenuPrincController">
    <children>
-      <AnchorPane prefHeight="133.0" prefWidth="1069.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0  0 30 30;">
+      <AnchorPane prefHeight="133.0" prefWidth="1072.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0  0 30 30;">
          <children>
             <Label layoutX="47.0" layoutY="24.0" prefHeight="68.0" prefWidth="269.0" text="Car Wash" textFill="WHITE">
                <font>
@@ -62,7 +62,7 @@
                   <Font name="DejaVu Sans Condensed Bold" size="16.0" />
                </font>
             </Label>
-            <Button fx:id="BotaoVerAgendamentos" layoutX="84.0" layoutY="152.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Meus Agendamentos" textFill="WHITE">
+            <Button fx:id="BotaoVerAgendamentos" layoutX="84.0" layoutY="152.0" mnemonicParsing="false" onAction="#onClickAgendamentos" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Meus Agendamentos" textFill="WHITE">
                <font>
                   <Font name="DejaVu Sans Bold" size="18.0" />
                </font>
