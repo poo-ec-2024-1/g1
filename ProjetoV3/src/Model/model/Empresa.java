@@ -30,11 +30,13 @@ public class Empresa{
     private String estado;
     @DatabaseField
     private String endereco;
+    @DatabaseField
+    private String senha;
 
     public Empresa() {
     }
 
-    public Empresa(String nome, String cnpj, String cep, String telefone, String descricao, String email, String cidade, String estado, String endereco) {
+    public Empresa(String nome, String cnpj, String cep, String telefone, String descricao, String email, String cidade, String estado, String endereco, String senha) {
         this.id = id;
         this.nome = nome;
         this.cnpj = cnpj;
@@ -45,6 +47,7 @@ public class Empresa{
         this.cidade = cidade;
         this.estado = estado;
         this.endereco = endereco;
+        this.senha = senha;
     }
 
     public int getId() {
@@ -106,5 +109,11 @@ public class Empresa{
     }
     public void setEndereco(String endereco) {
         this.endereco = endereco;
+    }
+    public String getSenha() {
+        return senha;
+    }
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 }

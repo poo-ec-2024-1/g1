@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaLoginEmpresaController">
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TelaLoginEmpresaController">
    <children>
       <AnchorPane layoutX="570.0" prefHeight="554.0" prefWidth="200.0" style="-fx-background-color: #E8530D;" />
       <Label layoutX="39.0" layoutY="26.0" text="Login">
@@ -15,29 +15,23 @@
             <Font name="DejaVu Sans Condensed Bold" size="34.0" />
          </font>
       </Label>
-      <Label layoutX="24.0" layoutY="443.0" text="Quero registrar minha empresa:">
+      <Label layoutX="24.0" layoutY="446.0" text="Quero registrar minha empresa:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="39.0" layoutY="112.0" text="Nome da empresa:">
+      <Label layoutX="39.0" layoutY="154.0" text="Email:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="39.0" layoutY="277.0" text="Senha:">
+      <Label layoutX="39.0" layoutY="230.0" text="Senha:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="39.0" layoutY="192.0" text="Cod. de usuario:">
-         <font>
-            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="textFielNome" layoutX="39.0" layoutY="130.0" prefHeight="29.0" prefWidth="261.0" />
-      <TextField fx:id="textFieldCodUsuario" layoutX="39.0" layoutY="210.0" prefHeight="29.0" prefWidth="261.0" />
-      <PasswordField fx:id="texFieldPassword" layoutX="39.0" layoutY="295.0" prefHeight="29.0" prefWidth="261.0" />
+      <TextField fx:id="tfEmail" layoutX="39.0" layoutY="172.0" prefHeight="29.0" prefWidth="261.0" />
+      <PasswordField fx:id="tfSenha" layoutX="39.0" layoutY="248.0" prefHeight="29.0" prefWidth="261.0" />
       <Button fx:id="BotaoCadastrar" layoutX="371.0" layoutY="443.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D;" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
@@ -53,5 +47,10 @@
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
+      <Label fx:id="labelMensagem" alignment="CENTER" layoutX="5.0" layoutY="312.0" prefHeight="20.0" prefWidth="360.0" textFill="RED">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

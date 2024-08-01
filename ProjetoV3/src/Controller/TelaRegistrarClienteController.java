@@ -1,9 +1,9 @@
 
 package Controller;
 
-import Model.Cliente;
-import Model.ClienteRepository;
-import Model.Database;
+import Model.model.Cliente;
+import Model.repository.ClienteRepository;
+import Model.repository.Database;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -146,8 +146,4 @@ public class TelaRegistrarClienteController  {
             labelMensagem.setText("Não foi posível realizar o cadastro. Tente novamente");
         }
     }
-    
-    
-   
-    
 }

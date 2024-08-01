@@ -131,16 +131,14 @@ public class EmpresaRepository
      * @param senha que deseja autenticar
      * @return retorna o id do cliente se ele existir no banco de dados. Do contrário, retorna 0;
      */
-    
-    /*
-    public int autenticarEmpresa(String usuario, String senha){
+    public int autenticarEmpresa(String email, String senha){
         int id = 0;
         try{
             List<Empresa> empresa = this.loadAll();
             for(int i = empresa.size(); i>0 ; i--){
                 String usuarioDatabase = empresa.get(i-1).getEmail();
                 String senhaDatabase = empresa.get(i-1).getSenha();
-                if(usuarioDatabase.equals(usuario) && senhaDatabase.equals(senha)){
+                if(usuarioDatabase.equals(email) && senhaDatabase.equals(senha)){
                         id = empresa.get(i-1).getId();
                         i=0;
                     }
@@ -150,5 +148,5 @@ public class EmpresaRepository
         }
         return id;
     }
-*/
+
 }

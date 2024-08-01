@@ -1,8 +1,8 @@
 package Controller;
 
-import Model.Cliente;
-import Model.ClienteRepository;
-import Model.Database;
+import Model.model.Cliente;
+import Model.repository.ClienteRepository;
+import Model.repository.Database;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -76,7 +76,7 @@ public class TelaLoginClienteController {
             database.getConnection();
             ClienteRepository clienteRP = new ClienteRepository(database);
             if((clienteRP.autenticarCliente(email, senha)) == 0){
-                labelMensagem.setText("Usuário ou senha incorretos! Tente novamente");
+                labelMensagem.setText("Email ou senha incorretos! Tente novamente");
                 this.tfEmail.setText("");
                 this.tfSenha.setText((""));
             }
