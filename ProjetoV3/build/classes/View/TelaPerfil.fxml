@@ -81,12 +81,12 @@
          </font>
       </Label>
       <TextField fx:id="tfEmail" editable="false" layoutX="325.0" layoutY="438.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
-      <Label layoutX="182.0" layoutY="476.0" prefHeight="20.0" prefWidth="142.0" text="Senha atual">
+      <Label fx:id="labelSenhaAtual" layoutX="182.0" layoutY="476.0" prefHeight="20.0" prefWidth="142.0" text="Senha atual" visible="false">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <PasswordField fx:id="tfSenha" editable="false" layoutX="325.0" layoutY="473.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
+      <PasswordField fx:id="tfSenha" editable="false" layoutX="325.0" layoutY="473.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" visible="false" />
       <Label fx:id="labelNovaSenha" layoutX="182.0" layoutY="510.0" prefHeight="20.0" prefWidth="142.0" text="Nova senha:" visible="false">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
