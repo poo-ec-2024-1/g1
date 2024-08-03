@@ -65,6 +65,39 @@ public class TelaAgendamentoClienteController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
+
+    public DatePicker getDateData() {
+        return dateData;
+    }
+
+    public ComboBox<Empresa> getBoxEmpresa() {
+        return boxEmpresa;
+    }
+
+    public ChoiceBox<?> getBoxFormaPagamento() {
+        return boxFormaPagamento;
+    }
+
+    public ChoiceBox<?> getBoxHora() {
+        return boxHora;
+    }
+
+    public ChoiceBox<?> getBoxServico() {
+        return boxServico;
+    }
+
+    public TextField getTfEndereco() {
+        return tfEndereco;
+    }
+
+    public TextField getTfModeloVeiculo() {
+        return tfModeloVeiculo;
+    }
+
+    public TextField getTfPlaca() {
+        return tfPlaca;
+    }
+    
     
     
 }

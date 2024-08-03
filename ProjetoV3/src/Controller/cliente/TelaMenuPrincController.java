@@ -14,28 +14,31 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 
 public class TelaMenuPrincController implements Initializable{
 
-    @FXML
-    private Button BotaoEntrar1;
-    @FXML
-    private Button BotaoEntrar2;
-    @FXML
-    private Button BotaoEntrar3;
     private Parent root;
     private Scene scene;
     private Stage stage;
     @FXML
     private ImageView Logout;
     @FXML
-    private Button BotaoEntrar11;
-    @FXML
     private Button BotaoPerfil;
     @FXML
     private Button BotaoLogout;
     
     public static int idSelecionado = 0;
+    @FXML
+    private Label labelNome;
+    @FXML
+    private Button BotaoAgendar;
+    @FXML
+    private Button BotaoVerAgendamentos;
+    @FXML
+    private Button BotaoConfig;
+    @FXML
+    private Button BotaoContato;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -60,6 +63,7 @@ public class TelaMenuPrincController implements Initializable{
         stage.show();
     }
 
+    @FXML
     public void onClickAgendar(ActionEvent e) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaAgendamentoCliente.fxml"));
         stage = (Stage)((Node)e.getSource()).getScene().getWindow();
@@ -68,6 +72,7 @@ public class TelaMenuPrincController implements Initializable{
         stage.show();
     }
     
+    @FXML
     public void onClickAgendamentos(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaVerAgendamentosCliente.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

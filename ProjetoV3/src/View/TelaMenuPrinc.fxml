@@ -12,85 +12,85 @@
 
 <AnchorPane id="AnchorPane" prefHeight="743.0" prefWidth="1069.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.cliente.TelaMenuPrincController">
    <children>
-      <AnchorPane prefHeight="133.0" prefWidth="1072.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0  0 30 30;">
+      <AnchorPane prefHeight="133.0" prefWidth="697.0" style="-fx-background-radius: 0  0 30 30; -fx-border-radius: 0 0 30 30; -fx-border-width: 3; -fx-border-color: #E8530D;">
          <children>
-            <Label layoutX="47.0" layoutY="24.0" prefHeight="68.0" prefWidth="269.0" text="Car Wash" textFill="WHITE">
+            <Label fx:id="labelNome" layoutX="14.0" layoutY="14.0" prefHeight="52.0" prefWidth="470.0" text="Nome do usuario">
                <font>
-                  <Font name="DejaVu Sans Condensed Bold" size="52.0" />
+                  <Font name="DejaVu Sans Bold" size="26.0" />
                </font>
             </Label>
-            <Button fx:id="BotaoPerfil" layoutX="855.0" layoutY="32.0" mnemonicParsing="false" onAction="#onClickPerfil" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #E8530D;" textFill="WHITE">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="18.0" />
-               </font>
-               <graphic>
-                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/Perfilbranco.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <Button fx:id="BotaoLogout" layoutX="929.0" layoutY="32.0" mnemonicParsing="false" onAction="#onClickLogout" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #E8530D;" textFill="WHITE">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="18.0" />
-               </font>
-               <graphic>
-                  <ImageView fx:id="Logout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/logoutbranco.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="330.0" layoutY="186.0" prefHeight="448.0" prefWidth="395.0" style="-fx-background-radius: 30 30 30 30; -fx-background-color: F5F1ED;">
-         <children>
-            <Button fx:id="BotaoAgendar" layoutX="11.0" layoutY="66.0" mnemonicParsing="false" onAction="#onClickAgendar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Agendar" textFill="WHITE" AnchorPane.rightAnchor="137.0" AnchorPane.topAnchor="66.0">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="18.0" />
-               </font>
-            </Button>
-            <Label layoutX="115.0" layoutY="34.0" text="Novo Agendamento:">
-               <font>
-                  <Font name="DejaVu Sans Condensed Bold" size="16.0" />
-               </font>
-            </Label>
-            <Label layoutX="89.0" layoutY="120.0" text="Visualizar agendamentos:">
-               <font>
-                  <Font name="DejaVu Sans Condensed Bold" size="16.0" />
-               </font>
-            </Label>
-            <Button fx:id="BotaoVerAgendamentos" layoutX="84.0" layoutY="152.0" mnemonicParsing="false" onAction="#onClickAgendamentos" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Meus Agendamentos" textFill="WHITE">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="18.0" />
-               </font>
-            </Button>
-            <Label layoutX="113.0" layoutY="217.0" text="Configure seu app:">
-               <font>
-                  <Font name="DejaVu Sans Condensed Bold" size="16.0" />
-               </font>
-            </Label>
-            <Button fx:id="BotaoConfig" layoutX="132.0" layoutY="248.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Config" textFill="WHITE">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="18.0" />
-               </font>
-            </Button>
-            <Label layoutX="124.0" layoutY="306.0" text="Algum problema?">
-               <font>
-                  <Font name="DejaVu Sans Condensed Bold" size="16.0" />
-               </font>
-            </Label>
-            <Button fx:id="BotaoContato" layoutX="118.0" layoutY="336.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Contate-nos" textFill="WHITE">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="18.0" />
-               </font>
-            </Button>
-         </children>
-         <effect>
-            <DropShadow color="#86786f" height="24.04" radius="10.0025" width="17.97" />
-         </effect></AnchorPane>
-      <AnchorPane layoutY="666.0" prefHeight="78.0" prefWidth="1072.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 0 0;" />
+      <AnchorPane layoutY="715.0" prefHeight="14.0" prefWidth="1073.0" style="-fx-background-color: #E8530D;" />
+      <Button fx:id="BotaoPerfil" layoutX="811.0" layoutY="41.0" mnemonicParsing="false" onAction="#onClickPerfil" prefHeight="52.0" prefWidth="40.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/Perfilbranco.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="BotaoLogout" layoutX="921.0" layoutY="41.0" mnemonicParsing="false" onAction="#onClickLogout" prefHeight="29.0" prefWidth="50.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fx:id="Logout" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/logoutbranco.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <AnchorPane layoutX="1045.0" prefHeight="743.0" prefWidth="14.0" style="-fx-background-color: #E8530D;" />
+      <AnchorPane layoutY="184.0" prefHeight="20.0" prefWidth="458.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 0 30 0;" />
+      <AnchorPane layoutY="283.0" prefHeight="20.0" prefWidth="458.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 0 30 0;" />
+      <AnchorPane layoutY="382.0" prefHeight="20.0" prefWidth="458.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 0 30 0;" />
+      <AnchorPane layoutY="481.0" prefHeight="20.0" prefWidth="458.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 0 30 0;" />
+      <Label layoutX="19.0" layoutY="209.0" text="Novo Agendamento:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="BotaoAgendar" layoutX="19.0" layoutY="235.0" mnemonicParsing="false" onAction="#onClickAgendar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Agendar" textFill="WHITE" AnchorPane.rightAnchor="929.0" AnchorPane.topAnchor="235.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="19.0" layoutY="308.0" text="Visualizar agendamentos:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="BotaoVerAgendamentos" layoutX="14.0" layoutY="334.0" mnemonicParsing="false" onAction="#onClickAgendamentos" prefHeight="33.0" prefWidth="246.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Meus Agendamentos" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="19.0" layoutY="407.0" text="Configure seu app:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="19.0" layoutY="506.0" text="Algum problema?">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="BotaoConfig" layoutX="14.0" layoutY="433.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Config" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BotaoContato" layoutX="14.0" layoutY="532.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="153.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Contate-nos" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="580.0" prefHeight="20.0" prefWidth="458.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 0 30 0;" />
    </children>
 </AnchorPane>

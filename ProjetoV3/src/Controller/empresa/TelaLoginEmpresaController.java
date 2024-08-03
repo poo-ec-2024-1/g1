@@ -46,7 +46,7 @@ public class TelaLoginEmpresaController {
     
     public void onClickEntrar(ActionEvent event) throws IOException{
         if(verificarLogin()){
-            Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/DashboardEmpresa.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/EmpresaMenu.fxml"));
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="1074.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.EmpresaMenuController">
+    <stylesheets>
+        <URL value="@empresamenu.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane prefHeight="698.0" prefWidth="72.0" style="-fx-background-color: #E8530D;">
+         <children>
+            <Button layoutX="6.0" layoutY="152.0" mnemonicParsing="false" style="-fx-background-color: #E8530D;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/Perfilbranco.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="BotaoSair" layoutX="6.0" layoutY="436.0" mnemonicParsing="false" onAction="#onClickVoltar" style="-fx-background-color: #E8530D;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/logoutbranco.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="6.0" layoutY="236.0" mnemonicParsing="false" style="-fx-background-color: #E8530D;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/morewhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="6.0" layoutY="331.0" mnemonicParsing="false" style="-fx-background-color: #E8530D;">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/confWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="72.0" layoutY="672.0" prefHeight="12.0" prefWidth="1004.0" style="-fx-background-color: #E8530D;" />
+      <AnchorPane layoutX="72.0" layoutY="14.0" prefHeight="12.0" prefWidth="1004.0" style="-fx-background-color: #E8530D;" />
+      <AnchorPane layoutX="1050.0" layoutY="1.0" prefHeight="698.0" prefWidth="12.0" style="-fx-background-color: #E8530D;" />
+      <AnchorPane layoutX="177.0" layoutY="20.0" prefHeight="103.0" prefWidth="770.0" style="-fx-border-color: #E8530D; -fx-border-width: 3; -fx-background-radius: 0 0 30 30; -fx-border-radius: 0 0 30 30;">
+         <children>
+            <Label fx:id="titleNome" layoutX="14.0" layoutY="14.0" prefHeight="42.0" prefWidth="284.0" text="Nome">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="26.0" />
+               </font>
+            </Label>
+            <Label fx:id="titleDate" layoutX="679.0" layoutY="5.0" prefHeight="19.0" prefWidth="85.0" text="11/06/2009">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="titleCnpj" layoutX="14.0" layoutY="56.0" text="CNPJ" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="89.0" layoutY="380.0" prefHeight="279.0" prefWidth="943.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;">
+         <children>
+            <Label layoutX="24.0" layoutY="36.0" prefHeight="42.0" prefWidth="182.0" text="Saldo:" textFill="#2fbf36">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="titleSaldo" layoutX="24.0" layoutY="93.0" prefHeight="26.0" prefWidth="168.0" text="\$ 1750,00">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="472.0" layoutY="15.0" prefHeight="26.0" prefWidth="182.0" text="Report" textFill="#2f34bd">
+               <font>
+                  <Font name="DejaVu Sans Bold" size="22.0" />
+               </font>
+            </Label>
+            <BarChart fx:id="graficoVendas" layoutX="360.0" layoutY="57.0" prefHeight="216.0" prefWidth="524.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tabelaServicos" layoutX="97.0" layoutY="135.0" prefHeight="200.0" prefWidth="930.0" style="-fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;">
+        <columns>
+          <TableColumn prefWidth="158.0" text="Nome:" />
+          <TableColumn prefWidth="182.0" text="Serviço" />
+            <TableColumn prefWidth="75.0" text="Modelo" />
+            <TableColumn prefWidth="75.0" text="Placa" />
+            <TableColumn prefWidth="75.0" text="Data" />
+            <TableColumn prefWidth="75.0" text="Hora" />
+            <TableColumn prefWidth="283.0" text="Local" />
+        </columns>
+      </TableView>
+      <Button fx:id="BotaoEditarPedido" layoutX="478.0" layoutY="341.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Editar pedido" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
