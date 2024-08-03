@@ -38,6 +38,8 @@ public class TelaLoginClienteController {
     @FXML
     private Label labelRegistro;
     
+    public static int idSelecionado = 0;
+    
     @FXML
     public void switchToMenu(ActionEvent event) throws IOException{
         if(verificarLogin()){
@@ -66,8 +68,6 @@ public class TelaLoginClienteController {
         stage.setScene(scene);
         stage.show();
     }
-    
-    public static int idSelecionado = 0;
     
     public boolean verificarLogin(){
         boolean validador = false;

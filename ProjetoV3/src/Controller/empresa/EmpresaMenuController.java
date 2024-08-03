@@ -1,6 +1,9 @@
 
 package Controller.empresa;
 
+import Model.repository.Database;
+import Model.repository.EmpresaRepository;
+import Util.Util;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,7 +21,7 @@ import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
 
-public class EmpresaMenuController {
+public class EmpresaMenuController implements Initializable{
 
     private Stage stage;
     private Scene scene;
@@ -39,6 +42,18 @@ public class EmpresaMenuController {
     private TableView<?> tabelaServicos;
     @FXML
     private Button BotaoEditarPedido;
+    
+    public static int idSelecionado = 0;
+    
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        idSelecionado = TelaLoginEmpresaController.idSelecionado;
+        Database database = Util.openDatabase("empresasDatabase");
+        EmpresaRepository empresaRP = new EmpresaRepository(database);
+        titleNome.setText(empresaRP.loadFromId(idSelecionado).getNome());
+        titleCnpj.setText(empresaRP.loadFromId(idSelecionado).getCnpj());
+        database.close();
+    }
     
     @FXML
     public void onClickVoltar(ActionEvent event) throws IOException{
@@ -80,6 +95,4 @@ public class EmpresaMenuController {
     public void setTitleSaldo(Label titleSaldo) {
         this.titleSaldo = titleSaldo;
     }
-    
-    
 }

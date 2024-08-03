@@ -17,17 +17,18 @@ public class Servico{
     @DatabaseField
     private float preco;
     @DatabaseField
-    private int empResponsavel;
-    @DatabaseField
     private String expediente;
+    @DatabaseField
+    private int empResponsavel;
 
     public Servico() {
     }
 
-    public Servico(String nome, String descricao, float preco, String expediente) {
+    public Servico(String nome, String descricao, float preco, String expediente, int empResponsavel) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
+        this.empResponsavel = empResponsavel;
         this.expediente = expediente;
     }
 
@@ -79,4 +80,8 @@ public class Servico{
         this.expediente = expediente;
     }
     
+    @Override
+    public String toString(){
+        return nome;
+    }
 }

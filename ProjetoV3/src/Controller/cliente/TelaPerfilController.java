@@ -109,7 +109,9 @@ public class TelaPerfilController implements Initializable{
         labelNovaSenha.setVisible(x);
         labelConfirmarSenha.setVisible(x);
         buttonSalvar.setDisable(!x);
-        
+        tfSenha.setText("");
+        tfNovaSenha.setText("");
+        tfConfirmarSenha.setText("");
     }
     
     public void onClickSalvar(ActionEvent event){
@@ -121,14 +123,16 @@ public class TelaPerfilController implements Initializable{
             String cep = tfCep.getText();
             String cidade = tfCidade.getText();
             String telefone = tfTelefone.getText();
-            String senha = tfSenha.getText();
+            String senhaAtual = tfSenha.getText();
             String endereco = tfEndereco.getText();
             String novaSenha = tfNovaSenha.getText();
             String senhaConfirmacao = tfConfirmarSenha.getText();
             
-            Cliente novoCliente = new Cliente(nome, dataNascimento, email, telefone, endereco, cpf, cep, cidade, novaSenha);
-            novoCliente.setId(idSelecionado);
+            Cliente novoCliente = new Cliente(nome, dataNascimento, email, telefone, endereco, cpf, cep, cidade, senhaAtual);
             List<String> list = Util.listCliente(novoCliente);
+            novoCliente.setSenha(novaSenha);
+            novoCliente.setId(idSelecionado);
+            list.add(senhaAtual);
             
             if(Util.existeVazio(list)){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");
@@ -136,7 +140,7 @@ public class TelaPerfilController implements Initializable{
             else if(!Util.verificarIgualdade(novaSenha, senhaConfirmacao)){
                 labelMensagem.setText("As senhas não conferem! Tente novamente.");
             }
-            else if(!cliente.getSenha().equals(senha)){
+            else if(!cliente.getSenha().equals(senhaAtual)){
                 labelMensagem.setText("Senha atual incorreta!");
             }
             else{

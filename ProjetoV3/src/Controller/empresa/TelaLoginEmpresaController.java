@@ -28,6 +28,8 @@ public class TelaLoginEmpresaController {
     private Parent root;
     private Scene scene;
     
+    public static int idSelecionado = 0;
+    
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaLoginCliente.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -62,13 +64,16 @@ public class TelaLoginEmpresaController {
             Database database = new Database("empresasDatabase");
             database.getConnection();
             EmpresaRepository empresaRP = new EmpresaRepository(database);
-            if((empresaRP.autenticarEmpresa(email, senha)) == 0){
+            int id = empresaRP.autenticarEmpresa(email, senha);
+            if(id == 0){
                 labelMensagem.setText("Email ou senha incorretos! Tente novamente");
                 this.tfEmail.setText("");
                 this.tfSenha.setText((""));
             }
             else{
                 validador = true;
+                idSelecionado = id;
+                
             }
        } catch(Exception e){
             labelMensagem.setText("Não foi possível fazer login. Tente novamente!");

@@ -17,12 +17,12 @@ import java.util.ArrayList;
 public class ServicoRepository{
     private static Database database;
     private static Dao<Servico, Integer> dao;
-    private List<Servico> loadedServicos;
+    private List<Servico> loadedAgendamentos;
     private Servico loadedServico; 
     // Construtores
     public ServicoRepository(Database database) {
         ServicoRepository.setDatabase(database);
-        loadedServicos = new ArrayList<Servico>();
+        loadedAgendamentos = new ArrayList<Servico>();
     }
     /**
      * Seleciona o banco de dados sobre qual o repositorio vai operar
@@ -52,7 +52,7 @@ public class ServicoRepository{
             if ( nrows == 0 )
                 throw new SQLException("Error: object not saved");
             this.loadedServico = servico;
-            loadedServicos.add(servico);
+            loadedAgendamentos.add(servico);
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -104,7 +104,7 @@ public class ServicoRepository{
         try {
             this.loadedServico = dao.queryForId(id);
             if (this.loadedServico != null)
-                this.loadedServicos.add(this.loadedServico);
+                this.loadedAgendamentos.add(this.loadedServico);
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -116,13 +116,13 @@ public class ServicoRepository{
      */
     public List<Servico> loadAll() {
         try {
-            this.loadedServicos =  dao.queryForAll();
-            if (this.loadedServicos.size() != 0)
-                this.loadedServico = this.loadedServicos.get(0);
+            this.loadedAgendamentos =  dao.queryForAll();
+            if (this.loadedAgendamentos.size() != 0)
+                this.loadedServico = this.loadedAgendamentos.get(0);
         } catch (SQLException e) {
             System.out.println(e);
         }
-        return this.loadedServicos;
+        return this.loadedAgendamentos;
     }
     // getters and setters ommited...        
 }

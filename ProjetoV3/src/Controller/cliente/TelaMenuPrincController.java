@@ -1,6 +1,9 @@
 
 package Controller.cliente;
 
+import Model.repository.ClienteRepository;
+import Model.repository.Database;
+import Util.Util;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -28,7 +31,6 @@ public class TelaMenuPrincController implements Initializable{
     @FXML
     private Button BotaoLogout;
     
-    public static int idSelecionado = 0;
     @FXML
     private Label labelNome;
     @FXML
@@ -40,9 +42,15 @@ public class TelaMenuPrincController implements Initializable{
     @FXML
     private Button BotaoContato;
     
+    public static int idSelecionado = 0;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         idSelecionado = TelaLoginClienteController.idSelecionado;
+        Database database = Util.openDatabase("clientesDatabase");
+        ClienteRepository clienteRP = new ClienteRepository(database);
+        labelNome.setText(clienteRP.loadFromId(idSelecionado).getNome());
+        database.close();
     }
     
     @FXML
