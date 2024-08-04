@@ -77,24 +77,4 @@ public class Util {
         database.getConnection();
         return database;
     }
-    
-    public static boolean verificarNumero(String num, int tamanho){
-        if(Util.stringVazia(num)){
-           return false;
-        }
-        else{
-            char[] list = num.toCharArray();
-            if(list.length == tamanho){
-                for(char x : list){
-                    if(!Character.isDigit(x)){
-                        return false;
-                    }
-                }
-            }
-            else{
-                return false;
-            }
-        }
-        return true;
-    }
 }
