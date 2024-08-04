@@ -146,4 +146,12 @@ public class EmpresaMenuController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
+    
+    public void onClickServicos(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/RegistrarServico.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }
