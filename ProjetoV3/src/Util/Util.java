@@ -68,7 +68,7 @@ public class Util {
         list.add(cliente.getCidade());
         list.add(cliente.getTelefone());
         list.add(cliente.getSenha());
-        list.add(cliente.getEndereco());
+        list.add(cliente.getEstado());
         return list;
     }
     

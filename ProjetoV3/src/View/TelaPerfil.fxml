@@ -63,30 +63,30 @@
          </font>
       </Label>
       <TextField fx:id="tfCep" editable="false" layoutX="325.0" layoutY="334.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
-      <Label layoutX="182.0" layoutY="372.0" prefHeight="20.0" prefWidth="142.0" text="Endereco:">
+      <Label layoutX="182.0" layoutY="372.0" prefHeight="20.0" prefWidth="142.0" text="Cidade:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tfEndereco" editable="false" layoutX="325.0" layoutY="369.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
-      <Label layoutX="182.0" layoutY="406.0" prefHeight="20.0" prefWidth="142.0" text="Cidade:">
+      <TextField fx:id="tfCidade" editable="false" layoutX="325.0" layoutY="369.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
+      <Label layoutX="182.0" layoutY="405.0" prefHeight="20.0" prefWidth="142.0" text="Estado:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tfCidade" editable="false" layoutX="325.0" layoutY="403.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
+      <TextField fx:id="tfEstado" editable="false" layoutX="325.0" layoutY="404.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
       <Label layoutX="182.0" layoutY="441.0" prefHeight="20.0" prefWidth="142.0" text="Email:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
       <TextField fx:id="tfEmail" editable="false" layoutX="325.0" layoutY="438.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
-      <Label fx:id="labelSenhaAtual" layoutX="182.0" layoutY="476.0" prefHeight="20.0" prefWidth="142.0" text="Senha atual" visible="false">
+      <Label fx:id="labelSenhaAtual" layoutX="182.0" layoutY="509.0" prefHeight="20.0" prefWidth="142.0" text="Senha atual" visible="false">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <PasswordField fx:id="tfSenha" editable="false" layoutX="325.0" layoutY="473.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" visible="false" />
+      <PasswordField fx:id="tfSenha" editable="false" layoutX="325.0" layoutY="506.0" prefHeight="27.0" prefWidth="279.0" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" visible="false" />
       <Label fx:id="labelNovaSenha" layoutX="182.0" layoutY="510.0" prefHeight="20.0" prefWidth="142.0" text="Nova senha:" visible="false">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />

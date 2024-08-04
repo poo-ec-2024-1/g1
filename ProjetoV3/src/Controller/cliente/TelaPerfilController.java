@@ -46,7 +46,7 @@ public class TelaPerfilController implements Initializable{
     @FXML
     private TextField tfEmail;
     @FXML
-    private TextField tfEndereco;
+    private TextField tfEstado;
     @FXML
     private TextField tfNome;
     @FXML
@@ -89,7 +89,7 @@ public class TelaPerfilController implements Initializable{
         tfDataNascimento.setText(cliente.getDataNascimento());
         tfTelefone.setText(cliente.getTelefone());
         tfCep.setText(cliente.getCep());
-        tfEndereco.setText(cliente.getEndereco());
+        tfEstado.setText(cliente.getEstado());
         tfCidade.setText(cliente.getCidade());
         tfEmail.setText(cliente.getEmail());
     }
@@ -104,7 +104,7 @@ public class TelaPerfilController implements Initializable{
         tfDataNascimento.setEditable(x);
         tfTelefone.setEditable(x);
         tfCep.setEditable(x);
-        tfEndereco.setEditable(x);
+        tfEstado.setEditable(x);
         tfCidade.setEditable(x);
         tfEmail.setEditable(x);
         tfSenha.setEditable(x);
@@ -140,11 +140,11 @@ public class TelaPerfilController implements Initializable{
             String cidade = tfCidade.getText();
             String telefone = tfTelefone.getText();
             String senhaAtual = tfSenha.getText();
-            String endereco = tfEndereco.getText();
+            String estado = tfEstado.getText();
             String novaSenha = tfNovaSenha.getText();
             String senhaConfirmacao = tfConfirmarSenha.getText();
             
-            Cliente novoCliente = new Cliente(nome, dataNascimento, email, telefone, endereco, cpf, cep, cidade, senhaAtual);
+            Cliente novoCliente = new Cliente(nome, dataNascimento, email, telefone, estado, cpf, cep, cidade, senhaAtual);
             novoCliente.setId(idSelecionado);
             List<String> list = Util.listCliente(novoCliente);
             
