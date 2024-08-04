@@ -5,7 +5,7 @@ public class AgendamentoExibivel {
     
     private int id;
     private String servico;
-    private String empresa;
+    private String entidade;
     private String preco;
     private String veiculo;
     private String data;
@@ -18,7 +18,7 @@ public class AgendamentoExibivel {
     public AgendamentoExibivel(int id, String servico, String empresa, String preco, String veiculo, String data, String hora, String endereco) {
         this.id = id;
         this.servico = servico;
-        this.empresa = empresa;
+        this.entidade = empresa;
         this.preco = preco;
         this.veiculo = veiculo;
         this.data = data;
@@ -42,12 +42,12 @@ public class AgendamentoExibivel {
         this.servico = servico;
     }
 
-    public String getEmpresa() {
-        return empresa;
+    public String getEntidade() {
+        return entidade;
     }
 
-    public void setEmpresa(String empresa) {
-        this.empresa = empresa;
+    public void setEntidade(String entidade) {
+        this.entidade = entidade;
     }
 
     public String getPreco() {

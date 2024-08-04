@@ -78,7 +78,7 @@ public class TelaVerAgendamentos implements Initializable{
     public void carregarDados(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colServico.setCellValueFactory(new PropertyValueFactory<>("servico"));
-        colEmpresa.setCellValueFactory(new PropertyValueFactory<>("empresa"));
+        colEmpresa.setCellValueFactory(new PropertyValueFactory<>("entidade"));
         colPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
         colVeiculo.setCellValueFactory(new PropertyValueFactory<>("veiculo"));
         colData.setCellValueFactory(new PropertyValueFactory<>("data"));

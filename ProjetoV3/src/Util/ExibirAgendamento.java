@@ -31,7 +31,7 @@ public class ExibirAgendamento {
         AgendamentoExibivel agendamento = new AgendamentoExibivel();
         
         agendamento.setId(agend.getId());
-        agendamento.setEmpresa(empresa.getNome());
+        agendamento.setEntidade(empresa.getNome());
         agendamento.setServico(servico.getNome());
         agendamento.setPreco(String.valueOf(servico.getPreco()));
         agendamento.setVeiculo(agend.getModeloVeiculo());
