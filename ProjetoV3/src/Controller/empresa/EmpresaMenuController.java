@@ -60,7 +60,7 @@ public class EmpresaMenuController implements Initializable{
     private TableColumn<AgendamentoExibivel, Integer> colId;
 
     @FXML
-    private TableColumn<AgendamentoExibivel, String> colPreco;
+    private TableColumn<AgendamentoExibivel, Double> colPreco;
 
     @FXML
     private TableColumn<AgendamentoExibivel, String> colServico;
@@ -138,7 +138,14 @@ public class EmpresaMenuController implements Initializable{
         colData.setCellValueFactory(new PropertyValueFactory<>("data"));
         colHora.setCellValueFactory(new PropertyValueFactory<>("hora"));
         colEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
-        
         tabelaServicos.setItems(agends);
+    }
+    
+    public void onClickPerfil(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/PerfilEmpresa.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="781.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.PerfilEmpresaController">
+   <children>
+      <Button layoutX="77.0" layoutY="62.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="133.0" style="-fx-background-radius: 90 90 90 90; -fx-background-color: #E8530D;">
+         <graphic>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/Perfilbranco.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="275.0" layoutY="77.0" text="Nome da empresa:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="147.0" text="CNPJ:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="113.0" layoutY="201.0" text="Edite sua foto">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="217.0" text="CEP:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="287.0" text="Telefone:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="357.0" text="Email:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="427.0" text="Cidade:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="497.0" text="Estado:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="275.0" layoutY="567.0" text="Descriçao:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tfNome" blendMode="DARKEN" layoutX="275.0" layoutY="100.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfCep" blendMode="DARKEN" layoutX="275.0" layoutY="235.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfCNPJ" blendMode="DARKEN" layoutX="275.0" layoutY="170.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfTelefone" blendMode="DARKEN" layoutX="275.0" layoutY="305.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfEmail" blendMode="DARKEN" layoutX="275.0" layoutY="375.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfCidade" blendMode="DARKEN" layoutX="275.0" layoutY="445.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfEstado" blendMode="DARKEN" layoutX="275.0" layoutY="515.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <TextField fx:id="tfDescricao" blendMode="DARKEN" layoutX="275.0" layoutY="591.0" prefHeight="108.0" prefWidth="312.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
+      <Button fx:id="BotaoSalvar" layoutX="682.0" layoutY="591.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Salvar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BotaoVoltar" layoutX="682.0" layoutY="645.0" mnemonicParsing="false" onAction="#onClckVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="245.0" prefHeight="537.0" prefWidth="211.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 50 0 0;" />
+      <AnchorPane layoutX="682.0" layoutY="-5.0" prefHeight="537.0" prefWidth="211.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 0 0 50;" />
+   </children>
+</AnchorPane>
