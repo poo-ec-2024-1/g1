@@ -3,13 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/cliente/TelaVerAgendamentos.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/cliente/TelaLoginClienteController.java</file>
             <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Model/model/Servico.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Util/AgendamentoExibivel.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/View/Main.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Model/model/Agendamento.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Util/ExibirAgendamento.java</file>
-            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/empresa/EmpresaMenuController.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/View/Empresa/RegistrarServico.fxml</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/empresa/TelaRegistroEmpresaController.java</file>
+            <file>file:/C:/Users/mathe/Documents/Projeto_POO/g1/ProjetoV3/src/Controller/cliente/TelaRegistrarClienteController.java</file>
         </group>
     </open-files>
 </project-private>
