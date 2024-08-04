@@ -109,12 +109,15 @@ public class TelaPerfilController implements Initializable{
         tfEmail.setEditable(x);
         tfSenha.setEditable(x);
         tfSenha.setVisible(x);
-        labelSenhaAtual.setVisible(x);
         tfNovaSenha.setVisible(x);
         tfConfirmarSenha.setVisible(x);
+        
+        labelSenhaAtual.setVisible(x);
         labelNovaSenha.setVisible(x);
         labelConfirmarSenha.setVisible(x);
+        
         buttonSalvar.setDisable(!x);
+        
         tfSenha.setText("");
         tfNovaSenha.setText("");
         tfConfirmarSenha.setText("");
@@ -160,7 +163,6 @@ public class TelaPerfilController implements Initializable{
                     salvarCliente(novoCliente);
                     cliente = novoCliente;
                     labelMensagem.setText("Dados salvos com sucesso!");
-                    onClickEditar();
                     isEdit(false);
                 }
             }
@@ -168,7 +170,6 @@ public class TelaPerfilController implements Initializable{
                 salvarCliente(novoCliente);
                 cliente = novoCliente;
                 labelMensagem.setText("Dados salvos com sucesso!");
-                onClickEditar();
                 isEdit(false);
             }
         } catch(Exception e){

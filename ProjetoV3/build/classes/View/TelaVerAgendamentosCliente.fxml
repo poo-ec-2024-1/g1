@@ -16,7 +16,7 @@
       </Label>
       <TableView fx:id="tabel" layoutX="67.0" layoutY="138.0" prefHeight="400.0" prefWidth="857.0">
         <columns>
-          <TableColumn fx:id="colId" minWidth="26.0" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="colId" minWidth="33.0" prefWidth="33.0" text="ID" />
           <TableColumn fx:id="colServico" minWidth="74.0" prefWidth="125.0" text="Servico" />
             <TableColumn fx:id="colEmpresa" minWidth="73.0" prefWidth="132.0" text="Empresa" />
             <TableColumn fx:id="colPreco" minWidth="59.0" prefWidth="66.0" text="Preço" />

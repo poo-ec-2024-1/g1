@@ -110,9 +110,7 @@ public class EmpresaMenuController implements Initializable{
         Servico servico = new Servico();
         for(Agendamento x : agendamentos){
             servico = servicoRP.loadFromId(x.getServico());
-            System.out.println("bbbbb");
             if(servico.getEmpResponsavel() == TelaLoginEmpresaController.idSelecionado){
-                System.out.println("aaaaa");
                 agends.add(getAgendamentoExibivel(x));
             }
         }

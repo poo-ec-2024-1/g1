@@ -43,8 +43,6 @@ public class TelaRegistroEmpresaController {
     @FXML
     private TextField tfEmail;
     @FXML
-    private TextField tfEndereco;
-    @FXML
     private TextField tfEstado;
     @FXML
     private TextField tfNome;
@@ -91,11 +89,10 @@ public class TelaRegistroEmpresaController {
             String cidade = tfCidade.getText();
             String telefone = tfTelefone.getText();
             String estado = tfEstado.getText();
-            String endereco = tfEndereco.getText();
             String senha = tfSenha.getText();
             String confirmacaoSenha = tfConfirmacaoSenha.getText();
             
-            Empresa empresa = new Empresa(nome, cnpj, cep, telefone, descricao, email, cidade, estado, endereco, senha);
+            Empresa empresa = new Empresa(nome, cnpj, cep, telefone, descricao, email, cidade, estado, senha);
             List<String> list = listEmpresa(empresa);
             if(Util.existeVazio(list)){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");

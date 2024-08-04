@@ -23,7 +23,7 @@
       <PasswordField fx:id="tfSenha" layoutX="455.0" layoutY="233.0" prefHeight="29.0" prefWidth="233.0" promptText="Senha" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
       <AnchorPane layoutX="1.0" prefHeight="549.0" prefWidth="358.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 30 30 0;">
          <children>
-            <Label layoutX="64.0" layoutY="53.0" text="Car Wash">
+            <Label layoutX="64.0" layoutY="53.0" text="Car Wash" textFill="WHITE">
                <font>
                   <Font name="DejaVu Sans Condensed Bold" size="45.0" />
                </font>

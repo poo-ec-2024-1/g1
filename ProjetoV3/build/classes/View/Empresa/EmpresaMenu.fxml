@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.net.URL?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
@@ -13,14 +20,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="1074.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.EmpresaMenuController">
+<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="1074.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.EmpresaMenuController">
     <stylesheets>
         <URL value="@empresamenu.css" />
     </stylesheets>
    <children>
       <AnchorPane prefHeight="698.0" prefWidth="72.0" style="-fx-background-color: #E8530D;">
          <children>
-            <Button layoutX="6.0" layoutY="152.0" mnemonicParsing="false" style="-fx-background-color: #E8530D;">
+            <Button fx:id="BtnPerfil" layoutX="6.0" layoutY="152.0" mnemonicParsing="false" onAction="#onClickPerfil" style="-fx-background-color: #E8530D;">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -76,7 +83,7 @@
             <Label fx:id="titleCnpj" layoutX="14.0" layoutY="56.0" text="CNPJ" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="89.0" layoutY="380.0" prefHeight="279.0" prefWidth="943.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;">
+      <AnchorPane layoutX="89.0" layoutY="516.0" prefHeight="143.0" prefWidth="943.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;">
          <children>
             <Label layoutX="24.0" layoutY="36.0" prefHeight="42.0" prefWidth="182.0" text="Saldo:" textFill="#2fbf36">
                <font>
@@ -88,27 +95,14 @@
                   <Font name="System Bold" size="13.0" />
                </font>
             </Label>
-            <Label layoutX="472.0" layoutY="15.0" prefHeight="26.0" prefWidth="182.0" text="Report" textFill="#2f34bd">
-               <font>
-                  <Font name="DejaVu Sans Bold" size="22.0" />
-               </font>
-            </Label>
-            <BarChart fx:id="graficoVendas" layoutX="360.0" layoutY="57.0" prefHeight="216.0" prefWidth="524.0">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis side="LEFT" />
-              </yAxis>
-            </BarChart>
          </children>
       </AnchorPane>
-      <Button fx:id="BotaoEditarPedido" layoutX="478.0" layoutY="334.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="168.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Editar pedido" textFill="WHITE">
+      <Button fx:id="BotaoEditarPedido" layoutX="463.0" layoutY="470.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="198.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Cancelar pedido" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tabelaServicos" layoutX="132.0" layoutY="136.0" prefHeight="193.0" prefWidth="857.0" style="-fx-background-radius: 15 15 15 15; -fx-border-radius: 15 15 15 15;">
+      <TableView fx:id="tabelaServicos" layoutX="132.0" layoutY="136.0" prefHeight="324.0" prefWidth="857.0" style="-fx-background-radius: 15 15 15 15; -fx-border-radius: 15 15 15 15;">
          <columns>
             <TableColumn fx:id="colId" minWidth="33.0" prefWidth="33.0" text="ID" />
             <TableColumn fx:id="colServico" minWidth="74.0" prefWidth="125.0" text="Servico" />
