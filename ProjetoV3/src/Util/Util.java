@@ -3,6 +3,8 @@ package Util;
 import Model.model.Cliente;
 import Model.repository.Database;
 import java.lang.reflect.Field;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -96,5 +98,18 @@ public class Util {
             }
         }
         return true;
+    }
+    
+    public static String formatData(String data){
+        DateTimeFormatter inDate = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        DateTimeFormatter outDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate date = LocalDate.parse(data, inDate);
+        String newData = date.format(outDate);
+        return newData;
+    }
+    
+    public static LocalDate stringToDate(String data, String pattern){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
+        return LocalDate.parse(data, formatter);
     }
 }
