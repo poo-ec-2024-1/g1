@@ -86,7 +86,7 @@ public class EmpresaMenuController implements Initializable{
     @FXML
     private Label titleSaldo;
     
-    public static int idSelecionado = 0;
+    public static int idSelecionado;
     
     ObservableList<AgendamentoExibivel> agends;
     
@@ -110,11 +110,10 @@ public class EmpresaMenuController implements Initializable{
         Servico servico = new Servico();
         for(Agendamento x : agendamentos){
             servico = servicoRP.loadFromId(x.getServico());
-            if(servico.getEmpResponsavel() == TelaLoginEmpresaController.idSelecionado){
-                agends.add(getAgendamentoExibivel(x));
+            if(servico.getEmpResponsavel() == idSelecionado){
+                agends.add(getAgendamentoExibivel(x, "cliente"));
             }
         }
-        
         carregarDados();
     }
     
@@ -126,7 +125,7 @@ public class EmpresaMenuController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+  
     public void carregarDados(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colServico.setCellValueFactory(new PropertyValueFactory<>("servico"));
@@ -149,6 +148,15 @@ public class EmpresaMenuController implements Initializable{
     
     public void onClickServicos(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/RegistrarServico.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
+    @FXML
+    public void onClickedServicos(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/EditarServico.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

@@ -30,13 +30,18 @@
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoSalvar" layoutX="458.0" layoutY="432.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Salvar" textFill="WHITE">
+      <Button fx:id="BotaoSalvar" layoutX="458.0" layoutY="432.0" mnemonicParsing="false" onAction="#onClickSalvar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Salvar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <TextField layoutX="259.0" layoutY="91.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30; -fx-border-radius: 30;" />
-      <TextField layoutX="259.0" layoutY="168.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30; -fx-border-radius: 30;" />
-      <TextArea layoutX="259.0" layoutY="259.0" prefHeight="80.0" prefWidth="233.0" style="-fx-border-color: #E8530D; -fx-border-radius: 15; -fx-background-radius: 15;" />
+      <TextField fx:id="tfNome" layoutX="259.0" layoutY="91.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <TextField fx:id="tfPreco" layoutX="259.0" layoutY="168.0" prefHeight="29.0" prefWidth="233.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30; -fx-border-radius: 30;" />
+      <TextArea fx:id="tfDescricao" layoutX="259.0" layoutY="259.0" prefHeight="80.0" prefWidth="233.0" style="-fx-border-color: #E8530D; -fx-border-radius: 15; -fx-background-radius: 15;" />
+      <Label fx:id="labelMensagem" alignment="CENTER" layoutX="205.0" layoutY="397.0" prefHeight="17.0" prefWidth="481.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

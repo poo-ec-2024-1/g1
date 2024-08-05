@@ -61,7 +61,7 @@ public class TelaVerAgendamentos implements Initializable{
         List<Agendamento> agendamentos = agendamentoRP.loadAll();
         for(Agendamento x : agendamentos){
             if(x.getCliente() == TelaLoginClienteController.idSelecionado){
-                agends.add(getAgendamentoExibivel(x));
+                agends.add(getAgendamentoExibivel(x, "empresa"));
             }
         }
         carregarDados();
