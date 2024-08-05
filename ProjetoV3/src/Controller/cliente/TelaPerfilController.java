@@ -7,8 +7,6 @@ import Model.repository.ClienteRepository;
 import Model.repository.Database;
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -19,7 +17,6 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -45,11 +42,11 @@ public class TelaPerfilController implements Initializable{
     @FXML
     private TextField tfCpf;
     @FXML
-    private DatePicker dateData;
+    private TextField tfDataNascimento;
     @FXML
     private TextField tfEmail;
     @FXML
-    private TextField tfEstado;
+    private TextField tfEndereco;
     @FXML
     private TextField tfNome;
     @FXML
@@ -89,10 +86,10 @@ public class TelaPerfilController implements Initializable{
     public void atualizarCampos(){
         tfNome.setText(cliente.getNome());
         tfCpf.setText(cliente.getCpf());
-        dateData.setValue(Util.stringToDate(cliente.getDataNascimento(), "dd/MM/yyyy"));
+        tfDataNascimento.setText(cliente.getDataNascimento());
         tfTelefone.setText(cliente.getTelefone());
         tfCep.setText(cliente.getCep());
-        tfEstado.setText(cliente.getEstado());
+        tfEndereco.setText(cliente.getEndereco());
         tfCidade.setText(cliente.getCidade());
         tfEmail.setText(cliente.getEmail());
     }
@@ -104,10 +101,10 @@ public class TelaPerfilController implements Initializable{
     public void isEdit(boolean x){
         tfNome.setEditable(x);
         tfCpf.setEditable(x);
-        dateData.setMouseTransparent(!x);
+        tfDataNascimento.setEditable(x);
         tfTelefone.setEditable(x);
         tfCep.setEditable(x);
-        tfEstado.setEditable(x);
+        tfEndereco.setEditable(x);
         tfCidade.setEditable(x);
         tfEmail.setEditable(x);
         tfSenha.setEditable(x);
@@ -137,17 +134,17 @@ public class TelaPerfilController implements Initializable{
         try{
             String nome = tfNome.getText();
             String cpf = tfCpf.getText();
-            String dataNascimento = Util.formatData(String.valueOf(dateData.getValue()));
+            String dataNascimento = tfDataNascimento.getText();
             String email = tfEmail.getText();
             String cep = tfCep.getText();
             String cidade = tfCidade.getText();
             String telefone = tfTelefone.getText();
             String senhaAtual = tfSenha.getText();
-            String estado = tfEstado.getText();
+            String endereco = tfEndereco.getText();
             String novaSenha = tfNovaSenha.getText();
             String senhaConfirmacao = tfConfirmarSenha.getText();
             
-            Cliente novoCliente = new Cliente(nome, dataNascimento, email, telefone, estado, cpf, cep, cidade, senhaAtual);
+            Cliente novoCliente = new Cliente(nome, dataNascimento, email, telefone, endereco, cpf, cep, cidade, senhaAtual);
             novoCliente.setId(idSelecionado);
             List<String> list = Util.listCliente(novoCliente);
             

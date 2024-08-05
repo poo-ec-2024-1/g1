@@ -40,6 +40,11 @@ public class TelaLoginClienteController {
     
     public static int idSelecionado = 0;
     
+    
+    
+    
+    
+    
     @FXML
     public void switchToMenu(ActionEvent event) throws IOException{
         if(verificarLogin()){
