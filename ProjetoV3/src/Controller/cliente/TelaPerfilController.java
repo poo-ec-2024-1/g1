@@ -7,6 +7,8 @@ import Model.repository.ClienteRepository;
 import Model.repository.Database;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -17,6 +19,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -42,7 +45,7 @@ public class TelaPerfilController implements Initializable{
     @FXML
     private TextField tfCpf;
     @FXML
-    private TextField tfDataNascimento;
+    private DatePicker dateData;
     @FXML
     private TextField tfEmail;
     @FXML
@@ -86,7 +89,7 @@ public class TelaPerfilController implements Initializable{
     public void atualizarCampos(){
         tfNome.setText(cliente.getNome());
         tfCpf.setText(cliente.getCpf());
-        tfDataNascimento.setText(cliente.getDataNascimento());
+        dateData.setValue(Util.stringToDate(cliente.getDataNascimento(), "dd/MM/yyyy"));
         tfTelefone.setText(cliente.getTelefone());
         tfCep.setText(cliente.getCep());
         tfEstado.setText(cliente.getEstado());
@@ -101,7 +104,7 @@ public class TelaPerfilController implements Initializable{
     public void isEdit(boolean x){
         tfNome.setEditable(x);
         tfCpf.setEditable(x);
-        tfDataNascimento.setEditable(x);
+        dateData.setMouseTransparent(!x);
         tfTelefone.setEditable(x);
         tfCep.setEditable(x);
         tfEstado.setEditable(x);
@@ -134,7 +137,7 @@ public class TelaPerfilController implements Initializable{
         try{
             String nome = tfNome.getText();
             String cpf = tfCpf.getText();
-            String dataNascimento = tfDataNascimento.getText();
+            String dataNascimento = Util.formatData(String.valueOf(dateData.getValue()));
             String email = tfEmail.getText();
             String cep = tfCep.getText();
             String cidade = tfCidade.getText();

@@ -35,18 +35,10 @@ public class ExibirAgendamento {
         agendamento.setServico(servico.getNome());
         agendamento.setPreco(String.valueOf(servico.getPreco()));
         agendamento.setVeiculo(agend.getModeloVeiculo());
-        agendamento.setData(formatData(agend.getData()));
+        agendamento.setData(Util.formatData(agend.getData()));
         agendamento.setHora(agend.getHora());
         agendamento.setEndereco(agend.getEndereco());
         
         return agendamento;
-    }
-    
-    public static String formatData(String data){
-        DateTimeFormatter inDate = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        DateTimeFormatter outDate = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-        LocalDate date = LocalDate.parse(data, inDate);
-        String newData = date.format(outDate);
-        return newData;
     }
 }
