@@ -117,6 +117,14 @@ public class TelaMenuPrincController implements Initializable{
     }
     
     
+    public void onClickContato(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/View/ContatoView.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    
     
 }
 

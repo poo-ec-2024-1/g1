@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="653.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.RegistrarServicoController">
+   <children>
+      <AnchorPane prefHeight="539.0" prefWidth="204.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 30 30 0;" />
+      <Label layoutX="259.0" layoutY="71.0" text="Nome do serviço:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="148.0" text="Valor:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="265.0" layoutY="234.0" text="Descriçao:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="tfNome" layoutX="256.0" layoutY="98.0" prefHeight="29.0" prefWidth="233.0" promptText="Nome" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
+      <PasswordField fx:id="tfValor" layoutX="256.0" layoutY="181.0" prefHeight="29.0" prefWidth="233.0" promptText="Valor" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
+      <PasswordField fx:id="tfDescricao" layoutX="256.0" layoutY="259.0" prefHeight="95.0" prefWidth="281.0" promptText="Descrição" style="-fx-border-color: #E8530D; -fx-border-radius: 30 30 30 30; -fx-background-radius: 30 30 30 30;" />
+      <Button fx:id="BotaoVoltar" layoutX="272.0" layoutY="416.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BotaoSalvar" layoutX="433.0" layoutY="416.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Salvar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

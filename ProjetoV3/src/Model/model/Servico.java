@@ -17,19 +17,16 @@ public class Servico{
     @DatabaseField
     private float preco;
     @DatabaseField
-    private String expediente;
-    @DatabaseField
     private int empResponsavel;
 
     public Servico() {
     }
 
-    public Servico(String nome, String descricao, float preco, String expediente, int empResponsavel) {
+    public Servico(String nome, String descricao, float preco, int empResponsavel) {
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
         this.empResponsavel = empResponsavel;
-        this.expediente = expediente;
     }
 
     public int getId() {
@@ -70,14 +67,6 @@ public class Servico{
 
     public void setEmpResponsavel(int empResponsavel) {
         this.empResponsavel = empResponsavel;
-    }
-
-    public String getExpediente() {
-        return expediente;
-    }
-
-    public void setExpediente(String expediente) {
-        this.expediente = expediente;
     }
     
     @Override

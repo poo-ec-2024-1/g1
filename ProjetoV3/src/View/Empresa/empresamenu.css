@@ -1,7 +1,16 @@
-/*
- * Empty Stylesheet file.
- */
+.Button{
+    -fx-background-color: linear-gradient(to right,FEBE1D, #E8530D);
+    -fx-background-radius: 30 30 30 30;
+    
+}
 
-.mainFxmlClass {
+.AnchorPane{
+    -fx-background-color: linear-gradient(to right ,FEBE1D, #E8530D);
+}
 
+.textField{
+    -fx-border-color: linear-gradient(to right,FEBE1D, #E8530D);
+    -fx-background-radius: 30 30 30 30;
+    -fx-border-radius: 30 30 30 30;
+    -fx-border-width: 2;
 }

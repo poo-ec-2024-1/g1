@@ -34,16 +34,5 @@ public class Main extends Application {
     }
     public static void main(String[] args) {
         launch(args);
-        /*
-        Servico servico1 = new Servico("Lavagem Completa", "Uma lavagem completa no seu veículo!", 100, "", 4);
-        Servico servico2 = new Servico("Lavagem Completa", "Uma lavagem completa no seu veículo!", 100, "", 1);
-        Servico servico3 = new Servico("Lavagem Completa", "Uma lavagem completa no seu veículo!", 100, "", 1);
-        Database database = Util.openDatabase("servicosDatabase");
-        ServicoRepository servicosRP = new ServicoRepository(database);
-        servicosRP.create(servico1);
-        servicosRP.create(servico2);
-        servicosRP.create(servico3);
-        */
     }
-    
 }

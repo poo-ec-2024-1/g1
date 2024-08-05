@@ -55,11 +55,15 @@ public class TelaPerfilController implements Initializable{
     private PasswordField tfSenha;
     @FXML
     private TextField tfTelefone;
+    @FXML
+    private Label labelSenhaAtual;
     
     private Scene scene;
     private Parent root;
     private Stage stage;
+    
     public static int idSelecionado = 0;
+    
     public static Cliente cliente;
     
     @Override
@@ -104,14 +108,26 @@ public class TelaPerfilController implements Initializable{
         tfCidade.setEditable(x);
         tfEmail.setEditable(x);
         tfSenha.setEditable(x);
+        tfSenha.setVisible(x);
         tfNovaSenha.setVisible(x);
         tfConfirmarSenha.setVisible(x);
+        
+        labelSenhaAtual.setVisible(x);
         labelNovaSenha.setVisible(x);
         labelConfirmarSenha.setVisible(x);
+        
         buttonSalvar.setDisable(!x);
+        
         tfSenha.setText("");
         tfNovaSenha.setText("");
         tfConfirmarSenha.setText("");
+    }
+    
+    public void salvarCliente(Cliente cliente){
+        Database database = Util.openDatabase("clientesDatabase");
+        ClienteRepository clienteRP = new ClienteRepository(database);
+        clienteRP.update(cliente);
+        database.close();
     }
     
     public void onClickSalvar(ActionEvent event){
@@ -129,27 +145,31 @@ public class TelaPerfilController implements Initializable{
             String senhaConfirmacao = tfConfirmarSenha.getText();
             
             Cliente novoCliente = new Cliente(nome, dataNascimento, email, telefone, endereco, cpf, cep, cidade, senhaAtual);
-            List<String> list = Util.listCliente(novoCliente);
-            novoCliente.setSenha(novaSenha);
             novoCliente.setId(idSelecionado);
-            list.add(senhaAtual);
+            List<String> list = Util.listCliente(novoCliente);
             
             if(Util.existeVazio(list)){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");
             }
-            else if(!Util.verificarIgualdade(novaSenha, senhaConfirmacao)){
-                labelMensagem.setText("As senhas não conferem! Tente novamente.");
-            }
             else if(!cliente.getSenha().equals(senhaAtual)){
                 labelMensagem.setText("Senha atual incorreta!");
             }
+            else if(!Util.stringVazia(novaSenha) || !Util.stringVazia(senhaConfirmacao)){
+                if(!novaSenha.equals(senhaConfirmacao)){
+                    labelMensagem.setText("As senhas não conferem! Tente novamente.");
+                }
+                else{
+                    novoCliente.setSenha(novaSenha);
+                    salvarCliente(novoCliente);
+                    cliente = novoCliente;
+                    labelMensagem.setText("Dados salvos com sucesso!");
+                    isEdit(false);
+                }
+            }
             else{
-                Database database = Util.openDatabase("clientesDatabase");
-                ClienteRepository clienteRP = new ClienteRepository(database);
-                clienteRP.update(novoCliente);
-                database.close();
+                salvarCliente(novoCliente);
+                cliente = novoCliente;
                 labelMensagem.setText("Dados salvos com sucesso!");
-                onClickEditar();
                 isEdit(false);
             }
         } catch(Exception e){

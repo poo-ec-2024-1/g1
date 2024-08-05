@@ -26,7 +26,7 @@
                   <Image url="@icons/carro_branco.png" />
                </image>
             </ImageView>
-            <Label layoutX="26.0" layoutY="39.0" text="Car Wash">
+            <Label layoutX="26.0" layoutY="39.0" text="Car Wash" textFill="WHITE">
                <font>
                   <Font name="DejaVu Sans Condensed Bold" size="45.0" />
                </font>
