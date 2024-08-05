@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import java.net.URL?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -10,7 +20,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="1074.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.EmpresaMenuController">
+<AnchorPane id="AnchorPane" prefHeight="698.0" prefWidth="1074.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.EmpresaMenuController">
     <stylesheets>
         <URL value="@empresamenu.css" />
     </stylesheets>
@@ -92,9 +102,9 @@
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tabelaServicos" layoutX="132.0" layoutY="136.0" prefHeight="324.0" prefWidth="857.0" style="-fx-background-radius: 15 15 15 15; -fx-border-radius: 15 15 15 15;">
+      <TableView fx:id="tabelaServicos" layoutX="132.0" layoutY="136.0" prefHeight="324.0" prefWidth="857.0" styleClass="TableView" stylesheets="@TableView.css">
          <columns>
-            <TableColumn fx:id="colId" minWidth="33.0" prefWidth="33.0" text="ID" />
+            <TableColumn fx:id="colId" minWidth="33.0" prefWidth="33.0" styleClass="TableColumn" text="ID" />
             <TableColumn fx:id="colServico" minWidth="74.0" prefWidth="125.0" text="Servico" />
             <TableColumn fx:id="colCliente" minWidth="73.0" prefWidth="132.0" text="Cliente" />
             <TableColumn fx:id="colPreco" minWidth="59.0" prefWidth="66.0" text="Preço" />
@@ -104,6 +114,5 @@
             <TableColumn fx:id="colEndereco" minWidth="78.0" prefWidth="209.0" text="Endereco" />
          </columns>
       </TableView>
-      <Button layoutX="222.0" layoutY="477.0" mnemonicParsing="false" onAction="#onClickedServicos" text="SERVICOS" />
    </children>
 </AnchorPane>
