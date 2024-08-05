@@ -1,7 +1,10 @@
 package Util;
 
 import Model.model.Cliente;
+import Model.model.Empresa;
+import Model.repository.ClienteRepository;
 import Model.repository.Database;
+import Model.repository.EmpresaRepository;
 import java.lang.reflect.Field;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -112,4 +115,75 @@ public class Util {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
         return LocalDate.parse(data, formatter);
     }
+    
+    public static boolean verificarTelefone(String telefone){
+        if(Util.verificarNumero(telefone, 11) || Util.verificarNumero(telefone, 10)){
+            return true;
+        }
+        return false;
+    }
+    
+    public static boolean verificarCep(String cep){
+        return Util.verificarNumero(cep, 8);
+    }
+    
+    public static boolean verificarSenha(String senha){
+        char[] list = senha.toCharArray();
+        if(list.length < 8){
+            return false;
+        }
+        return true;
+    }
+    
+    public static boolean verificarEmail(String email){
+        Database database1 = Util.openDatabase("clientesDatabase");
+        Database database2 = Util.openDatabase("empresasDatabase");
+        ClienteRepository clienteRP = new ClienteRepository(database1);
+        EmpresaRepository empresaRP = new EmpresaRepository(database2);
+        List<Cliente> clientes = clienteRP.loadAll();
+        List<Empresa> empresas = empresaRP.loadAll();
+        for(Cliente x : clientes){
+            if(email.equals(x.getEmail())){
+                return false;
+            }
+        }
+        for(Empresa x : empresas){
+            if(email.equals(x.getEmail())){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public static boolean verificarCnpj(String cnpj){
+        return Util.verificarNumero(cnpj, 14);
+    }
+    
+    public static boolean existeCnpj(String cnpj){
+        Database database = Util.openDatabase("empresasDatabase");
+        EmpresaRepository empresaRP = new EmpresaRepository(database);
+        
+        for(Empresa x : empresaRP.loadAll()){
+            if(x.getCnpj() == cnpj){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public static boolean verificarCpf(String cpf){
+        Database database = Util.openDatabase("clientesDatabase");
+        ClienteRepository clienteRP = new ClienteRepository(database);
+        List<Cliente> clientes = clienteRP.loadAll();
+        if(Util.verificarNumero(cpf, 11)){
+            for(Cliente x : clientes){
+                if(cpf.equals(x.getCpf())){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    
 }

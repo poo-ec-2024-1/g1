@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -9,7 +14,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.TelaRegistroEmpresaController">
+<AnchorPane id="AnchorPane" prefHeight="608.0" prefWidth="862.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.TelaRegistroEmpresaController">
    <children>
       <Label layoutX="50.0" layoutY="117.0" text="Nome">
          <font>
@@ -56,19 +61,16 @@
             <Font name="DejaVu Sans Condensed Bold" size="34.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="691.0" prefHeight="608.0" prefWidth="171.0" style="-fx-background-color: #E8530D; -fx-background-radius: 50 0 0 50;">
-         <effect>
-            <DropShadow color="#ff8001" height="0.0" radius="17.65" width="72.6" />
-         </effect></AnchorPane>
-      <TextField fx:id="tfNome" blendMode="DARKEN" layoutX="50.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfCep" blendMode="DARKEN" layoutX="52.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfCnpj" blendMode="DARKEN" layoutX="50.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfTelefone" blendMode="DARKEN" layoutX="50.0" layoutY="297.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextArea fx:id="tfDescricao" blendMode="DARKEN" layoutX="50.0" layoutY="354.0" prefHeight="81.0" prefWidth="257.0" style="-fx-border-radius: 20 20 20; -fx-border-color: #E8530D; -fx-background-radius: 20 20 20 20; -fx-scrollpane-radius: 20 20 20 20;" wrapText="true" />
-      <TextField fx:id="tfEmail" blendMode="DARKEN" layoutX="395.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfCidade" blendMode="DARKEN" layoutX="399.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfEstado" blendMode="DARKEN" layoutX="399.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <PasswordField fx:id="tfSenha" blendMode="DARKEN" layoutX="399.0" layoutY="297.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40; -fx-background-radius: 40 40 40; -fx-border-color: #E8530D;" />
+      <AnchorPane layoutX="691.0" prefHeight="608.0" prefWidth="171.0" style="-fx-background-radius: 50 0 0 50;" styleClass="AnchorPane" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfNome" blendMode="DARKEN" layoutX="50.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfCep" blendMode="DARKEN" layoutX="52.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfCnpj" blendMode="DARKEN" layoutX="50.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfTelefone" blendMode="DARKEN" layoutX="50.0" layoutY="297.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextArea fx:id="tfDescricao" blendMode="DARKEN" layoutX="50.0" layoutY="354.0" prefHeight="81.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" wrapText="true" />
+      <TextField fx:id="tfEmail" blendMode="DARKEN" layoutX="395.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfCidade" blendMode="DARKEN" layoutX="399.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfEstado" blendMode="DARKEN" layoutX="399.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <PasswordField fx:id="tfSenha" blendMode="DARKEN" layoutX="399.0" layoutY="297.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
       <Label layoutX="401.0" layoutY="279.0" text="Senha:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
@@ -79,13 +81,13 @@
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <PasswordField fx:id="tfConfirmacaoSenha" blendMode="DARKEN" layoutX="399.0" layoutY="355.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <Button fx:id="BotaoVoltar" layoutX="181.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Voltar" textFill="WHITE">
+      <PasswordField fx:id="tfConfirmacaoSenha" blendMode="DARKEN" layoutX="399.0" layoutY="355.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <Button fx:id="BotaoVoltar" layoutX="181.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoRegistrarEmpresa" layoutX="364.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Registrar" textFill="WHITE">
+      <Button fx:id="BotaoRegistrarEmpresa" layoutX="364.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Registrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

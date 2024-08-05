@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -7,14 +11,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="676.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.cliente.TelaVerAgendamentos">
+<AnchorPane id="AnchorPane" prefHeight="676.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.cliente.TelaVerAgendamentos">
    <children>
       <Label layoutX="63.0" layoutY="47.0" text="Meus agendamentos:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="34.0" />
          </font>
       </Label>
-      <TableView fx:id="tabel" layoutX="67.0" layoutY="138.0" prefHeight="400.0" prefWidth="857.0" style="-fx-border-color: #E8530D; -fx-border-width: 10; -fx-border-radius: 0 0 30 30; -fx-background-radius: 0 0 30 30;">
+      <TableView fx:id="tabel" layoutX="67.0" layoutY="138.0" prefHeight="400.0" prefWidth="857.0" styleClass="TableView" stylesheets="@Empresa/empresamenu.css">
         <columns>
           <TableColumn fx:id="colId" minWidth="33.0" prefWidth="33.0" text="ID" />
           <TableColumn fx:id="colServico" minWidth="74.0" prefWidth="125.0" text="Servico" />
@@ -26,9 +30,14 @@
             <TableColumn fx:id="colEndereco" minWidth="78.0" prefWidth="209.0" text="Endereco" />
         </columns>
       </TableView>
-      <AnchorPane prefHeight="677.0" prefWidth="41.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 30 30 0;" />
-      <AnchorPane layoutX="949.0" prefHeight="677.0" prefWidth="41.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 0 0 30;" />
-      <Button fx:id="BotaoVoltar" layoutX="433.0" layoutY="596.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Voltar" textFill="WHITE">
+      <AnchorPane prefHeight="677.0" prefWidth="41.0" style="-fx-background-radius: 0 30 30 0;" styleClass="AnchorPaneV2" stylesheets="@Empresa/empresamenu.css" />
+      <AnchorPane layoutX="949.0" prefHeight="677.0" prefWidth="41.0" style="-fx-background-radius: 30 0 0 30;" styleClass="AnchorPaneV2" stylesheets="@Empresa/empresamenu.css" />
+      <Button fx:id="BotaoVoltar" layoutX="340.0" layoutY="596.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BotaoEditar" layoutX="513.0" layoutY="596.0" mnemonicParsing="false" onAction="#onClickEditar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Editar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
