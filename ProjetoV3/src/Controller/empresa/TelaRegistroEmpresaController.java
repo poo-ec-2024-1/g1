@@ -6,7 +6,6 @@ import Model.repository.EmpresaRepository;
 import Model.repository.Database;
 import Model.model.Empresa;
 import Util.Util;
-import Util.VerificarRegEmpresa;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -98,10 +97,6 @@ public class TelaRegistroEmpresaController {
             if(Util.existeVazio(list)){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");
             }
-            // Essa é a parte que verifica o registro da empresa. Deixei comentada para fins desenvolvedorísticos.
-     //       else if(!Util.verificarIgualdade(senha, confirmacaoSenha)){
-      //          labelMensagem.setText("As senhas não conferem! Tente novamente.");
-     //       }
             else if(!Util.verificarIgualdade(senha, confirmacaoSenha)){
                 labelMensagem.setText("As senhas não conferem! Tente novamente.");
             }
@@ -121,27 +116,5 @@ public class TelaRegistroEmpresaController {
         } catch(Exception e){
             labelMensagem.setText("Não foi posível realizar o cadastro. Tente novamente");
         }
-    }
-    
-    public boolean verificarRegistro(Empresa empresa){
-        if(!VerificarRegEmpresa.verificarCep(empresa.getCep())){
-            labelMensagem.setText("CEP Inválido! Tente novamente."); return false;
-        }
-        if(!VerificarRegEmpresa.verificarCnpj(empresa.getCnpj())){
-            labelMensagem.setText("CNPJ Inválido! Tente noavamente."); return false;
-        }
-        if(!VerificarRegEmpresa.verificarTelefone(empresa.getTelefone())){
-            labelMensagem.setText("Telefone Inválido! Tente noavamente."); return false;
-        }
-        if(!VerificarRegEmpresa.verificarSenha(empresa.getSenha())){
-            labelMensagem.setText("A senha precisa ter, no mínimo, 8 caractéres!"); return false;
-        }
-        if(VerificarRegEmpresa.existeCnpj(empresa.getCnpj())){
-            labelMensagem.setText("CNPJ já está em uso!"); return false;
-        }
-        if(VerificarRegEmpresa.existeEmail(empresa.getEmail())){
-            labelMensagem.setText("Email já está em uso!"); return false;
-        }
-        return true;
     }
 }

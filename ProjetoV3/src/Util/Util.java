@@ -3,8 +3,6 @@ package Util;
 import Model.model.Cliente;
 import Model.repository.Database;
 import java.lang.reflect.Field;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -70,7 +68,7 @@ public class Util {
         list.add(cliente.getCidade());
         list.add(cliente.getTelefone());
         list.add(cliente.getSenha());
-        list.add(cliente.getEstado());
+        list.add(cliente.getEndereco());
         return list;
     }
     
@@ -78,38 +76,5 @@ public class Util {
         Database database = new Database(nome);
         database.getConnection();
         return database;
-    }
-    
-    public static boolean verificarNumero(String num, int tamanho){
-        if(Util.stringVazia(num)){
-           return false;
-        }
-        else{
-            char[] list = num.toCharArray();
-            if(list.length == tamanho){
-                for(char x : list){
-                    if(!Character.isDigit(x)){
-                        return false;
-                    }
-                }
-            }
-            else{
-                return false;
-            }
-        }
-        return true;
-    }
-    
-    public static String formatData(String data){
-        DateTimeFormatter inDate = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        DateTimeFormatter outDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate date = LocalDate.parse(data, inDate);
-        String newData = date.format(outDate);
-        return newData;
-    }
-    
-    public static LocalDate stringToDate(String data, String pattern){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
-        return LocalDate.parse(data, formatter);
     }
 }
