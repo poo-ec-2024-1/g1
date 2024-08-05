@@ -106,7 +106,7 @@ public class EditarAgendamentoController implements Initializable {
     }
     
     public void onClickVoltar(ActionEvent event) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource("/View/TelaVerAgendamentos.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/View/TelaVerAgendamentosCliente.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
