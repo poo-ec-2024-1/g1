@@ -15,6 +15,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -34,7 +35,7 @@ public class TelaRegistrarClienteController  {
     @FXML
     private TextField tfCpf;
     @FXML
-    private TextField tfDataNascimento;
+    private DatePicker dateData;
     @FXML
     private TextField tfEmail;
     @FXML
@@ -68,7 +69,7 @@ public class TelaRegistrarClienteController  {
         try{
             String nome = tfNome.getText();
             String cpf = tfCpf.getText();
-            String dataNascimento = tfDataNascimento.getText();
+            String dataNascimento = Util.formatData(String.valueOf(dateData.getValue()));
             String email = tfEmail.getText();
             String cep = tfCep.getText();
             String cidade = tfCidade.getText();
@@ -76,7 +77,6 @@ public class TelaRegistrarClienteController  {
             String senha = tfSenha.getText();
             String endereco = tfEndereco.getText();
             String senhaConfirmacao = tfSenhaConfirmacao.getText();
-            
             Cliente cliente = new Cliente(nome, dataNascimento, email, telefone, endereco, cpf, cep, cidade, senha);
             
             if(Util.existeVazio(Util.listCliente(cliente))){
