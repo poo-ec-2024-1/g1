@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
@@ -9,9 +14,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="781.0" prefWidth="876.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.PerfilEmpresaController">
+<AnchorPane id="AnchorPane" prefHeight="775.0" prefWidth="724.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.PerfilEmpresaController">
    <children>
-      <Button layoutX="77.0" layoutY="62.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="133.0" style="-fx-background-radius: 90 90 90 90; -fx-background-color: #E8530D;">
+      <Button layoutX="77.0" layoutY="62.0" mnemonicParsing="false" prefHeight="137.0" prefWidth="133.0" style="-fx-background-radius: 90 90 90 90;" styleClass="ButtonV5" stylesheets="@empresamenu.css">
          <graphic>
             <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -65,16 +70,16 @@
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tfNome" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="100.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfCnpj" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="155.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextArea fx:id="tfDescricao" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="207.0" prefHeight="68.0" prefWidth="257.0" style="-fx-border-color: #E8530D; -fx-border-radius: 15; -fx-background-radius: 15;" />
-      <TextField fx:id="tfTelefone" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="298.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfCep" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="350.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfCidade" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="403.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfEstado" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="455.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <TextField fx:id="tfEmail" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="506.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" />
-      <AnchorPane layoutY="245.0" prefHeight="537.0" prefWidth="211.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 50 0 0;" />
-      <AnchorPane layoutX="682.0" layoutY="-5.0" prefHeight="537.0" prefWidth="211.0" style="-fx-background-color: #E8530D; -fx-background-radius: 0 0 0 50;" />
+      <TextField fx:id="tfNome" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="100.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfCnpj" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="155.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextArea fx:id="tfDescricao" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="207.0" prefHeight="68.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfTelefone" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="298.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfCep" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="350.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfCidade" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="403.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfEstado" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="455.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <TextField fx:id="tfEmail" blendMode="DARKEN" editable="false" layoutX="275.0" layoutY="506.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <AnchorPane layoutY="245.0" prefHeight="537.0" prefWidth="211.0" style="-fx-background-radius: 0 50 0 0;" styleClass="AnchorPaneV2" stylesheets="@empresamenu.css" />
+      <AnchorPane layoutX="556.0" prefHeight="537.0" prefWidth="211.0" style="-fx-background-radius: 0 0 0 50;" styleClass="AnchorPaneV5" stylesheets="@empresamenu.css" />
       <Label fx:id="labelSenhaAtual" layoutX="275.0" layoutY="537.0" text="Senha Atual:" visible="false">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
@@ -93,17 +98,17 @@
          </font>
       </Label>
       <TextField fx:id="tfConfirmarNovaSenha" blendMode="DARKEN" layoutX="275.0" layoutY="660.0" prefHeight="29.0" prefWidth="257.0" style="-fx-border-radius: 40 40 40 40; -fx-background-radius: 40 40 40 40; -fx-border-color: #E8530D;" visible="false" />
-      <Button fx:id="botaoEditarPerfil" layoutX="682.0" layoutY="579.0" mnemonicParsing="false" onAction="#onClickEditarPerfil" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Editar Perfil" textFill="WHITE">
+      <Button fx:id="botaoEditarPerfil" layoutX="345.0" layoutY="581.0" mnemonicParsing="false" onAction="#onClickEditarPerfil" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Editar " textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="botaoSalvar" disable="true" layoutX="682.0" layoutY="635.0" mnemonicParsing="false" onAction="#onClickSalvar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Salvar" textFill="WHITE">
+      <Button fx:id="botaoSalvar" disable="true" layoutX="341.0" layoutY="644.0" mnemonicParsing="false" onAction="#onClickSalvar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Salvar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="botaoVoltar" layoutX="682.0" layoutY="689.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Voltar" textFill="WHITE">
+      <Button fx:id="botaoVoltar" layoutX="345.0" layoutY="705.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

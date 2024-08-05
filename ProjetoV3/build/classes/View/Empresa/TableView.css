@@ -1,0 +1,9 @@
+
+
+.TableView {
+    -fx-background-color: linear-gradient(to left, F9B52E, FCBE42);
+}
+
+.TableView .TableColumn{
+    -fx-background-color: transparent;
+}

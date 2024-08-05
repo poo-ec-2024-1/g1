@@ -6,7 +6,6 @@ import Model.repository.EmpresaRepository;
 import Model.repository.Database;
 import Model.model.Empresa;
 import Util.Util;
-import Util.VerificarRegEmpresa;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -124,22 +123,22 @@ public class TelaRegistroEmpresaController {
     }
     
     public boolean verificarRegistro(Empresa empresa){
-        if(!VerificarRegEmpresa.verificarCep(empresa.getCep())){
+        if(!Util.verificarCep(empresa.getCep())){
             labelMensagem.setText("CEP Inválido! Tente novamente."); return false;
         }
-        if(!VerificarRegEmpresa.verificarCnpj(empresa.getCnpj())){
+        if(!Util.verificarCnpj(empresa.getCnpj())){
             labelMensagem.setText("CNPJ Inválido! Tente noavamente."); return false;
         }
-        if(!VerificarRegEmpresa.verificarTelefone(empresa.getTelefone())){
+        if(!Util.verificarTelefone(empresa.getTelefone())){
             labelMensagem.setText("Telefone Inválido! Tente noavamente."); return false;
         }
-        if(!VerificarRegEmpresa.verificarSenha(empresa.getSenha())){
+        if(!Util.verificarSenha(empresa.getSenha())){
             labelMensagem.setText("A senha precisa ter, no mínimo, 8 caractéres!"); return false;
         }
-        if(VerificarRegEmpresa.existeCnpj(empresa.getCnpj())){
+        if(Util.existeCnpj(empresa.getCnpj())){
             labelMensagem.setText("CNPJ já está em uso!"); return false;
         }
-        if(VerificarRegEmpresa.existeEmail(empresa.getEmail())){
+        if(Util.verificarEmail(empresa.getEmail())){
             labelMensagem.setText("Email já está em uso!"); return false;
         }
         return true;

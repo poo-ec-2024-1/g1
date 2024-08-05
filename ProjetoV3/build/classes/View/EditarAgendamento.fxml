@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="666.0" prefWidth="1142.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.cliente.EditarAgendamentoController">
+   <children>
+      <AnchorPane layoutX="942.0" prefHeight="666.0" prefWidth="200.0" style="-fx-background-radius: 30 0 0 30;" styleClass="AnchorPaneV2" stylesheets="@Empresa/empresamenu.css" />
+      <TableView fx:id="tabel" layoutX="54.0" layoutY="36.0" prefHeight="310.0" prefWidth="858.0" styleClass="TableView" stylesheets="@Empresa/empresamenu.css">
+         <columns>
+            <TableColumn fx:id="colId" minWidth="33.0" prefWidth="33.0" text="ID" />
+            <TableColumn fx:id="colServico" minWidth="74.0" prefWidth="125.0" text="Servico" />
+            <TableColumn fx:id="colEmpresa" minWidth="73.0" prefWidth="132.0" text="Empresa" />
+            <TableColumn fx:id="colPreco" minWidth="59.0" prefWidth="66.0" text="Preço" />
+            <TableColumn fx:id="colVeiculo" minWidth="75.0" prefWidth="135.0" text="Veículo" />
+            <TableColumn fx:id="colData" minWidth="51.0" prefWidth="76.0" text="Data" />
+            <TableColumn fx:id="colHora" minWidth="71.0" text="Horário" />
+            <TableColumn fx:id="colEndereco" minWidth="78.0" prefWidth="209.0" text="Endereco" />
+         </columns>
+      </TableView>
+      <Label layoutX="90.0" layoutY="380.0" text="Empresa:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="90.0" layoutY="485.0" text="Serviço:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="344.0" layoutY="380.0" text="Data:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="344.0" layoutY="485.0" text="Hora:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="614.0" layoutY="380.0" text="Endereço:">
+         <font>
+            <Font name="DejaVu Sans Condensed Bold" size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="dateData" editable="false" layoutX="344.0" layoutY="398.0" prefHeight="29.0" prefWidth="213.0" styleClass="DataPicker" stylesheets="@Empresa/empresamenu.css" />
+      <TextField fx:id="tfEndereço" layoutX="614.0" layoutY="398.0" prefHeight="29.0" prefWidth="213.0" styleClass="textField" stylesheets="@Empresa/empresamenu.css" />
+      <Button fx:id="botaoVoltar" layoutX="257.0" layoutY="602.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="botaoCancelar" layoutX="402.0" layoutY="602.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Cancelar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="botaoEditar" layoutX="545.0" layoutY="602.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Editar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="botaoSalvar" layoutX="686.0" layoutY="602.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Salvar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="-3.0" prefHeight="666.0" prefWidth="46.0" style="-fx-background-radius: 0 30 30 0;" styleClass="AnchorPaneV2" stylesheets="@Empresa/empresamenu.css" />
+      <ComboBox fx:id="boxEmpresa" layoutX="90.0" layoutY="400.0" prefHeight="29.0" prefWidth="228.0" styleClass="ComboBox" stylesheets="@Empresa/empresamenu.css" />
+      <ComboBox fx:id="boxServico" layoutX="90.0" layoutY="503.0" prefHeight="29.0" prefWidth="228.0" styleClass="ComboBox" stylesheets="@Empresa/empresamenu.css" />
+      <ComboBox fx:id="boxHora" layoutX="344.0" layoutY="503.0" prefHeight="29.0" prefWidth="228.0" styleClass="ComboBox" stylesheets="@Empresa/empresamenu.css" />
+   </children>
+</AnchorPane>
