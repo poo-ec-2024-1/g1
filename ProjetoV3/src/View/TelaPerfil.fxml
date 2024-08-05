@@ -24,7 +24,7 @@
             <Image url="@icons/Perfil.png" />
          </image>
       </ImageView>
-      <Button layoutX="345.0" layoutY="129.0" mnemonicParsing="false" onAction="#onClickEditar" prefHeight="33.0" prefWidth="109.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Editar perfil" textFill="WHITE">
+      <Button layoutX="345.0" layoutY="129.0" mnemonicParsing="false" onAction="#onClickEditar" prefHeight="33.0" prefWidth="109.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Editar perfil" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="14.0" />
          </font>
@@ -35,12 +35,12 @@
          </font>
       </Label>
       <TextField fx:id="tfNome" editable="false" layoutX="325.0" layoutY="195.0" prefHeight="27.0" prefWidth="279.0" styleClass="textField" stylesheets="@Empresa/empresamenu.css" />
-      <Button layoutX="410.0" layoutY="614.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="43.0" prefWidth="131.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
+      <Button layoutX="410.0" layoutY="614.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="43.0" prefWidth="131.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="14.0" />
          </font>
       </Button>
-      <Button fx:id="buttonSalvar" disable="true" layoutX="256.0" layoutY="614.0" mnemonicParsing="false" onAction="#onClickSalvar" prefHeight="43.0" prefWidth="118.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Salvar" textFill="WHITE">
+      <Button fx:id="buttonSalvar" disable="true" layoutX="256.0" layoutY="614.0" mnemonicParsing="false" onAction="#onClickSalvar" prefHeight="43.0" prefWidth="118.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Salvar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="14.0" />
          </font>

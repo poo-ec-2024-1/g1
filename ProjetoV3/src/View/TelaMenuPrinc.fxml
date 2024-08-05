@@ -29,7 +29,7 @@
          </children>
       </AnchorPane>
       <AnchorPane layoutY="715.0" prefHeight="33.0" prefWidth="1080.0" styleClass="AnchorPane" stylesheets="@Empresa/empresamenu.css" />
-      <Button fx:id="BotaoPerfil" layoutX="811.0" layoutY="41.0" mnemonicParsing="false" onAction="#onClickPerfil" prefHeight="52.0" prefWidth="40.0" styleClass="ButtonV2" stylesheets="@Empresa/empresamenu.css" textFill="WHITE">
+      <Button fx:id="BotaoPerfil" layoutX="811.0" layoutY="41.0" mnemonicParsing="false" onAction="#onClickPerfil" prefHeight="52.0" prefWidth="40.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
@@ -41,7 +41,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button fx:id="BotaoLogout" layoutX="921.0" layoutY="41.0" mnemonicParsing="false" onAction="#onClickLogout" prefHeight="29.0" prefWidth="50.0" styleClass="ButtonV2" stylesheets="@Empresa/empresamenu.css" textFill="WHITE">
+      <Button fx:id="BotaoLogout" layoutX="921.0" layoutY="41.0" mnemonicParsing="false" onAction="#onClickLogout" prefHeight="29.0" prefWidth="50.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
@@ -60,7 +60,7 @@
             <Font name="DejaVu Sans Condensed Bold" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="BotaoAgendar" layoutX="470.0" layoutY="238.0" mnemonicParsing="false" onAction="#onClickAgendar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV2" stylesheets="@Empresa/empresamenu.css" text="Agendar" textFill="WHITE" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="238.0">
+      <Button fx:id="BotaoAgendar" layoutX="470.0" layoutY="238.0" mnemonicParsing="false" onAction="#onClickAgendar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Agendar" textFill="WHITE" AnchorPane.rightAnchor="485.0" AnchorPane.topAnchor="238.0">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
@@ -70,7 +70,7 @@
             <Font name="DejaVu Sans Condensed Bold" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="BotaoVerAgendamentos" layoutX="417.0" layoutY="322.0" mnemonicParsing="false" onAction="#onClickAgendamentos" prefHeight="33.0" prefWidth="246.0" styleClass="ButtonV2" stylesheets="@Empresa/empresamenu.css" text="Meus Agendamentos" textFill="WHITE">
+      <Button fx:id="BotaoVerAgendamentos" layoutX="417.0" layoutY="322.0" mnemonicParsing="false" onAction="#onClickAgendamentos" prefHeight="33.0" prefWidth="246.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Meus Agendamentos" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
@@ -85,12 +85,12 @@
             <Font name="DejaVu Sans Condensed Bold" size="16.0" />
          </font>
       </Label>
-      <Button fx:id="BotaoConfig" layoutX="478.0" layoutY="406.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV2" stylesheets="@Empresa/empresamenu.css" text="Config" textFill="WHITE">
+      <Button fx:id="BotaoConfig" layoutX="478.0" layoutY="406.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Config" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoContato" layoutX="464.0" layoutY="490.0" mnemonicParsing="false" onAction="#onClickContato" prefHeight="33.0" prefWidth="153.0" styleClass="ButtonV2" stylesheets="@Empresa/empresamenu.css" text="Contate-nos" textFill="WHITE">
+      <Button fx:id="BotaoContato" layoutX="464.0" layoutY="490.0" mnemonicParsing="false" onAction="#onClickContato" prefHeight="33.0" prefWidth="153.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Contate-nos" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

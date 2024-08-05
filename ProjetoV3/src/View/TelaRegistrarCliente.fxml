@@ -34,12 +34,12 @@
             <Line endX="100.0" layoutX="130.0" layoutY="94.0" startX="-100.0" stroke="WHITE" />
          </children>
       </AnchorPane>
-      <Button fx:id="BotaoEntrar" layoutX="376.0" layoutY="512.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
+      <Button fx:id="BotaoEntrar" layoutX="376.0" layoutY="512.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoRegistrar" layoutX="554.0" layoutY="512.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Registrar" textFill="WHITE">
+      <Button fx:id="BotaoRegistrar" layoutX="554.0" layoutY="512.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Registrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

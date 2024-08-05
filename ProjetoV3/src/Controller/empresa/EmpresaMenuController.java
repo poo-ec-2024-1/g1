@@ -155,7 +155,7 @@ public class EmpresaMenuController implements Initializable{
     }
     
     @FXML
-    public void onClickedServicos(ActionEvent event) throws IOException {
+    public void onClickedEditar(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/EditarServico.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

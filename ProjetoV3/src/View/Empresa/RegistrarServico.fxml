@@ -29,12 +29,12 @@
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="BotaoVoltar" layoutX="310.0" layoutY="432.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="Button" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
+      <Button fx:id="BotaoVoltar" layoutX="297.0" layoutY="416.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoSalvar" layoutX="458.0" layoutY="432.0" mnemonicParsing="false" onAction="#onClickSalvar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="Button" stylesheets="@empresamenu.css" text="Salvar" textFill="WHITE">
+      <Button fx:id="BotaoSalvar" layoutX="500.0" layoutY="416.0" mnemonicParsing="false" onAction="#onClickSalvar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Salvar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

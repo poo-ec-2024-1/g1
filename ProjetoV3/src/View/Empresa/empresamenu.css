@@ -5,11 +5,11 @@
 }
 
 .AnchorPane{
-    -fx-background-color: linear-gradient(to right ,FEBE1D, #E8530D);
+    -fx-background-color: linear-gradient(to right ,#4697ba,#0f4b65,#111618);
 }
 
 .textField{
-    -fx-border-color: linear-gradient(to right,FEBE1D, #E8530D);
+    -fx-border-color: linear-gradient(to right,#197DA9,#111618);
     -fx-background-radius: 30 30 30 30;
     -fx-border-radius: 30 30 30 30;
     -fx-border-width: 2;
@@ -17,17 +17,17 @@
 
 
 .AnchorPaneV2{
-    -fx-background-color: linear-gradient(FEBE1D, #E8530D);
+    -fx-background-color: linear-gradient(#4697ba,#0f4b65,#111618);
 }
 
 .DataPicker{
-	-fx-primary-color: linear-gradient(#fecb4a,FEBE1D);;
+	-fx-primary-color: linear-gradient(#111618,#0f4b65,#4697ba);;
 	-fx-secondary-color: #FEBE1D;
-	-fx-light-grey-color: linear-gradient(to right,FEBE1D, #E8530D);
+	-fx-light-grey-color: linear-gradient(to right,#111618,#0f4b65,#4697ba);
         -fx-border-radius: 30 30 30 30;
         -fx-background-radius: 30 30 30 30;
 	-fx-focus-color: -fx-secondary-color;
-        -fx-border-color: linear-gradient(to right,FEBE1D, #E8530D);
+        -fx-border-color: linear-gradient(to right,#111618,#0f4b65,#4697ba);
 }
 
 .date-picker .arrow-button {
@@ -80,11 +80,11 @@
 
 
 .TableView{
-	-fx-primary-color: #E8530D;
-	-fx-secondary-color: #FEBE1D;
+	-fx-primary-color: #0f4b65;
+	-fx-secondary-color: #4697ba;
 	-fx-accent-color: #B6FF00;
-	-fx-grey-color: #E8530D;
-	-fx-light-grey-color: linear-gradient(#fecb4a,FEBE1D);
+	-fx-grey-color: #111618;
+	-fx-light-grey-color: linear-gradient(#111618,#0f4b65,#4697ba);
 	-fx-lightest-grey-color: #F9F9FB;
     
 	-fx-focus-color: -fx-secondary-color;
@@ -111,6 +111,7 @@
 	-fx-border-color: -fx-grey-color;
 }
 .table-view .column-header .label{
+        -fx-text-fill:white;
 	-fx-font-weight: bold; 
 	-fx-alignment: center-left;
 }
@@ -119,15 +120,18 @@
 	-fx-background-color: transparent;
 	-fx-border-color: transparent -fx-lightest-grey-color -fx-lightest-grey-color -fx-lightest-grey-color, transparent;
 	-fx-border-insets: 0, 1;
+        -fx-text-fill:white;
 }
 .table-row-cell:empty {
 	-fx-background-color: transparent;
 }
 .table-row-cell:filled:hover {
 	-fx-background-color: -fx-light-grey-color;
+        -fx-text-fill:white;
 }
 .table-row-cell:filled:selected:hover {
 	-fx-background-color: -fx-light-grey-color;
+        -fx-text-fill:white;
 }
 .table-row-cell:filled:selected {
   	-fx-background-color: #eaeaea;
@@ -135,17 +139,20 @@
 	-fx-background-radius: 0.0;
 }
 .table-row-cell:filled:selected .table-cell {
-	-fx-text-fill: black;
+	-fx-text-fill: white;
 }
 .table-view .cell:filled{
 	-fx-cell-size: 30;
 	-fx-alignment: center-left;
+        
 }
 .check-box-table-cell > .check-box:selected .box .mark {
 	-fx-background-color: white;
+        -fx-text-fill:white;
 }
 .check-box-table-cell > .check-box:selected .box{
 	-fx-background-color: -fx-accent-color;
+        -fx-text-fill:white;
 }
 .table-view .placeholder .label {
 	-fx-text-fill: red;
@@ -154,10 +161,9 @@
 
 
 .ComboBox{
-	-fx-primary-color: linear-gradient(to right,FEBE1D, #E8530D);
-	-fx-secondary-color: linear-gradient(#fecb4a,FEBE1D);
+	-fx-primary-color: linear-gradient(to right,#111618,#0f4b65,#4697ba);
+	-fx-secondary-color: linear-gradient(#111618,#0f4b65,#4697ba);
 	-fx-grey-color: #b9b9b9;
-    
 	-fx-focus-color: -fx-secondary-color;
 }
 
@@ -180,32 +186,41 @@
 /* WHILE OPEN */
 .combo-box-base:showing {
 	-fx-background-color: -fx-secondary-color;
+        -fx-text-fill:white;
 }
 .combo-box .combo-box-popup .list-view .list-cell {
 	-fx-background-color: -fx-primary-color;
+        -fx-text-fill:white;
 }
 .combo-box .combo-box-popup .list-view .list-cell:hover,
 .combo-box .combo-box-popup .list-view .list-cell:selected {
 	-fx-background-color: -fx-secondary-color;
+        -fx-text-fill:white;
 }
 
 .AnchorPaneV3{
     
-    -fx-border-color:linear-gradient(to right,FEBE1D, #E8530D);
+    -fx-border-color:linear-gradient(to right,#111618,#0f4b65,#4697ba);
     -fx-border-width: 3;
     
     
 }
 
 .ButtonV2{
-    -fx-background-color: linear-gradient(to right,#E8530D,FEBE1D);
+    -fx-background-color: #E8530D;
     -fx-background-radius: 30 30 30 30;
 }
 
 .AnchorPaneV4{
-    -fx-background-color: linear-gradient(to left ,FEBE1D, #E8530D);
+    -fx-background-color: linear-gradient(to left ,#4697ba,#0f4b65,#111618);
 }
 
 .AnchorPaneV5{
-    -fx-background-color: linear-gradient( #E8530D,FEBE1D);
+    -fx-background-color: linear-gradient( #111618,#0f4b65,#4697ba );
+}
+
+
+.ButtonV5{
+    -fx-background-color: #072532;
+    -fx-background-radius:30 30 30 30;
 }

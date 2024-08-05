@@ -61,10 +61,7 @@
             <Font name="DejaVu Sans Condensed Bold" size="34.0" />
          </font>
       </Label>
-      <AnchorPane layoutX="691.0" prefHeight="608.0" prefWidth="171.0" style="-fx-background-radius: 50 0 0 50;" styleClass="AnchorPane" stylesheets="@empresamenu.css">
-         <effect>
-            <DropShadow color="#ff8001" height="0.0" radius="17.65" width="72.6" />
-         </effect></AnchorPane>
+      <AnchorPane layoutX="691.0" prefHeight="608.0" prefWidth="171.0" style="-fx-background-radius: 50 0 0 50;" styleClass="AnchorPane" stylesheets="@empresamenu.css" />
       <TextField fx:id="tfNome" blendMode="DARKEN" layoutX="50.0" layoutY="135.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
       <TextField fx:id="tfCep" blendMode="DARKEN" layoutX="52.0" layoutY="189.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
       <TextField fx:id="tfCnpj" blendMode="DARKEN" layoutX="50.0" layoutY="243.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
@@ -85,12 +82,12 @@
          </font>
       </Label>
       <PasswordField fx:id="tfConfirmacaoSenha" blendMode="DARKEN" layoutX="399.0" layoutY="355.0" prefHeight="29.0" prefWidth="257.0" styleClass="textField" stylesheets="@empresamenu.css" />
-      <Button fx:id="BotaoVoltar" layoutX="181.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="Button" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
+      <Button fx:id="BotaoVoltar" layoutX="181.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoRegistrarEmpresa" layoutX="364.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="Button" stylesheets="@empresamenu.css" text="Registrar" textFill="WHITE">
+      <Button fx:id="BotaoRegistrarEmpresa" layoutX="364.0" layoutY="516.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Registrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

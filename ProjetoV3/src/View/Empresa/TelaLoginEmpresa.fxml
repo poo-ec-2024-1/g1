@@ -36,17 +36,17 @@
       </Label>
       <TextField fx:id="tfEmail" layoutX="39.0" layoutY="172.0" prefHeight="29.0" prefWidth="261.0" styleClass="textField" stylesheets="@empresamenu.css" />
       <PasswordField fx:id="tfSenha" layoutX="39.0" layoutY="248.0" prefHeight="29.0" prefWidth="261.0" styleClass="textField" stylesheets="@empresamenu.css" />
-      <Button fx:id="BotaoCadastrar" layoutX="371.0" layoutY="443.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="Button" stylesheets="@empresamenu.css" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="BotaoCadastrar" layoutX="371.0" layoutY="443.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoEntrar" layoutX="35.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickEntrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 40 40 40 40;" styleClass="Button" stylesheets="@empresamenu.css" text="Entrar" textFill="WHITE">
+      <Button fx:id="BotaoEntrar" layoutX="35.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickEntrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 40 40 40 40;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Entrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoVoltarCliente" layoutX="188.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 40 40 40 40;" styleClass="Button" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
+      <Button fx:id="BotaoVoltarCliente" layoutX="188.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 40 40 40 40;" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

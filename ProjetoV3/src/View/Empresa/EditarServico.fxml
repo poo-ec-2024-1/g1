@@ -23,15 +23,15 @@
             <TableColumn fx:id="colPreco" minWidth="0.0" prefWidth="102.0" text="Preço" />
         </columns>
       </TableView>
-      <Button fx:id="buttonEditar" disable="true" layoutX="196.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedEditar" styleClass="Button" stylesheets="@empresamenu.css" text="Editar" textFill="WHITE">
+      <Button fx:id="buttonEditar" disable="true" layoutX="196.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedEditar" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Editar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="13.0" />
          </font></Button>
-      <Button fx:id="buttonDeletar" disable="true" layoutX="347.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedDeletar" styleClass="Button" stylesheets="@empresamenu.css" text="Deletar" textFill="WHITE">
+      <Button fx:id="buttonDeletar" disable="true" layoutX="347.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedDeletar" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Deletar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="13.0" />
          </font></Button>
-      <Button fx:id="buttonLimpar" layoutX="431.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedLimpar" styleClass="Button" stylesheets="@empresamenu.css" text="Limpar" textFill="WHITE">
+      <Button fx:id="buttonLimpar" layoutX="431.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedLimpar" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Limpar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="13.0" />
          </font></Button>
@@ -53,11 +53,11 @@
       <TextField fx:id="tfNome" editable="false" layoutX="62.0" layoutY="361.0" prefHeight="29.0" prefWidth="268.0" styleClass="textField" stylesheets="@empresamenu.css" />
       <TextField fx:id="tfPreco" editable="false" layoutX="62.0" layoutY="460.0" prefHeight="29.0" prefWidth="268.0" styleClass="textField" stylesheets="@empresamenu.css" />
       <TextArea fx:id="tfDescricao" editable="false" layoutX="442.0" layoutY="362.0" prefHeight="130.0" prefWidth="268.0" styleClass="textField" stylesheets="@empresamenu.css" wrapText="true" />
-      <Button fx:id="buttonSalvar" disable="true" layoutX="267.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedSalvar" styleClass="Button" stylesheets="@empresamenu.css" text="Salvar" textFill="WHITE">
+      <Button fx:id="buttonSalvar" disable="true" layoutX="267.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedSalvar" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Salvar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="13.0" />
          </font></Button>
-      <Button fx:id="buttonVoltar" layoutX="515.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedVoltar" styleClass="Button" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
+      <Button fx:id="buttonVoltar" layoutX="515.0" layoutY="555.0" mnemonicParsing="false" onAction="#onClickedVoltar" styleClass="ButtonV5" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="13.0" />
          </font></Button>
