@@ -15,10 +15,10 @@ public class AgendamentoExibivel {
     public AgendamentoExibivel() {
     }
 
-    public AgendamentoExibivel(int id, String servico, String empresa, String preco, String veiculo, String data, String hora, String endereco) {
+    public AgendamentoExibivel(int id, String servico, String entidade, String preco, String veiculo, String data, String hora, String endereco) {
         this.id = id;
         this.servico = servico;
-        this.entidade = empresa;
+        this.entidade = entidade;
         this.preco = preco;
         this.veiculo = veiculo;
         this.data = data;

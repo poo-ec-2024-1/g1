@@ -2,15 +2,11 @@
 
 <?import java.lang.*?>
 <?import java.net.*?>
-<?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 <?import java.net.URL?>
-<?import javafx.scene.chart.BarChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -25,9 +21,9 @@
         <URL value="@empresamenu.css" />
     </stylesheets>
    <children>
-      <AnchorPane prefHeight="698.0" prefWidth="72.0" style="-fx-background-color: #E8530D;">
+      <AnchorPane prefHeight="705.0" prefWidth="72.0" styleClass="AnchorPaneV2" stylesheets="@empresamenu.css">
          <children>
-            <Button fx:id="BtnPerfil" layoutX="6.0" layoutY="152.0" mnemonicParsing="false" onAction="#onClickPerfil" style="-fx-background-color: #E8530D;">
+            <Button fx:id="BtnPerfil" layoutX="6.0" layoutY="152.0" mnemonicParsing="false" onAction="#onClickPerfil" styleClass="Button" stylesheets="@empresamenu.css">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -36,7 +32,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="BotaoSair" layoutX="6.0" layoutY="436.0" mnemonicParsing="false" onAction="#onClickVoltar" style="-fx-background-color: #E8530D;">
+            <Button fx:id="BotaoSair" layoutX="6.0" layoutY="436.0" mnemonicParsing="false" onAction="#onClickVoltar" styleClass="Button" stylesheets="@empresamenu.css">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -45,7 +41,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="BotaoServicos" layoutX="6.0" layoutY="236.0" mnemonicParsing="false" onAction="#onClickServicos" style="-fx-background-color: #E8530D;">
+            <Button fx:id="BotaoServicos" layoutX="6.0" layoutY="236.0" mnemonicParsing="false" onAction="#onClickServicos" styleClass="Button" stylesheets="@empresamenu.css">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -54,7 +50,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="6.0" layoutY="331.0" mnemonicParsing="false" style="-fx-background-color: #E8530D;">
+            <Button layoutX="6.0" layoutY="331.0" mnemonicParsing="false" styleClass="Button" stylesheets="@empresamenu.css">
                <graphic>
                   <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -65,10 +61,10 @@
             </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="72.0" layoutY="672.0" prefHeight="12.0" prefWidth="1004.0" style="-fx-background-color: #E8530D;" />
-      <AnchorPane layoutX="72.0" layoutY="14.0" prefHeight="12.0" prefWidth="1004.0" style="-fx-background-color: #E8530D;" />
-      <AnchorPane layoutX="1050.0" layoutY="1.0" prefHeight="698.0" prefWidth="12.0" style="-fx-background-color: #E8530D;" />
-      <AnchorPane layoutX="177.0" layoutY="20.0" prefHeight="103.0" prefWidth="770.0" style="-fx-border-color: #E8530D; -fx-border-width: 3; -fx-background-radius: 0 0 30 30; -fx-border-radius: 0 0 30 30;">
+      <AnchorPane layoutX="72.0" layoutY="672.0" prefHeight="33.0" prefWidth="980.0" styleClass="AnchorPaneV4" />
+      <AnchorPane layoutX="72.0" prefHeight="26.0" prefWidth="1010.0" styleClass="AnchorPane" stylesheets="@empresamenu.css" />
+      <AnchorPane layoutX="1050.0" layoutY="26.0" prefHeight="679.0" prefWidth="32.0" styleClass="AnchorPaneV5" />
+      <AnchorPane layoutX="177.0" layoutY="20.0" prefHeight="103.0" prefWidth="770.0" style="-fx-background-radius: 0 0 30 30; -fx-border-radius: 0 0 30 30;" styleClass="AnchorPaneV3" stylesheets="@empresamenu.css">
          <children>
             <Label fx:id="titleNome" layoutX="14.0" layoutY="14.0" prefHeight="42.0" prefWidth="284.0" text="Nome">
                <font>
@@ -83,7 +79,7 @@
             <Label fx:id="titleCnpj" layoutX="14.0" layoutY="56.0" text="CNPJ" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="89.0" layoutY="516.0" prefHeight="143.0" prefWidth="943.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;">
+      <AnchorPane layoutX="89.0" layoutY="516.0" prefHeight="143.0" prefWidth="943.0" style="-fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" styleClass="AnchorPaneV3" stylesheets="@empresamenu.css">
          <children>
             <Label layoutX="24.0" layoutY="36.0" prefHeight="42.0" prefWidth="182.0" text="Saldo:" textFill="#2fbf36">
                <font>
@@ -97,14 +93,9 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="BotaoEditarPedido" layoutX="463.0" layoutY="470.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="198.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Cancelar pedido" textFill="WHITE">
-         <font>
-            <Font name="DejaVu Sans Bold" size="18.0" />
-         </font>
-      </Button>
-      <TableView fx:id="tabelaServicos" layoutX="132.0" layoutY="136.0" prefHeight="324.0" prefWidth="857.0" styleClass="TableView" stylesheets="@TableView.css">
+      <TableView fx:id="tabelaServicos" layoutX="132.0" layoutY="136.0" prefHeight="324.0" prefWidth="857.0" styleClass="TableView" stylesheets="@empresamenu.css">
          <columns>
-            <TableColumn fx:id="colId" minWidth="33.0" prefWidth="33.0" styleClass="TableColumn" text="ID" />
+            <TableColumn fx:id="colId" minWidth="33.0" prefWidth="33.0" text="ID" />
             <TableColumn fx:id="colServico" minWidth="74.0" prefWidth="125.0" text="Servico" />
             <TableColumn fx:id="colCliente" minWidth="73.0" prefWidth="132.0" text="Cliente" />
             <TableColumn fx:id="colPreco" minWidth="59.0" prefWidth="66.0" text="Preço" />

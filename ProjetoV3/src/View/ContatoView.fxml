@@ -8,21 +8,20 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="Controller.cliente.ContatoViewController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.cliente.ContatoViewController">
    <children>
       <Label layoutX="75.0" layoutY="126.0" text="Relate um problema ou sugestao:">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tfDescricao" layoutX="75.0" layoutY="157.0" prefHeight="134.0" prefWidth="413.0" promptText="Conte-nos" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
-      <Button fx:id="BotaoVoltar" layoutX="123.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Voltar" textFill="WHITE">
+      <TextField fx:id="tfDescricao" layoutX="75.0" layoutY="157.0" prefHeight="134.0" prefWidth="413.0" promptText="Conte-nos" styleClass="textField" stylesheets="@Empresa/empresamenu.css" />
+      <Button fx:id="BotaoVoltar" layoutX="123.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoEnviar" layoutX="316.0" layoutY="328.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Enviar" textFill="WHITE">
+      <Button fx:id="BotaoEnviar" layoutX="316.0" layoutY="328.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Enviar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

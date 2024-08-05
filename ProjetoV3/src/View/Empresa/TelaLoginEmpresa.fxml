@@ -13,7 +13,7 @@
 
 <AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="770.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.empresa.TelaLoginEmpresaController">
    <children>
-      <AnchorPane layoutX="570.0" prefHeight="554.0" prefWidth="200.0" style="-fx-background-color: #E8530D;" />
+      <AnchorPane layoutX="570.0" prefHeight="554.0" prefWidth="200.0" style="-fx-background-radius: 30 0 0 30;" styleClass="AnchorPane" stylesheets="@empresamenu.css" />
       <Label layoutX="39.0" layoutY="26.0" text="Login">
          <font>
             <Font name="DejaVu Sans Condensed Bold" size="34.0" />
@@ -34,19 +34,19 @@
             <Font name="DejaVu Sans Condensed Bold" size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="tfEmail" layoutX="39.0" layoutY="172.0" prefHeight="29.0" prefWidth="261.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
-      <PasswordField fx:id="tfSenha" layoutX="39.0" layoutY="248.0" prefHeight="29.0" prefWidth="261.0" style="-fx-border-color: #E8530D; -fx-background-radius: 30 30 30 30; -fx-border-radius: 30 30 30 30;" />
-      <Button fx:id="BotaoCadastrar" layoutX="371.0" layoutY="443.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 30 30 30 30;" text="Cadastrar" textFill="WHITE">
+      <TextField fx:id="tfEmail" layoutX="39.0" layoutY="172.0" prefHeight="29.0" prefWidth="261.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <PasswordField fx:id="tfSenha" layoutX="39.0" layoutY="248.0" prefHeight="29.0" prefWidth="261.0" styleClass="textField" stylesheets="@empresamenu.css" />
+      <Button fx:id="BotaoCadastrar" layoutX="371.0" layoutY="443.0" mnemonicParsing="false" onAction="#onClickRegistrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 30 30 30 30;" styleClass="Button" stylesheets="@empresamenu.css" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoEntrar" layoutX="35.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickEntrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 40 40 40 40;" text="Entrar" textFill="WHITE">
+      <Button fx:id="BotaoEntrar" layoutX="35.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickEntrar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 40 40 40 40;" styleClass="Button" stylesheets="@empresamenu.css" text="Entrar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoVoltarCliente" layoutX="188.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-color: #E8530D; -fx-background-radius: 40 40 40 40;" text="Voltar" textFill="WHITE">
+      <Button fx:id="BotaoVoltarCliente" layoutX="188.0" layoutY="357.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" style="-fx-background-radius: 40 40 40 40;" styleClass="Button" stylesheets="@empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

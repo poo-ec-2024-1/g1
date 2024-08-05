@@ -21,7 +21,7 @@ public class Cliente{
     @DatabaseField
     private String telefone;
     @DatabaseField
-    private String endereco;
+    private String estado;
     @DatabaseField
     private String cpf;
     @DatabaseField
@@ -39,7 +39,7 @@ public class Cliente{
         this.dataNascimento = dataNascimento;
         this.email = email;
         this.telefone = telefone;
-        this.endereco = endereco;
+        this.estado = endereco;
         this.cpf = cpf;
         this.cep = cep;
         this.cidade = cidade;
@@ -86,12 +86,12 @@ public class Cliente{
         this.telefone = telefone;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public String getCpf() {
@@ -125,6 +125,6 @@ public class Cliente{
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
+
     
 }
