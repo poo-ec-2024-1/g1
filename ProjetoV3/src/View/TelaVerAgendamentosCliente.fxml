@@ -32,7 +32,12 @@
       </TableView>
       <AnchorPane prefHeight="677.0" prefWidth="41.0" style="-fx-background-radius: 0 30 30 0;" styleClass="AnchorPaneV2" stylesheets="@Empresa/empresamenu.css" />
       <AnchorPane layoutX="949.0" prefHeight="677.0" prefWidth="41.0" style="-fx-background-radius: 30 0 0 30;" styleClass="AnchorPaneV2" stylesheets="@Empresa/empresamenu.css" />
-      <Button fx:id="BotaoVoltar" layoutX="433.0" layoutY="596.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
+      <Button fx:id="BotaoVoltar" layoutX="340.0" layoutY="596.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="BotaoEditar" layoutX="513.0" layoutY="596.0" mnemonicParsing="false" onAction="#onClickEditar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Editar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>

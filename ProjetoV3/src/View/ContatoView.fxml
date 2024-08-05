@@ -16,12 +16,12 @@
          </font>
       </Label>
       <TextField fx:id="tfDescricao" layoutX="75.0" layoutY="157.0" prefHeight="134.0" prefWidth="413.0" promptText="Conte-nos" styleClass="textField" stylesheets="@Empresa/empresamenu.css" />
-      <Button fx:id="BotaoVoltar" layoutX="123.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
+      <Button fx:id="BotaoVoltar" layoutX="123.0" layoutY="328.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
-      <Button fx:id="BotaoEnviar" layoutX="316.0" layoutY="328.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="Button" stylesheets="@Empresa/empresamenu.css" text="Enviar" textFill="WHITE">
+      <Button fx:id="BotaoEnviar" layoutX="316.0" layoutY="328.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Enviar" textFill="WHITE">
          <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
