@@ -49,8 +49,7 @@
       </Label>
       <DatePicker fx:id="dateData" editable="false" layoutX="344.0" layoutY="398.0" prefHeight="29.0" prefWidth="213.0" styleClass="DataPicker" stylesheets="@Empresa/empresamenu.css" />
       <TextField fx:id="tfEndereço" layoutX="614.0" layoutY="398.0" prefHeight="29.0" prefWidth="213.0" styleClass="textField" stylesheets="@Empresa/empresamenu.css" />
-      <Button fx:id="botaoVoltar" layoutX="257.0" layoutY="602.0" mnemonicParsing="false" onAction="#onClickVoltar" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">
-         <font>
+      <Button fx:id="botaoVoltar" layoutX="257.0" layoutY="602.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="125.0" styleClass="ButtonV5" stylesheets="@Empresa/empresamenu.css" text="Voltar" textFill="WHITE">         <font>
             <Font name="DejaVu Sans Bold" size="18.0" />
          </font>
       </Button>
