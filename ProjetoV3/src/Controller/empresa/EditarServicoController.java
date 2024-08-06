@@ -68,13 +68,14 @@ public class EditarServicoController implements Initializable {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    ObservableList<Servico> servicos;
+    ObservableList<Servico> servicosEmpresa;
     Database database;
     ServicoRepository servicoRP;
     Servico servicoAtual;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        servicosEmpresa = FXCollections.observableArrayList();
         database = Util.openDatabase("servicosDatabase");
         servicoRP = new ServicoRepository(database);
         atualizarTabel();
@@ -83,13 +84,17 @@ public class EditarServicoController implements Initializable {
      * Atualiza os servios na tabela de serviços da empresa
      */
     public void atualizarTabel(){
-        servicos = FXCollections.observableArrayList(servicoRP.loadAll());
+        List<Servico> servicos = servicoRP.loadAll();
+        for(Servico x : servicos){
+            if(x.getEmpResponsavel() == TelaLoginEmpresaController.idSelecionado){
+                servicosEmpresa.add(x);
+            }
+        }
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colServico.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colDescricao.setCellValueFactory(new PropertyValueFactory<>("descricao"));
         colPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
-        
-        tabel.setItems(servicos);
+        tabel.setItems(servicosEmpresa);
     }
     /**
      * Habilita alguns botões na tela de editar serviço, escaneia o serviço selecionado na tabela e o exibe nos campos de texto
