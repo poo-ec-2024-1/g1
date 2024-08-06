@@ -13,6 +13,19 @@ Em primeiro plano, o projeto foi estruturado no modelo MVC (model, view, control
 
 ![image](https://github.com/user-attachments/assets/09f7a725-634a-424e-ad98-c4e4211e2e22)
 
+Para a conexão das telas, foram utilizados 7 principais imports:
+
+1) import javafx.scene.Node;
+2) import javafx.scene.Parent;
+3) import javafx.scene.Scene;
+4) import javafx.stage.Stage;
+5) import javafx.event.ActionEvent;
+6) import javafx.fxml.FXML;
+7) import javafx.fxml.FXMLLoader;
+
+Para a linguagem css, foi utilizado a referência do site da Oracle : https://docs.oracle.com/javafx/2/api/javafx/scene/doc-files/cssref.html#:~:text=CSS%20styles%20are%20applied%20to,need%20CSS%20reapplied%20are%20visited.
+
+
 # Modelagem de classes:
 
 ![Classe UML - Database](https://github.com/user-attachments/assets/f512c2b4-2eba-4476-afa5-f920b1f40277)
