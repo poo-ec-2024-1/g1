@@ -34,6 +34,8 @@ Nesse commit, eu implementei o sistema que permite o registro e o login por part
 https://github.com/poo-ec-2024-1/g1/commit/d62393c97cfc1781a151171bb7589f771214f03b 
 Nesse commit, eu implementei o sistema que permite aos clientes verem os serviços que ele agendou.
 
+https://github.com/poo-ec-2024-1/g1/commit/35a6914b5cad9ab389593bf9b6cbd821c2567132
+Nesse commit, adicionei a documentação javadoc ao projeto. Além disso, fiz alguns testes e implementei algumas correções
 
 ### Considerações finais
 
