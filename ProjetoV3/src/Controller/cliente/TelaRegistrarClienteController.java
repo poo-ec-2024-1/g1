@@ -57,7 +57,7 @@ public class TelaRegistrarClienteController  {
     
 
     @FXML
-    private void onClickVoltar(ActionEvent event) throws IOException {
+    public void onClickVoltar(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaLoginCliente.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scena = new Scene(root);
@@ -82,6 +82,9 @@ public class TelaRegistrarClienteController  {
             if(Util.existeVazio(Util.listCliente(cliente))){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");
             }
+            //     Essa é a parte que verifica o registro do cliente. Deixei comentada para fins desenvolvedorísticos.
+    //        else if(!verificarRegistro(cliente)){
+    //        }
             else if(!Util.verificarIgualdade(senha, senhaConfirmacao)){
                 labelMensagem.setText("As senhas não conferem! Tente novamente.");
             }
@@ -102,5 +105,24 @@ public class TelaRegistrarClienteController  {
         } catch(Exception e){
             labelMensagem.setText("Não foi posível realizar o cadastro. Tente novamente");
         }
+    }
+    
+    public boolean verificarRegistro(Cliente cliente){
+            if(Util.verificarCpf(cliente.getCpf())){
+                labelMensagem.setText("CPF inválido ou já existente!"); return false;
+            }
+            else if(Util.verificarEmail(cliente.getEmail())){
+                labelMensagem.setText("Email já está em uso!"); return false;
+            }
+            else if(Util.verificarTelefone(cliente.getTelefone())){
+                labelMensagem.setText("Telefone inválido!"); return false;
+            }
+            else if(Util.verificarCep(cliente.getCep())){
+                labelMensagem.setText("CEP inválido!"); return false;
+            }
+            else if(Util.verificarSenha(cliente.getSenha())){
+                labelMensagem.setText("A senha precisa ter no mínimo 8 caractéres!"); return false;
+            }
+            return true;
     }
 }

@@ -120,21 +120,21 @@
 	-fx-background-color: transparent;
 	-fx-border-color: transparent -fx-lightest-grey-color -fx-lightest-grey-color -fx-lightest-grey-color, transparent;
 	-fx-border-insets: 0, 1;
-        -fx-text-fill:white;
+        
 }
 .table-row-cell:empty {
 	-fx-background-color: transparent;
 }
 .table-row-cell:filled:hover {
 	-fx-background-color: -fx-light-grey-color;
-        -fx-text-fill:white;
+        
 }
 .table-row-cell:filled:selected:hover {
 	-fx-background-color: -fx-light-grey-color;
-        -fx-text-fill:white;
+        
 }
 .table-row-cell:filled:selected {
-  	-fx-background-color: #eaeaea;
+  	-fx-background-color: #4697ba;
  	-fx-background-insets: 0.0;
 	-fx-background-radius: 0.0;
 }
@@ -163,25 +163,34 @@
 .ComboBox{
 	-fx-primary-color: linear-gradient(to right,#111618,#0f4b65,#4697ba);
 	-fx-secondary-color: linear-gradient(#111618,#0f4b65,#4697ba);
-	-fx-grey-color: #b9b9b9;
+	-fx-grey-color: white;
 	-fx-focus-color: -fx-secondary-color;
+        -fx-text-fill:white;
+        -fx-text-color:white;
 }
 
 .combo-box-base {
 	-fx-background-color: -fx-primary-color;
 	-fx-background-radius: 30 30 30 30;
+        -fx-text-fill:white;
+        -fx-text-color:white;
 }
 .combo-box-base:hover {
 	-fx-background-color: -fx-secondary-color;
+        -fx-text-fill:white;
+        -fx-text-color:white;
 }
 .combo-box-base:disabled {
-	-fx-background-color: -fx-grey-color;
+	-fx-background-color: whiter;
+        -fx-text-color:white;
+        -fx-text-fill: -fx-white-color;
 }
 .combo-box .list-cell {
-	-fx-text-fill: -fx-white-color;
+	-fx-text-fill: white;
 }
 .combo-box-base .arrow-button .arrow {
 	-fx-background-color: white;
+        -fx-text-fill:white;
 }
 /* WHILE OPEN */
 .combo-box-base:showing {
