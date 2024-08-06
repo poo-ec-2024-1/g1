@@ -34,3 +34,10 @@ Para a linguagem css, foi utilizado a referência do site da Oracle : https://do
 
 A documentação foi feita através de commits, documentos markdown, e diagramas UML. O projeto foi estruturado através da colaboração dos membros do grupo por intermédio de reuniôes no discord, grupo de whatsapp, e de reuniões físicas. A divisão do projeto não foi algo bem estruturado, tendo em vista os imprevistos e a falta de integrantes, foi necessário a versatilidade dos membros restantes para preencher os papeis propostos pelo professor. Em geral, eu participei de toda a porção do projeto, todavia, com uma maior ênfase no aspecto estético e de prototipação, também participei da criação inicial dos modelos de estruturação dos packages dos arquivos.
 
+Principais commits:
+
+1) https://github.com/poo-ec-2024-1/g1/commit/8701a8673d7a04f4965cc831cb55b5bbb3042d62 (Criação de interfaces e controllers);
+2) https://github.com/poo-ec-2024-1/g1/commit/7ea7e7dcbec2ce09b48bc3073f3a35b4dd3cec10 (Criação das interfaces e controllers de edição de serviços conectada ao banco de dados);
+3) https://github.com/poo-ec-2024-1/g1/commit/ec8af52eeddef310d157c4b080f92030693cbfb7 (Repaginando a interface com css);
+4) https://github.com/poo-ec-2024-1/g1/commit/306b183bc4e6fed337ecb439590d883d43662803 (Reformulação nos modelos, interfaces e controllers);
+
