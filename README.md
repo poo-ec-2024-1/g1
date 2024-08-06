@@ -1,6 +1,6 @@
 # Car Wash
 
-Obs: para executar o projeto, basta executar a classe Main que está no seguinte endereço: https://github.com/poo-ec-2024-1/g1/tree/main/ProjetoV3/src/Main
+Obs: para executar o projeto, basta executar a classe Main que está no seguinte endereço: g1/ProjetoV3/src/Main (https://github.com/poo-ec-2024-1/g1/blob/main/ProjetoV3/src/Main/Main.java)
 
 # Motivação:
 
