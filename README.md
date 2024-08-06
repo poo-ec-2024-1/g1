@@ -1,4 +1,7 @@
 # Car Wash
+
+Obs: para executar o projeto, basta executar a classe Main que está no seguinte endereço: https://github.com/poo-ec-2024-1/g1/tree/main/ProjetoV3/src/Main
+
 # Motivação:
 
 O projeto tem como fim a praticidade em relação a estética automotiva. O objetivo principal é a conexão de pessoas com as respectivas empresas que oferecem o serviço de estética automotiva, como lavagem, pintura, retoques, envelopamento, dentre outros, com os clientes. 
@@ -26,8 +29,3 @@ O projeto foi estruturado de acordo com o modelo MVC e possui a seguinte estrutu
 3) Lider: Matheus Teixeira Pires;
 4) Analista de sistemas: João Pedro Santos Morais;
 5) Testador: Matheus Teixeira Pires;
-
-
-
-
-
