@@ -25,7 +25,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
+/**
+ * TelaPerfil Controller Class
+ */
 public class TelaPerfilController implements Initializable{
     
     @FXML
@@ -68,16 +70,22 @@ public class TelaPerfilController implements Initializable{
     public static int idSelecionado = 0;
     
     public static Cliente cliente;
+    public Database database;
+    public ClienteRepository clienteRP;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         idSelecionado = TelaLoginClienteController.idSelecionado;
-        Database database = Util.openDatabase("clientesDatabase");
-        ClienteRepository clienteRP = new ClienteRepository(database);
+        database = Util.openDatabase("clientesDatabase");
+        clienteRP = new ClienteRepository(database);
         cliente = clienteRP.loadFromId(idSelecionado);
         atualizarCampos();
     }
-    
+    /**
+     * Sai da tela de perfil do cliente para a tela de menu do cliente
+     * @param event event
+     * @throws IOException e
+     */
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaMenuPrinc.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -85,7 +93,9 @@ public class TelaPerfilController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Atualiza os dados do cliente para os campos correspondentes
+     */
     public void atualizarCampos(){
         tfNome.setText(cliente.getNome());
         tfCpf.setText(cliente.getCpf());
@@ -96,11 +106,16 @@ public class TelaPerfilController implements Initializable{
         tfCidade.setText(cliente.getCidade());
         tfEmail.setText(cliente.getEmail());
     }
-
+    /**
+     * Habilita a edição das caixas de texto
+     */
     public void onClickEditar(){
         isEdit(true);
     }
-    
+    /**
+     * Habilita a edição das caixas de texto
+     * @param x true para deixar editável, false para o contrário
+     */
     public void isEdit(boolean x){
         tfNome.setEditable(x);
         tfCpf.setEditable(x);
@@ -125,14 +140,20 @@ public class TelaPerfilController implements Initializable{
         tfNovaSenha.setText("");
         tfConfirmarSenha.setText("");
     }
-    
+    /**
+     * Salva o cliente do parâmetro no lugar do cliente do banco de dados que possui o mesmo id
+     * @param cliente novo cliente para fazer a substituição
+     */
     public void salvarCliente(Cliente cliente){
-        Database database = Util.openDatabase("clientesDatabase");
-        ClienteRepository clienteRP = new ClienteRepository(database);
+        database = Util.openDatabase("clientesDatabase");
+        clienteRP = new ClienteRepository(database);
         clienteRP.update(cliente);
         database.close();
     }
-    
+    /**
+     * Escaneia o que foi escrito nas caixas de texto e após uma verificação, salva as alterações feitas no cliente referido
+     * @param event event
+     */
     public void onClickSalvar(ActionEvent event){
         try{
             String nome = tfNome.getText();
@@ -153,6 +174,9 @@ public class TelaPerfilController implements Initializable{
             
             if(Util.existeVazio(list)){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");
+            }
+            else if(!verificarRegistro(novoCliente)){
+                
             }
             else if(!cliente.getSenha().equals(senhaAtual)){
                 labelMensagem.setText("Senha atual incorreta!");
@@ -178,5 +202,34 @@ public class TelaPerfilController implements Initializable{
         } catch(Exception e){
             labelMensagem.setText("Não foi possivel realizar a edição!");
         }
+    }
+    /**
+     * Verifica se os dados do cliente do parâmetro são válidos
+     * @param cliente cliente a ser verificado
+     * @return true se passar pela verificação, false do contrário
+     */
+    public boolean verificarRegistro(Cliente cliente){
+            if(!Util.verificarCpf(cliente.getCpf())){
+                Cliente clienteOld = clienteRP.loadFromId(cliente.getId());
+                if(!clienteOld.getCpf().equals(cliente.getCpf())){
+                    labelMensagem.setText("CPF inválido ou já existente!"); return false;
+                }
+            }
+            if(!Util.verificarEmail(cliente.getEmail())){
+                Cliente clienteOld = clienteRP.loadFromId(cliente.getId());
+                if(!clienteOld.getEmail().equals(cliente.getEmail())){
+                    labelMensagem.setText("Email já existente!"); return false;
+                }
+            }
+            if(!Util.verificarTelefone(cliente.getTelefone())){
+                labelMensagem.setText("Telefone inválido!"); return false;
+            }
+            if(!Util.verificarCep(cliente.getCep())){
+                labelMensagem.setText("CEP inválido!"); return false;
+            }
+            if(!Util.verificarSenha(cliente.getSenha())){
+                labelMensagem.setText("A senha precisa ter no mínimo 8 caractéres!"); return false;
+            }
+            return true;
     }
 }

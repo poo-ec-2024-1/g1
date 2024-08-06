@@ -10,19 +10,16 @@ import java.util.ArrayList;
 
 /**
  *  Repositório para o banco de dados dos clientes
- * 
- * @author Matheus TP
  */
-
 public class ClienteRepository{
     private static Database database;
     private static Dao<Cliente, Integer> dao;
-    private List<Cliente> loadedServicos;
+    private List<Cliente> loadedClientes;
     private Cliente loadedCliente; 
     // Construtores
     public ClienteRepository(Database database) {
         ClienteRepository.setDatabase(database);
-        loadedServicos = new ArrayList<Cliente>();
+        loadedClientes = new ArrayList<Cliente>();
     }
     /**
      * Seleciona o banco de dados sobre qual o repositorio vai operar
@@ -52,7 +49,7 @@ public class ClienteRepository{
             if ( nrows == 0 )
                 throw new SQLException("Error: object not saved");
             this.loadedCliente = cliente;
-            loadedServicos.add(cliente);
+            loadedClientes.add(cliente);
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -104,7 +101,7 @@ public class ClienteRepository{
         try {
             this.loadedCliente = dao.queryForId(id);
             if (this.loadedCliente != null)
-                this.loadedServicos.add(this.loadedCliente);
+                this.loadedClientes.add(this.loadedCliente);
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -116,19 +113,19 @@ public class ClienteRepository{
      */
     public List<Cliente> loadAll() {
         try {
-            this.loadedServicos =  dao.queryForAll();
-            if (this.loadedServicos.size() != 0)
-                this.loadedCliente = this.loadedServicos.get(0);
+            this.loadedClientes =  dao.queryForAll();
+            if (this.loadedClientes.size() != 0)
+                this.loadedCliente = this.loadedClientes.get(0);
         } catch (SQLException e) {
             System.out.println(e);
         }
-        return this.loadedServicos;
+        return this.loadedClientes;
     }
     /**
-     * Método responsável por validar se um cliente existe no banco de dados através de seu usuario e senha, e além disso,
+     * Método responsável por validar se um cliente existe no banco de dados através de seu email e senha, e além disso,
      * obtêm o seu id.
      * 
-     * @param usuario que deseja autenticar
+     * @param email que deseja autenticar
      * @param senha que deseja autenticar
      * @return retorna o id do cliente se ele existir no banco de dados. Do contrário, retorna 0;
      */

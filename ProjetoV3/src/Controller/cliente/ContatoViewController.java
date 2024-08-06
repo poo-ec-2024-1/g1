@@ -18,7 +18,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
+/**
+ * ContatoView Controller Class
+ */
 public class ContatoViewController  {
 
     @FXML
@@ -31,17 +33,21 @@ public class ContatoViewController  {
     private Button btnFourStar;
     @FXML
     private Button btnFiveStar;
-
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
     @FXML
     private TextField tfDescricao;
     @FXML
     private Button BotaoVoltar;
     @FXML
     private Button BotaoEnviar;
-
+    
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
+    /**
+     * Sai da tela de "Contate-nos" de volta para o menu principal do cliente
+     * @param event e
+     * @throws IOException e
+     */
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaMenuPrinc.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

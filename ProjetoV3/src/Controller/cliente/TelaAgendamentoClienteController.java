@@ -36,7 +36,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-
+/**
+ * TelaAgendamentoCliente Controller Class
+ */
 public class TelaAgendamentoClienteController implements Initializable{
     @FXML
     private Button botaoAgendar;
@@ -79,7 +81,10 @@ public class TelaAgendamentoClienteController implements Initializable{
         ObservableList<String> formasPagamento = FXCollections.observableArrayList(formasPagamento());
         boxFormaPagamento.setItems(formasPagamento);
     }
-    
+    /**
+     * Define as formas de pagamento que podem ser selecionadas pelo cliente ao agendar um serviço.
+     * @return Retorna uma lista com as formas de pagamento, para serem utilizadas em uma caixa de seleção
+     */
     public List<String> formasPagamento(){
         List<String> formasPagamento = new ArrayList<>();
         formasPagamento.add("Dinheiro");
@@ -89,7 +94,11 @@ public class TelaAgendamentoClienteController implements Initializable{
         formasPagamento.add("Cheque");
         return formasPagamento;
     }
-    
+    /**
+     * Sai da tela de fazer agendamento e vai para o menu principal do cliente
+     * @param event e
+     * @throws IOException e
+     */
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaMenuPrinc.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -97,7 +106,10 @@ public class TelaAgendamentoClienteController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Altera a disponibilidade para edição de alguns dos campos de text
+     * @param x true para esconder os campos, false para exibi-los
+     */
     public void hideFields(boolean x){
         dateData.setDisable(x);
         tfHora.setDisable(x);
@@ -108,11 +120,16 @@ public class TelaAgendamentoClienteController implements Initializable{
         tfDescricao.setDisable(x);
         botaoAgendar.setDisable(x);
     }
-    
+    /**
+     * Altera a disponibilidade para seleção da caixa de seleção de serviços
+     * @param x true para esconder, false para liberar
+     */
     public void hideServicos(boolean x){
         boxServico.setDisable(x);
     }
-    
+    /**
+     * Limpa todos os campos de texto editáveis
+     */
     public void clearFields(){
         tfModeloVeiculo.setText("");
         tfPlaca.setText("");
@@ -126,7 +143,9 @@ public class TelaAgendamentoClienteController implements Initializable{
     }
     
     ObservableList<Servico> empresaServicos = FXCollections.observableArrayList();
-    
+    /**
+     * Seleciona a empresa que está definida na caixa de seleção
+     */
     public void selectEmpresa(){
         try{
             Empresa empresaSelecionada = boxEmpresa.getSelectionModel().getSelectedItem();
@@ -148,7 +167,9 @@ public class TelaAgendamentoClienteController implements Initializable{
             
         }
     }
-    
+    /**
+     * Seleciona o serviço que está definido na caixa de seleção
+     */
     public void selectServico(){
         try{
             Servico servicoSelecionado = boxServico.getSelectionModel().getSelectedItem();
@@ -160,7 +181,9 @@ public class TelaAgendamentoClienteController implements Initializable{
             
         }
     }
-    
+    /**
+     * Após uma verificação, realiza o agendamento do serviço
+     */
     public void onClickedAgendar(){
         try{
             Agendamento agenda = new Agendamento();

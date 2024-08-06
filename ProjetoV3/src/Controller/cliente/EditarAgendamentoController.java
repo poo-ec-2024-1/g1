@@ -30,7 +30,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-
+/**
+ * EditarAgendamento Controller Class
+ * 
+ */
 public class EditarAgendamentoController implements Initializable {
 
     @FXML
@@ -73,9 +76,7 @@ public class EditarAgendamentoController implements Initializable {
     ObservableList<AgendamentoExibivel> agends;
     
     private Stage stage;
-    
     private Scene scene;
-    
     private Parent root;
     
     @Override
@@ -91,7 +92,9 @@ public class EditarAgendamentoController implements Initializable {
         }
         carregarDados();
     }    
-
+    /**
+     * Carrega os agendamentos do cliente
+     */
     public void carregarDados(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colServico.setCellValueFactory(new PropertyValueFactory<>("servico"));
@@ -104,7 +107,11 @@ public class EditarAgendamentoController implements Initializable {
         
         tabel.setItems(agends);
     }
-    
+    /**
+     * Sai da tela de editar agendamento do cliente para a tela de ver agendamentos do cliente
+     * @param event e
+     * @throws IOException e
+     */
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaVerAgendamentosCliente.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

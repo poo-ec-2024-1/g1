@@ -22,7 +22,10 @@ import javafx.scene.control.Label;
 import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+/**
+ * TelaMenuPrinc Controller Class
+ * @author mathe
+ */
 public class TelaMenuPrincController implements Initializable{
     
     
@@ -35,7 +38,6 @@ public class TelaMenuPrincController implements Initializable{
     private Button BotaoPerfil;
     @FXML
     private Button BotaoLogout;
-    
     @FXML
     private Label labelNome;
     @FXML
@@ -48,8 +50,6 @@ public class TelaMenuPrincController implements Initializable{
     private Button BotaoContato;
     
     public static int idSelecionado = 0;
-    
-    
    
     @FXML
     private Label labelClock;
@@ -60,8 +60,6 @@ public class TelaMenuPrincController implements Initializable{
     String time ;
     @FXML
     private Label labelCPF;
-    
-
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -77,9 +75,11 @@ public class TelaMenuPrincController implements Initializable{
         
     
     }
-    
-    
-    
+    /**
+     * Sai da tela de menu do cliente para a tela de login do cliente
+     * @param event event
+     * @throws IOException e
+     */
     @FXML
     public void onClickLogout(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaLoginCliente.fxml"));
@@ -88,7 +88,11 @@ public class TelaMenuPrincController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Sai da tela de menu do clente para a tela de editar perfil do cliente
+     * @param e event
+     * @throws IOException e
+     */
     @FXML
     public void onClickPerfil(ActionEvent e) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaPerfil.fxml"));
@@ -97,7 +101,11 @@ public class TelaMenuPrincController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-
+    /**
+     * Sai da tela de menu do clente para a tela de fazer agendamento do cliente
+     * @param e event
+     * @throws IOException e
+     */
     @FXML
     public void onClickAgendar(ActionEvent e) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaAgendamentoCliente.fxml"));
@@ -106,7 +114,11 @@ public class TelaMenuPrincController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Sai da tela de menu do clente para a tela de ver agendamentos do cliente
+     * @param event event
+     * @throws IOException e
+     */
     @FXML
     public void onClickAgendamentos(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaVerAgendamentosCliente.fxml"));
@@ -115,8 +127,11 @@ public class TelaMenuPrincController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
-    
+    /**
+     * Sai da tela de menu do clente para a tela de contate-nos
+     * @param event event
+     * @throws IOException e
+     */
     public void onClickContato(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/View/ContatoView.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -124,8 +139,6 @@ public class TelaMenuPrincController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
-    
 }
 
 

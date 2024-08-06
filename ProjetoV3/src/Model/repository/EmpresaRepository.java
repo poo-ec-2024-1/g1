@@ -9,8 +9,6 @@ import java.util.List;
 import java.util.ArrayList;
 /**
  *  Repositório para o banco de dados das empresas
- * 
- * @author Matheus TP
  */
 public class EmpresaRepository
 {
@@ -127,7 +125,7 @@ public class EmpresaRepository
      * Método responsável por validar se uma empresa existe no banco de dados através de seu usuario e senha, e além disso,
      * obtêm o seu id.
      * 
-     * @param usuario que deseja autenticar
+     * @param email que deseja autenticar
      * @param senha que deseja autenticar
      * @return retorna o id do cliente se ele existir no banco de dados. Do contrário, retorna 0;
      */

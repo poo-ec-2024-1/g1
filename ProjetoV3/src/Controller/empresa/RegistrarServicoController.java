@@ -22,7 +22,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
+/**
+ * RegistrarServico Controller Class
+ */
 public class RegistrarServicoController implements Initializable{
     
     
@@ -52,7 +54,11 @@ public class RegistrarServicoController implements Initializable{
         database = Util.openDatabase("servicosDatabase");
         servicoRP = new ServicoRepository(database);
     }
-    
+    /**
+     * Sai da tela de registrar serviço da empresa para a tela de menu da empresa
+     * @param event e
+     * @throws IOException e
+     */
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/EmpresaMenu.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -60,7 +66,10 @@ public class RegistrarServicoController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Após uma verificação, salva o serviço informado no banco de dados
+     * @param event e
+     */
     @FXML
     public void onClickSalvar(ActionEvent event) {
         try{
@@ -83,7 +92,9 @@ public class RegistrarServicoController implements Initializable{
             labelMensagem.setText("Dados inválidos! Tente novamente.");
         }
     }
-    
+    /**
+     * Limpa os campos de texto do serviço
+     */
     public void clear(){
         tfNome.setText("");
         tfPreco.setText("");
