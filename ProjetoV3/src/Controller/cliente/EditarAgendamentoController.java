@@ -34,21 +34,21 @@ import javafx.stage.Stage;
 public class EditarAgendamentoController implements Initializable {
 
     @FXML
-    private TableColumn<AgendamentoExibivel, String> colId;
-    @FXML
-    private TableColumn<AgendamentoExibivel, String> colServico;
-    @FXML
     private TableColumn<AgendamentoExibivel, String> colEmpresa;
-    @FXML
-    private TableColumn<AgendamentoExibivel, String> colPreco;
-    @FXML
-    private TableColumn<AgendamentoExibivel, String> colVeiculo;
     @FXML
     private TableColumn<AgendamentoExibivel, String> colData;
     @FXML
+    private TableColumn<AgendamentoExibivel, String> colEndereco;
+    @FXML
     private TableColumn<AgendamentoExibivel, String> colHora;
     @FXML
-    private TableColumn<AgendamentoExibivel, String> colEndereco;
+    private TableColumn<AgendamentoExibivel, Integer> colId;
+    @FXML
+    private TableColumn<AgendamentoExibivel, Double> colPreco;
+    @FXML
+    private TableColumn<AgendamentoExibivel, String> colServico;
+    @FXML
+    private TableColumn<AgendamentoExibivel, String> colVeiculo;
     @FXML
     private DatePicker dateData;
     @FXML

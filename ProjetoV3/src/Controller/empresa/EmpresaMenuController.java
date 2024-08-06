@@ -40,49 +40,34 @@ public class EmpresaMenuController implements Initializable{
     
     @FXML
     private Button BotaoEditarPedido;
-
     @FXML
     private Button BotaoSair;
-
     @FXML
     private TableColumn<AgendamentoExibivel, String> colCliente;
-
     @FXML
     private TableColumn<AgendamentoExibivel, String> colData;
-
     @FXML
     private TableColumn<AgendamentoExibivel, String> colEndereco;
-
     @FXML
     private TableColumn<AgendamentoExibivel, String> colHora;
-
     @FXML
     private TableColumn<AgendamentoExibivel, Integer> colId;
-
     @FXML
     private TableColumn<AgendamentoExibivel, Double> colPreco;
-
     @FXML
     private TableColumn<AgendamentoExibivel, String> colServico;
-
     @FXML
     private TableColumn<AgendamentoExibivel, String> colVeiculo;
-
     @FXML
     private BarChart<AgendamentoExibivel, String> graficoVendas;
-
     @FXML
     private TableView<AgendamentoExibivel> tabelaServicos;
-
     @FXML
     private Label titleCnpj;
-
     @FXML
     private Label titleDate;
-
     @FXML
     private Label titleNome;
-
     @FXML
     private Label titleSaldo;
     
