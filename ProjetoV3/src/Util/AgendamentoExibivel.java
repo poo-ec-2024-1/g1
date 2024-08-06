@@ -1,6 +1,8 @@
 package Util;
 
-
+/**
+ * Agendamento Exibível que pode ser utilizado para ser exibido em tabelas
+ */
 public class AgendamentoExibivel {
     
     private int id;

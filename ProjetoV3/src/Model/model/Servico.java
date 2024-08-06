@@ -4,7 +4,6 @@ import com.j256.ormlite.field.DatabaseField;
 
 /**
  *  POJO para o banco de dados dos serviços
- * @author Matheus TP
  */
 public class Servico{
     

@@ -24,7 +24,9 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-
+/**
+ * TelaVerAgendamentos Controller Class
+ */
 public class TelaVerAgendamentos implements Initializable{
     private Stage stage;
     private Scene scene;
@@ -66,7 +68,11 @@ public class TelaVerAgendamentos implements Initializable{
         }
         carregarDados();
     }
-        
+    /**
+     * Sai da tela de ver agendamentos do cliente para o menu principal do cliente
+     * @param event event
+     * @throws IOException e
+     */    
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaMenuPrinc.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -74,7 +80,9 @@ public class TelaVerAgendamentos implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Carrega os agendamentos já feitos pelo cliente
+     */
     public void carregarDados(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colServico.setCellValueFactory(new PropertyValueFactory<>("servico"));
@@ -87,9 +95,11 @@ public class TelaVerAgendamentos implements Initializable{
         
         tabel.setItems(agends);
     }
-    
-    
-    
+    /**
+     * Sai da tela de ver agendamentos do cliente para a tela de editar agendamentos do cliente
+     * @param event event
+     * @throws IOException e
+     */
     public void onClickEditar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/EditarAgendamento.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();

@@ -10,19 +10,17 @@ import java.util.ArrayList;
 
 /**
  *  Repositório para o banco de dados dos servicos
- * 
- * @author Matheus TP
  */
 
 public class ServicoRepository{
     private static Database database;
     private static Dao<Servico, Integer> dao;
-    private List<Servico> loadedAgendamentos;
+    private List<Servico> loadedServicos;
     private Servico loadedServico; 
     // Construtores
     public ServicoRepository(Database database) {
         ServicoRepository.setDatabase(database);
-        loadedAgendamentos = new ArrayList<Servico>();
+        loadedServicos = new ArrayList<Servico>();
     }
     /**
      * Seleciona o banco de dados sobre qual o repositorio vai operar
@@ -52,7 +50,7 @@ public class ServicoRepository{
             if ( nrows == 0 )
                 throw new SQLException("Error: object not saved");
             this.loadedServico = servico;
-            loadedAgendamentos.add(servico);
+            loadedServicos.add(servico);
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -104,7 +102,7 @@ public class ServicoRepository{
         try {
             this.loadedServico = dao.queryForId(id);
             if (this.loadedServico != null)
-                this.loadedAgendamentos.add(this.loadedServico);
+                this.loadedServicos.add(this.loadedServico);
         } catch (SQLException e) {
             System.out.println(e);
         }
@@ -116,13 +114,13 @@ public class ServicoRepository{
      */
     public List<Servico> loadAll() {
         try {
-            this.loadedAgendamentos =  dao.queryForAll();
-            if (this.loadedAgendamentos.size() != 0)
-                this.loadedServico = this.loadedAgendamentos.get(0);
+            this.loadedServicos =  dao.queryForAll();
+            if (this.loadedServicos.size() != 0)
+                this.loadedServico = this.loadedServicos.get(0);
         } catch (SQLException e) {
             System.out.println(e);
         }
-        return this.loadedAgendamentos;
+        return this.loadedServicos;
     }
     // getters and setters ommited...        
 }

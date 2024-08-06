@@ -15,7 +15,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
+/**
+ * TelaLoginEmpresa Controller Class
+ */
 public class TelaLoginEmpresaController {
     @FXML
     private TextField tfEmail;
@@ -29,7 +31,11 @@ public class TelaLoginEmpresaController {
     private Scene scene;
     
     public static int idSelecionado = 0;
-    
+    /**
+     * Sai da tela de login da empresa para a tela de login do cliente
+     * @param event e
+     * @throws IOException e
+     */
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaLoginCliente.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -37,7 +43,11 @@ public class TelaLoginEmpresaController {
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Sai da tela de login da empresa para a tela de registro da empresa
+     * @param event e
+     * @throws IOException e
+     */
     public void onClickRegistrar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/TelaRegistroEmpresa.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -55,7 +65,10 @@ public class TelaLoginEmpresaController {
             stage.show();
         }
     }
-    
+    /**
+     * Autentica o login da empresa
+     * @return true se passar pela verificação, false do contrário
+     */
     public boolean verificarLogin(){
         boolean validador = false;
         try{

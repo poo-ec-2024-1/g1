@@ -21,9 +21,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-
-
+/**
+ * TelaRegistroEmpresa Controller Class
+ */
 public class TelaRegistroEmpresaController {
     
     @FXML
@@ -56,7 +56,11 @@ public class TelaRegistroEmpresaController {
     private Stage stage;
     private Scene scene;
     private Parent root;
-    
+    /**
+     * Sai da tela de registro da empresa para a tela de login da empresa
+     * @param event e
+     * @throws IOException e
+     */
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/TelaLoginEmpresa.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -64,7 +68,11 @@ public class TelaRegistroEmpresaController {
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Cria uma lista com todos os atributos da empresa do parâmetro
+     * @param empresa empresa a ser salva na lista
+     * @return lista com todos os atributos da empresa
+     */
     public List<String> listEmpresa(Empresa empresa){
         List<String> list = new ArrayList<>();
         list.add(empresa.getNome());
@@ -78,7 +86,10 @@ public class TelaRegistroEmpresaController {
         list.add(empresa.getSenha());
         return list;
     }
-    
+    /**
+     * Após uma verificação, registra a empresa informada
+     * @param event e
+     */
     public void onClickRegistrar(ActionEvent event){
         try{
             String nome = tfNome.getText();
@@ -97,14 +108,12 @@ public class TelaRegistroEmpresaController {
             if(Util.existeVazio(list)){
                 labelMensagem.setText("Dados inválidos! Tente novamente.");
             }
-            // Essa é a parte referente a verificação do registro da empresa. Comentei para poder desenvolver
-      //      else if(!verificarRegistro(empresa)){
-      //      }
+            else if(!verificarRegistro(empresa)){
+            }
             else if(!Util.verificarIgualdade(senha, confirmacaoSenha)){
                 labelMensagem.setText("As senhas não conferem! Tente novamente.");
             }
             else{
-                System.out.println("aaa");
                 Database database = new Database("empresasDatabase");
                 database.getConnection();
                 EmpresaRepository empresaRP = new EmpresaRepository(database);
@@ -120,7 +129,11 @@ public class TelaRegistroEmpresaController {
             labelMensagem.setText("Não foi posível realizar o cadastro. Tente novamente");
         }
     }
-    
+    /**
+     * Verifica se os dados passados para registro são válidos
+     * @param empresa empresa a ser verificada
+     * @return true se passar pela verificação, false do contrário
+     */
     public boolean verificarRegistro(Empresa empresa){
         if(!Util.verificarCep(empresa.getCep())){
             labelMensagem.setText("CEP Inválido! Tente novamente."); return false;

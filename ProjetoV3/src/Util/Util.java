@@ -20,7 +20,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
-
+/**
+ * Conjunto de vários métodos úteis para o projeto
+ */
 public class Util {
     /**
      * Verifica se ass duas Strings são iguais
@@ -62,7 +64,11 @@ public class Util {
         }
         return validador;
     }
-    
+    /**
+     * Cria uma lista com os atributos do cliente do parâmetro
+     * @param cliente cliente a ser listado
+     * @return lista dos atributos do cliente do parâmetro
+     */
     public static List<String> listCliente(Cliente cliente){
         List<String> list = new ArrayList<>();
         list.add(cliente.getNome());
@@ -76,13 +82,22 @@ public class Util {
         list.add(cliente.getEstado());
         return list;
     }
-    
+    /**
+     * Cria um banco de dados e inicia sua conexão
+     * @param nome nome do bando de dados a ser criado/aberto
+     * @return retorna o banco de dados que foi criado
+     */
     public static Database openDatabase(String nome){
         Database database = new Database(nome);
         database.getConnection();
         return database;
     }
-    
+    /**
+     * Verifica se a String passada no parâmetro é um número, e se ela possui o mesmo tamanho que o passado no parâmetro
+     * @param num String a ser verificada
+     * @param tamanho tamanho que o número deve ter
+     * @return true se passar pela verificação, false do contrário
+     */
     public static boolean verificarNumero(String num, int tamanho){
         if(Util.stringVazia(num)){
            return false;
@@ -102,7 +117,11 @@ public class Util {
         }
         return true;
     }
-    
+    /**
+     * Formata uma data do pattern "yyyy-MM-dd" para o pattern "dd/MM/yyyy"
+     * @param data pattern a ser convertido
+     * @return pattern convertido
+     */
     public static String formatData(String data){
         DateTimeFormatter inDate = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         DateTimeFormatter outDate = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -110,23 +129,40 @@ public class Util {
         String newData = date.format(outDate);
         return newData;
     }
-    
+    /**
+     * Transforma uma String em um LocalDate
+     * @param data String a ser transformada
+     * @param pattern pattern em que a String está formatada
+     * @return novo LocalDate
+     */
     public static LocalDate stringToDate(String data, String pattern){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
         return LocalDate.parse(data, formatter);
     }
-    
+    /**
+     * Verifica se um número é de telefone
+     * @param telefone número a ser verificado
+     * @return true se passar pela verificação, false do contrário
+     */
     public static boolean verificarTelefone(String telefone){
         if(Util.verificarNumero(telefone, 11) || Util.verificarNumero(telefone, 10)){
             return true;
         }
         return false;
     }
-
+    /**
+     * Verifica se um CEP é válido
+     * @param cep CEP a ser verificado
+     * @return true se passar pela verificação, false do contrário
+     */
     public static boolean verificarCep(String cep){
         return Util.verificarNumero(cep, 8);
     }
-
+    /**
+     * Verifica se uma senha possui 8 ou mais caracteres
+     * @param senha senha a ser verificada
+     * @return true se passar pela verificação, false do contrário
+     */
     public static boolean verificarSenha(String senha){
         char[] list = senha.toCharArray();
         if(list.length < 8){
@@ -134,7 +170,11 @@ public class Util {
         }
         return true;
     }
-
+    /**
+     * Verifica se o email dado já existe em um cliente ou empresa do banco de dados
+     * @param email email a ser verificado
+     * @return true se passar pela verificação, false do contrário
+     */
     public static boolean verificarEmail(String email){
         Database database1 = Util.openDatabase("clientesDatabase");
         Database database2 = Util.openDatabase("empresasDatabase");
@@ -154,11 +194,19 @@ public class Util {
         }
         return true;
     }
-
+    /**
+     * Verifica se um CNPJ é válido
+     * @param cnpj CNPJ a ser verificad
+     * @return true se passar pela verificação, false do contrário
+     */
     public static boolean verificarCnpj(String cnpj){
         return Util.verificarNumero(cnpj, 14);
     }
-
+    /**
+     * Verifica se um CNPJ já existe no banco de dados
+     * @param cnpj CNPJ a ser verificado
+     * @return true se já existir, false do contrário
+     */
     public static boolean existeCnpj(String cnpj){
         Database database = Util.openDatabase("empresasDatabase");
         EmpresaRepository empresaRP = new EmpresaRepository(database);
@@ -170,7 +218,11 @@ public class Util {
         }
         return false;
     }
-
+    /**
+     * Verifica se um CPF é válido
+     * @param cpf CPF a ser verificado
+     * @return true se passar pela verificação, false do contrário
+     */
     public static boolean verificarCpf(String cpf){
         Database database = Util.openDatabase("clientesDatabase");
         ClienteRepository clienteRP = new ClienteRepository(database);
@@ -178,9 +230,10 @@ public class Util {
         if(Util.verificarNumero(cpf, 11)){
             for(Cliente x : clientes){
                 if(cpf.equals(x.getCpf())){
-                    return true;
+                    return false;
                 }
             }
+            return true;
         }
         return false;
     }

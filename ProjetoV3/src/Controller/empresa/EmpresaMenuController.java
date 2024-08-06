@@ -31,7 +31,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
-
+/**
+ * EmpresaMenu Controller Class
+ */
 public class EmpresaMenuController implements Initializable{
 
     private Stage stage;
@@ -72,11 +74,13 @@ public class EmpresaMenuController implements Initializable{
     private Label titleSaldo;
     
     public static int idSelecionado;
+    public static double saldo;
     
     ObservableList<AgendamentoExibivel> agends;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        saldo = 0;
         idSelecionado = TelaLoginEmpresaController.idSelecionado;
         Database database = Util.openDatabase("empresasDatabase");
         EmpresaRepository empresaRP = new EmpresaRepository(database);
@@ -97,11 +101,17 @@ public class EmpresaMenuController implements Initializable{
             servico = servicoRP.loadFromId(x.getServico());
             if(servico.getEmpResponsavel() == idSelecionado){
                 agends.add(getAgendamentoExibivel(x, "cliente"));
+                saldo += servico.getPreco();
             }
         }
+        titleSaldo.setText(String.valueOf(saldo));
         carregarDados();
     }
-    
+    /**
+     * Sai da tela de menu da empresa para a tela de login da empresa
+     * @param event e
+     * @throws IOException  e
+     */
     @FXML
     public void onClickVoltar(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/TelaLoginEmpresa.fxml"));
@@ -110,7 +120,9 @@ public class EmpresaMenuController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-  
+    /**
+     * Carrega os agendamentos feitas para a empresa na tabela
+     */
     public void carregarDados(){
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colServico.setCellValueFactory(new PropertyValueFactory<>("servico"));
@@ -122,7 +134,11 @@ public class EmpresaMenuController implements Initializable{
         colEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
         tabelaServicos.setItems(agends);
     }
-    
+    /**
+     * Sai da tela de menu da empresa para a tela de editar perfil da empresa
+     * @param event e
+     * @throws IOException  e
+     */
     public void onClickPerfil(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/PerfilEmpresa.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -130,7 +146,11 @@ public class EmpresaMenuController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Sai da tela de menu da empresa para a tela de registar serviços da empresa
+     * @param event e
+     * @throws IOException e
+     */
     public void onClickServicos(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/RegistrarServico.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -138,7 +158,11 @@ public class EmpresaMenuController implements Initializable{
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Sai da tela de menu da empresa para a tela de editar serviço
+     * @param event e
+     * @throws IOException e
+     */
     @FXML
     public void onClickedEditar(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/EditarServico.fxml"));

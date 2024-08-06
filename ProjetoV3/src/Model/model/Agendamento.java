@@ -5,7 +5,6 @@ import java.time.LocalDate;
 
 /**
  *  POJO para o banco de dados dos agendamentos
- * @author Matheus TP
  */
 public class Agendamento{
     

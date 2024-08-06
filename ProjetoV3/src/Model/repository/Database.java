@@ -5,8 +5,6 @@ import com.j256.ormlite.jdbc.JdbcConnectionSource;
 
 /**
  *  Classe do database
- * 
- * @author Matheus TP
  */
 public class Database{
    private String databaseName = null;
@@ -17,7 +15,7 @@ public class Database{
    /**
     * Abre a conexão com o banco de dados
     * 
-    * @return
+    * @return JdbcConnectionSource
     */
    public JdbcConnectionSource getConnection(){
     try{

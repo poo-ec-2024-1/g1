@@ -10,10 +10,7 @@ import java.util.ArrayList;
 
 /**
  *  Repositório para o banco de dados dos agendamentos
- * 
- * @author Matheus TP
  */
-
 public class AgendamentoRepository{
     private static Database database;
     private static Dao<Agendamento, Integer> dao;

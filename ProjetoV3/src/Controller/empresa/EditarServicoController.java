@@ -30,7 +30,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-
+/**
+ * EditarServico Controller Class
+ */
 public class EditarServicoController implements Initializable {
 
     @FXML
@@ -77,7 +79,9 @@ public class EditarServicoController implements Initializable {
         servicoRP = new ServicoRepository(database);
         atualizarTabel();
     }
-    
+    /**
+     * Atualiza os servios na tabela de serviços da empresa
+     */
     public void atualizarTabel(){
         servicos = FXCollections.observableArrayList(servicoRP.loadAll());
         colId.setCellValueFactory(new PropertyValueFactory<>("id"));
@@ -87,7 +91,10 @@ public class EditarServicoController implements Initializable {
         
         tabel.setItems(servicos);
     }
-    
+    /**
+     * Habilita alguns botões na tela de editar serviço, escaneia o serviço selecionado na tabela e o exibe nos campos de texto
+     * @param event e
+     */
     @FXML
     public void onClickTabel(MouseEvent event) {
         try{
@@ -102,7 +109,10 @@ public class EditarServicoController implements Initializable {
             
         }
     }
-    
+    /**
+     * Deleta o serviço selecionado
+     * @param event e
+     */
     @FXML
     public void onClickedDeletar(ActionEvent event) {
         try{
@@ -126,14 +136,20 @@ public class EditarServicoController implements Initializable {
             
         }
     }
-
+    /**
+     * Habilita a edição do serviço selecionado
+     * @param event e
+     */
     @FXML
     public void onClickedEditar(ActionEvent event) {
         buttonEditar.setDisable(true);
         buttonSalvar.setDisable(false);
         isEditable(true);
     }
-
+    /**
+     * Limpa os campos de texto do serviço selecionado
+     * @param event e
+     */
     @FXML
     public void onClickedLimpar(ActionEvent event) {
         try{  
@@ -148,7 +164,10 @@ public class EditarServicoController implements Initializable {
             
         }
     }
-
+    /**
+     * Após uma verificação, salva os dados do serviço editado
+     * @param event e
+     */
     @FXML
     public void onClickedSalvar(ActionEvent event) {
         try{
@@ -174,7 +193,11 @@ public class EditarServicoController implements Initializable {
             labelMensagem.setText("Dados inválidos! Tente novamente.");
         }
     }
-
+    /**
+     * Sai da tela de editar serviço da empresa para o menu da empresa
+     * @param event e
+     * @throws IOException e
+     */
     @FXML
     public void onClickedVoltar(ActionEvent event) throws IOException {
         try{
@@ -187,13 +210,18 @@ public class EditarServicoController implements Initializable {
             
         }
     }
-    
+    /**
+     * Limpa as caixas de texto
+     */
     public void clear(){
         tfNome.setText("");
         tfPreco.setText("");
         tfDescricao.setText("");
     }
-    
+    /**
+     * Define se as caixas de texto são editáveis ou não
+     * @param x true para serem editáveis, false para o contrário
+     */
     public void isEditable(boolean x){
        tfNome.setEditable(x);
        tfPreco.setEditable(x);

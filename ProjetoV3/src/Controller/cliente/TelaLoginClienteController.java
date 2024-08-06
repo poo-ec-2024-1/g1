@@ -18,7 +18,9 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
+/**
+ * TelaLoginCliente Controller Class
+ */
 public class TelaLoginClienteController {
     private Stage stage;
     private Scene scene;
@@ -39,7 +41,11 @@ public class TelaLoginClienteController {
     private Label labelRegistro;
     
     public static int idSelecionado = 0;
-    
+    /**
+     * Sai da tela de login do cliente para o menu do cliente
+     * @param event e
+     * @throws IOException e
+     */
     @FXML
     public void switchToMenu(ActionEvent event) throws IOException{
         if(verificarLogin()){
@@ -50,7 +56,11 @@ public class TelaLoginClienteController {
             stage.show();
         }
     }
-    
+    /**
+     * Sai da tela de login do cliente para a tela de registro do cliente
+     * @param event e
+     * @throws IOException e
+     */
     @FXML
     public void switchToRegistro(ActionEvent event) throws IOException{
         Parent root = FXMLLoader.load(getClass().getResource("/View/TelaRegistrarCliente.fxml"));
@@ -59,7 +69,11 @@ public class TelaLoginClienteController {
         stage.setScene(scene);
         stage.show();
     }
-
+    /**
+     * Sai da tela de login do cliente para a tela de login da empresa
+     * @param event
+     * @throws IOException 
+     */
     @FXML
     private void switchToEmpresaSide(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/View/Empresa/TelaLoginEmpresa.fxml"));
@@ -68,7 +82,10 @@ public class TelaLoginClienteController {
         stage.setScene(scene);
         stage.show();
     }
-    
+    /**
+     * Faz a autenticação do email e da senha do cliente
+     * @return true se passar pela verificação, false do contrario
+     */
     public boolean verificarLogin(){
         boolean validador = false;
         try{

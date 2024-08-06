@@ -4,8 +4,6 @@ import com.j256.ormlite.field.DatabaseField;
 
 /**
  *  POJO para o banco de dados dos clientes
- * 
- * @author Matheus TP
  */
 public class Cliente{
     // Atributos da classe dos clientes. Novos atributos podem ser adicionados, contanto que a adaptação seja feita no código

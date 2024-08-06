@@ -4,8 +4,6 @@ import com.j256.ormlite.field.DatabaseField;
 
 /**
  *  POJO para o banco de dados da empresa
- * 
- * @author Matheus TP
  */
 public class Empresa{
     // Atributos da classe das empresas. Novos atributos podem ser adicionados, contanto que a adaptação seja feita no código
